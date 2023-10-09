@@ -1,1 +1,32 @@
-​
+.active {
+  background-color: #007B8A !important;
+  border-color: #007B8A !important;
+  border-radius: 0 !important;
+}
+
+.blue-planet {
+  background-color: #00416A !important;
+  border-color: #00416A !important;
+  border-radius: 0 !important;
+}
+
+.btn-group.special {
+  display: flex;
+}
+
+.special .btn {
+  flex: 1
+}
+
+.card-bg {
+  background-color: #343848 !important;
+  border-color: #343848 !important;
+}
+
+.bluey {
+  background-color: #8B97FF !important;
+}
+
+.redy {
+  background-color: #E56E6E !important;
+}
