@@ -30,3 +30,17 @@
 .redy {
   background-color: #E56E6E !important;
 }
+
+.bg-image {
+  background-image: url("/assets/img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-overlay {
+  position: relative;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+}

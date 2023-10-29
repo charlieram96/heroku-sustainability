@@ -2,6 +2,7 @@ const express = require('express');
 require('dotenv').config(); 
 const client = require('smartsheet');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -9,6 +10,14 @@ const HOST = process.env.HOST || 'localhost';
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'pages/index.html'));
+});
+
+app.get('/builder', (req, res) => {
+  res.sendFile(path.join(__dirname, 'pages/builder.html'));
+});
+
+app.get('/checkout', (req, res) => {
+  res.sendFile(path.join(__dirname, 'pages/checkout.html'));
 });
 
 app.use('/assets', express.static(path.join(__dirname, '../public')));
@@ -33,12 +42,14 @@ var options = {
 
 smartsheet.sheets.listSheets(options)
   .then(function (result) {
-    var sheetId = result.data[0].id;  // Choose the first sheet
+    var sheetId = process.env.SMARTSHEET_SHEET_ID;  // Sustainability Source Data
 
-    // Load one sheet
     smartsheet.sheets.getSheet({id: sheetId})
       .then(function(sheetInfo) {
-        console.log(sheetInfo);
+        fs.writeFile('src/data/sheetInfo.json', JSON.stringify(sheetInfo), function(err) {
+          if (err) throw err;
+          console.log('Saved!');
+        });
       })
       .catch(function(error) {
         console.log(error);
