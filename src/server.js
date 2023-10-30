@@ -20,6 +20,10 @@ app.get('/checkout', (req, res) => {
   res.sendFile(path.join(__dirname, 'pages/checkout.html'));
 });
 
+app.get('/src/data/sheetInfo.json', (req, res) => {
+  res.sendFile(path.join(__dirname, 'data/sheetInfo.json'));
+});
+
 app.use('/assets', express.static(path.join(__dirname, '../public')));
 
 app.listen(PORT, HOST, () => {
