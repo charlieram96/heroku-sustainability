@@ -30,7 +30,27 @@ app.listen(PORT, HOST, () => {
   console.log(`Server is running on http://${HOST}:${PORT}`);
 });
 
-console.log(process.env.SMARTSHEET_ACCESS_TOKEN)
+
+var columnMap = {};
+
+function getCellByColumnName(row, columnName) {
+  var columnId = columnMap[columnName];
+  return row.cells.find(function(c) {
+    return (c.columnId == columnId);
+  });
+};
+
+function evaluateRowAndBuildParentList(sourceRow) {
+  var rowToReturn = null;
+
+  // Find the cell and value to evaluate
+  var parentCell = getCellByColumnName(sourceRow, "Parent");
+  if (parentCell.displayValue == "0") {
+    var categoryCell = getCellByColumnName(sourceRow, "Category");
+    rowToReturn = categoryCell.displayValue;
+  }
+  return rowToReturn;
+}
 
 const smartsheet = client.createClient({
   accessToken: process.env.SMARTSHEET_ACCESS_TOKEN, 
@@ -43,6 +63,7 @@ var options = {
     includeAll: true
   }
 };
+ 
 
 smartsheet.sheets.listSheets(options)
   .then(function (result) {
@@ -51,9 +72,33 @@ smartsheet.sheets.listSheets(options)
     smartsheet.sheets.getSheet({id: sheetId})
       .then(function(sheetInfo) {
         fs.writeFile('src/data/sheetInfo.json', JSON.stringify(sheetInfo), function(err) {
+          sheetInfo.columns.forEach(function(column) {
+            columnMap[column.title] = column.id;
+          });
+          
+          // Accumulate rows needing update here
+          var parentRows = [];
+
+          // Evaluate each row in sheet
+          sheetInfo.rows.forEach(function(row) {
+              let rowToReturn = evaluateRowAndBuildParentList(row);
+              if (rowToReturn)
+                parentRows.push(rowToReturn);
+          });
+
+          if (parentRows.length == 0) {
+            console.log("No Parent Rows", parentRows.length);
+          } else {
+            fs.writeFile('src/data/parentCategory.json', JSON.stringify(parentRows), function(err) {
+            console.log("Parent Rows: " + parentRows);
+            if (err) throw err;
+              console.log('Categories Saved!');
+            });
+          }
           if (err) throw err;
-          console.log('Saved!');
+          console.log('All Data Saved!');
         });
+
       })
       .catch(function(error) {
         console.log(error);

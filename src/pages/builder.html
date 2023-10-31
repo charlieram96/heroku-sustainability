@@ -74,8 +74,8 @@
           <!-- Jumbotron End -->
           <!-- Secondary Category Button Group Start -->
           <div class="d-flex gap-4 justify-content-start py-5">
-            <button class="btn btn-light second-active rounded-pill px-3" type="button">Recycling</button>
-            <button class="btn btn-light rounded-pill px-3" type="button">Waste Management</button>
+            <button id="recycleClick" class="btn btn-light second-active rounded-pill px-3" type="button">Recycling</button>
+            <button id="wasteClick" class="btn btn-light rounded-pill px-3" type="button">Waste Management</button>
             <button class="btn btn-light rounded-pill px-3" type="button">Bulk Purchases</button>
             <button class="btn btn-light rounded-pill px-3" type="button">Beverages</button>
             <button class="btn btn-light rounded-pill px-3" type="button">Dining</button>
@@ -86,63 +86,8 @@
           <!-- Secondary Category Button Group End -->
           <!-- Solution Card Grid Start -->
           <div class="container-fluid">
-            <div class="row row-cols-3 py-3">
-              <div class="col mb-4">
-                <div class="card card-bg p-3">
-                  <div class="card-body">
-                    <h5 class="card-title text-light">
-                      Recycling: Full account
-                    </h5>
-                    <p class="card-text text-light"><small>Rather than sending all waste to the landfill, divert accepted materials for recycling.</small></p>
-                    <div class="d-flex gap-4 justify-content-start">
-                      <button class="btn btn-light btn-sm second-active rounded-pill px-3" type="button">Learn More</button>
-                      <button class="btn btn-light btn-sm rounded-pill px-3" type="button"> Select </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col mb-4">
-                <div class="card card-bg p-3">
-                  <div class="card-body">
-                    <h5 class="card-title text-light">
-                      Recycling: E-waste (Office)
-                    </h5>
-                    <p class="card-text text-light"><small>Utilize a recycling solution for electronic waste, instead of sending it to the landfill.</small></p>
-                    <div class="d-flex gap-4 justify-content-start">
-                      <button class="btn btn-light btn-sm second-active rounded-pill px-3" type="button">Learn More</button>
-                      <button class="btn btn-light btn-sm rounded-pill px-3" type="button"> Select </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col mb-4">
-                <div class="card card-bg p-3">
-                  <div class="card-body">
-                    <h5 class="card-title text-light">
-                      Recycling: Printer cartridges (Office)
-                    </h5>
-                    <p class="card-text text-light"><small>Utilize a recycling solution for printer ink cartridges, instead of sending them to the landfill.</small></p>
-                    <div class="d-flex gap-4 justify-content-start">
-                      <button class="btn btn-light btn-sm second-active rounded-pill px-3" type="button">Learn More</button>
-                      <button class="btn btn-light btn-sm rounded-pill px-3" type="button"> Select </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col mb-4">
-                <div class="card card-bg p-3">
-                  <div class="card-body">
-                    <h5 class="card-title text-light">
-                      Terracycle: Single collection stream
-                    </h5>
-                    <p class="card-text text-light"><small>Terracycle is a solution for difficult to recycle items that are not accepted in a traditional waste stream.</small></p>
-                    <div class="d-flex gap-4 justify-content-start">
-                      <button class="btn btn-light btn-sm second-active rounded-pill px-3" type="button">Learn More</button>
-                      <button class="btn btn-light btn-sm rounded-pill px-3" type="button"> Select </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div id="optionCards" class="row row-cols-3 py-3">
+              
             </div>
           </div>
           <!-- Solution Card Grid End -->
