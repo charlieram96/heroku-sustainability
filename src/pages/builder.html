@@ -10,6 +10,7 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/styles/style.css">
@@ -50,52 +51,93 @@
     </header>
     <!-- Header End -->
     <!-- Main Page Start -->
-    <main>
-      <div class="col-9">
-        <div class="container py-4">
-          <!-- Primary Category Button Group Start -->
-          <div class="btn-group special">
-            <a href="#" class="btn btn-primary active special" aria-current="page">Embed Circularity</a>
-            <a href="#" class="btn btn-primary blue-planet special">Source Sustainably</a>
-            <a href="#" class="btn btn-primary blue-planet special">Minimize Food Waste</a>
-            <a href="#" class="btn btn-primary blue-planet special">Operate Efficiently</a>
-            <a href="#" class="btn btn-primary blue-planet special">Pollinate Education</a>
-          </div>
-          <!-- Primary Category Button Group End -->
-          <!-- Jumbotron Start -->
-          <div class="bg-image my-3 rounded-0" style="background-image: url('assets/img/bg.jpg'); background-size: cover;">
-            <div class="mask rounded-3 p-4" style="background-color: rgba(0, 0, 0, 0.6);">
-              <div class="container-fluid py-4">
-                <h1 class="display-5 text-light fw-bold">Embed Circularity</h1>
-                <p class="col-md-8 text-light fs-5">When we use the term circular, we refer to our ability to keep materials in the economy in circulation and out of the environment. These solutions are focused on redesigning operations with circularity in mind through reducing the consumption of single-use plastics and other disposables, and expanding opportunities to reuse, recycle, and compost. An efficient circular system generates little to no waste. </p>
+    <main class="row">
+      <section class="col-9">
+          <div class="container py-4">
+            <!-- Primary Category Button Group Start -->
+            <div class="btn-group special">
+              <a href="#" class="btn btn-primary second-active special" aria-current="page">Embed Circularity</a>
+              <a href="#" class="btn btn-primary blue-planet special">Source Sustainably</a>
+              <a href="#" class="btn btn-primary blue-planet special">Minimize Food Waste</a>
+              <a href="#" class="btn btn-primary blue-planet special">Operate Efficiently</a>
+              <a href="#" class="btn btn-primary blue-planet special">Pollinate Education</a>
+            </div>
+            <!-- Primary Category Button Group End -->
+            <!-- Jumbotron Start -->
+            <div class="bg-image my-3 rounded-0" style="background-image: url('assets/img/bg.jpg'); background-size: cover;">
+              <div class="mask rounded-3 p-4" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="container-fluid py-4">
+                  <h1 class="display-5 text-light fw-bold">Embed Circularity</h1>
+                  <p class="col-md-8 text-light fs-5">When we use the term circular, we refer to our ability to keep materials in the economy in circulation and out of the environment. These solutions are focused on redesigning operations with circularity in mind through reducing the consumption of single-use plastics and other disposables, and expanding opportunities to reuse, recycle, and compost. An efficient circular system generates little to no waste. </p>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Jumbotron End -->
-          <!-- Secondary Category Button Group Start -->
-          <div class="d-flex gap-4 justify-content-start py-5">
-            <button id="recycleClick" class="btn btn-light second-active rounded-pill px-3" type="button">Recycling</button>
-            <button id="wasteClick" class="btn btn-light rounded-pill px-3" type="button">Waste Management</button>
-            <button class="btn btn-light rounded-pill px-3" type="button">Bulk Purchases</button>
-            <button class="btn btn-light rounded-pill px-3" type="button">Beverages</button>
-            <button class="btn btn-light rounded-pill px-3" type="button">Dining</button>
-            <button class="btn btn-light rounded-pill px-3" type="button">Catering</button>
-            <button class="btn btn-light rounded-pill px-3" type="button">Recycled Content</button>
-            <button class="btn btn-light rounded-pill px-3" type="button">Packaging</button>
-          </div>
-          <!-- Secondary Category Button Group End -->
-          <!-- Solution Card Grid Start -->
-          <div class="container-fluid">
-            <div id="optionCards" class="row row-cols-3 py-3">
-              
+            <!-- Jumbotron End -->
+            <!-- Secondary Category Button Group Start -->
+            <div class="d-flex gap-4 justify-content-start py-5" id="subCategories">
+              <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat active" type="button">Recycling</button>
+              <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Waste Management</button>
+              <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Bulk Purchases</button>
+              <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Beverages</button>
+              <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Dining</button>
+              <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Catering</button>
+              <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Recycled Content</button>
+              <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Packaging</button>
             </div>
+            <!-- Secondary Category Button Group End -->
+            <!-- Solution Card Grid Start -->
+            <div class="container-fluid">
+              <div id="optionCards" class="row row-cols-3 py-3">
+                
+              </div>
+            </div>
+            <!-- Solution Card Grid End -->
           </div>
-          <!-- Solution Card Grid End -->
+      </section>
+      <section class="col-3">
+        <div class="bg-body-tertiary h-100 p-4">
+          <h4>My Sustainability Plan</h4>
+          <hr>
+          <table id="example" class="display compact" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Sub Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>Embed Circularity</td>
+                  <td>Recycling : Printer cartridges (Office)</td>
+                </tr>
+                <tr>
+                  <td>Waste bins : Signage</td>
+                  <td>Embed Circularity</td>
+                </tr>
+                <tr>
+                  <td>Straws : Eco-friendly</td>
+                  <td>Embed Circularity</td>
+                </tr>
+                <tr>
+                  <td>On site farmer's market</td>
+                  <td>Source Sustainably</td>
+                </tr>
+                <tr>
+                  <td>Cage free eggs</td>
+                  <td>Source Sustainably</td>
+                </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Category</th>
+                <th>Sub Category</th>
+              </tr>
+          </tfoot>
+          </table>
+          <a href="javascript:void(0)" class="btn btn-secondary mt-3">View Cart</a>
         </div>
-      </div>
-      <div class="col-3 bg-body-tertiary">
+      </section>
 
-      </div>
     </main>
 
     <!-- Main Page End -->
@@ -157,6 +199,7 @@
     <!-- BootstrapJS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
     <!-- Custom JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/script.js" async defer></script>
   </body>
 </html>
