@@ -319,3 +319,13 @@ th.sorting_desc::after {
 .bg-alt {
   background-color: #A6A3A3
 }
+
+.rows-bg {
+  background-color: #f4f4f4;
+}
+
+.btn-light {
+  --bs-btn-active-bg: #007B8A !important;
+  --bs-btn-active-color: #FFF !important;
+  --bs-btn-active-border-color: #007B8A !important;
+}
