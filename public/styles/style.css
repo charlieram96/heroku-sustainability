@@ -213,7 +213,7 @@ h6 {
   letter-spacing: 2px;
 }
 
-p {
+p, li {
   font-family: 'gotham-light';
 }
 
