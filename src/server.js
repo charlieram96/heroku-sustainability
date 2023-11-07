@@ -3,6 +3,7 @@ require('dotenv').config();
 const client = require('smartsheet');
 const path = require('path');
 const fs = require('fs');
+const serverless = require('serverless-http');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -107,3 +108,5 @@ smartsheet.sheets.listSheets(options)
   .catch(function(error) {
     console.log(error);
   });
+
+  module.exports.handler = serverless(app);
