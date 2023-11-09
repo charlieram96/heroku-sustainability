@@ -293,40 +293,65 @@ const embed = {
   ]
 }
 
-var subCats = document.getElementById('subCategories');
+let typeVal = 0
+
+function findPos(el) {
+  const x = Array.from(el.parentNode.children).indexOf(el)
+  typeVal = x
+  for(var i = 0; i < activeButton.length; i++) {
+    activeButton[i].addEventListener('click', function() {
+      var current = document.getElementsByClassName('active');
+      current[0].className = current[0].className.replace(' active', '');
+      this.className += ' active';
+      
+      console.log(typeVal);
+      showEmbed(typeVal);
+    });
+  }
+  console.log(x) 
+}
+
+let categories = document.getElementById('categories');
+let actCat = document.getElementsByClassName('act-cat');
+let catButton = document.getElementById('catButton');
+let catVal = 'embed';
+
+for (let i =0; i < actCat.length; i++) {
+  actCat[i].addEventListener('click', function() {
+    var current = document.getElementsByClassName('active');
+    current[0].className = current[0].className.replace(' active', '');
+    this.className += ' active';
+    let catVal = this.innerHTML;
+    console.log(catVal);
+    showCategories(catVal);
+  });
+}
+
+
+var subCats = document.getElementById('subCategories'); //outer div
 var activeButton = document.getElementsByClassName('sub-cat');
 var actBut = document.getElementById('actBut');
-let typeVal = 'Recycling';
 
-console.log(embed.features[1]);
 
 for(var i = 0; i < activeButton.length; i++) {
   activeButton[i].addEventListener('click', function() {
     var current = document.getElementsByClassName('active');
     current[0].className = current[0].className.replace(' active', '');
     this.className += ' active';
-    let typeVal = this.innerHTML;
+
     console.log(typeVal);
-    showRecycling(typeVal);
+    showEmbed(typeVal);
   });
 }
 
 if($('#actBut').hasClass('active')) {
-  showRecycling(typeVal);
+  showEmbed(typeVal);
   console.log(typeVal)
 }
 
-actBut.addEventListener('click', function(typeVal) {
-  if($('#actBut').hasClass('active')) {
-    showRecycling(typeVal);
-  } else {
-    document.getElementById('optionCards').style.display = 'none';
-  }
-});
 
 
-
-function showRecycling(typeVal) {
+function showEmbed(typeVal) {
   var optionCards = document.getElementById('optionCards');
   optionCards.innerHTML = '';
   
@@ -347,7 +372,7 @@ function showRecycling(typeVal) {
   }else if (typeVal == 'Packaging') {
     i=7;
   }else {
-    console.log('error');
+    console.log('error ',i);
   }
   var features = embed.features[i].properties;
   features.forEach(function(feature) {

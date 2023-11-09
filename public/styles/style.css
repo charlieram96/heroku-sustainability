@@ -223,17 +223,6 @@ h6 {
   letter-spacing: 2px;
 }
 
-.second-active {
-  background-color: #007B8A !important;
-  border-color: #007B8A !important;
-  border-radius: 0 !important;
-}
-
-.blue-planet {
-  background-color: #00416A !important;
-  border-color: #00416A !important;
-  border-radius: 0 !important;
-}
 
 .btn-group.special {
   display: flex;
@@ -276,6 +265,19 @@ h6 {
   color: #FFF;
   font-family: 'gotham-light';
 }
+
+.btn-primary:hover {
+  background-color: #007B8A;
+  border-color: #007B8A;
+  color: #FFF;
+}
+
+.btn-primary:active {
+  background-color: #00616e!important;
+  border-color: #00616e!important;
+  color: #FFF;
+}
+
 
 .btn-secondary {
   background-color: #007B8A;

@@ -95,12 +95,12 @@
             </div>
           </div>
           <!-- Primary Category Button Group Start -->
-          <div class="btn-group special mx-2">
-            <a href="javascript:void(0)" class="btn btn-primary second-active special" aria-current="page">Embed Circularity</a>
-            <a href="javascript:void(0)" class="btn btn-primary blue-planet special">Source Sustainably</a>
-            <a href="javascript:void(0)" class="btn btn-primary blue-planet special">Minimize Food Waste</a>
-            <a href="javascript:void(0)" class="btn btn-primary blue-planet special">Operate Efficiently</a>
-            <a href="javascript:void(0)" class="btn btn-primary blue-planet special">Pollinate Education</a>
+          <div class="btn-group special mx-2" id="categories">
+            <button id="catButton" class="btn btn-primary py-0 px-4 act-cat" type="button">Embed Circularity</button>
+            <button id="catButton" class="btn btn-primary py-0 px-4 act-cat" type="button">Source Sustainably</button>
+            <button id="catButton" class="btn btn-primary py-0 px-4 act-cat" type="button">Minimize Food Waste</button>
+            <button id="catButton" class="btn btn-primary py-0 px-4 act-cat" type="button">Operate Efficiently</button>
+            <button id="catButton" class="btn btn-primary py-0 px-4 act-cat" type="button">Training & Certificates</button>
           </div>
           <!-- Primary Category Button Group End -->
           <!-- Jumbotron Start -->
@@ -117,14 +117,14 @@
           <!-- Jumbotron End -->
           <!-- Secondary Category Button Group Start -->
           <div class="d-flex gap-4 justify-content-start py-5 mx-2" id="subCategories">
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat active" type="button">Recycling</button>
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Waste Management</button>
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Bulk Purchases</button>
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Beverages</button>
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Dining</button>
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Catering</button>
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Recycled Content</button>
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Packaging</button>
+            <button onclick="findPos(this)" id="actBut" class="btn btn-light rounded-pill px-3 sub-cat active" type="button">Recycling</button>
+            <button onclick="findPos(this)" id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Waste Management</button>
+            <button onclick="findPos(this)" id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Bulk Purchases</button>
+            <button onclick="findPos(this)" id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Beverages</button>
+            <button onclick="findPos(this)" id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Dining</button>
+            <button onclick="findPos(this)" id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Catering</button>
+            <button onclick="findPos(this)" id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Recycled Content</button>
+            <button onclick="findPos(this)" id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Packaging</button>
           </div>
           <!-- Secondary Category Button Group End -->
           <!-- Solution Card Grid Start -->
