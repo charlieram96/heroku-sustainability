@@ -95,17 +95,17 @@
             </div>
           </div>
           <!-- Primary Category Button Group Start -->
-          <div class="btn-group special mx-2">
-            <a href="javascript:void(0)" class="btn btn-primary second-active special" aria-current="page">Embed Circularity</a>
-            <a href="javascript:void(0)" class="btn btn-primary blue-planet special">Source Sustainably</a>
-            <a href="javascript:void(0)" class="btn btn-primary blue-planet special">Minimize Food Waste</a>
-            <a href="javascript:void(0)" class="btn btn-primary blue-planet special">Operate Efficiently</a>
-            <a href="javascript:void(0)" class="btn btn-primary blue-planet special">Pollinate Education</a>
+          <div class="btn-group d-flex flex-grow-1 mx-2">
+            <button onclick="catPos(this)" class="rounded-0 py-3 btn btn-primary act-cat" type="button">Embed Circularity</button>
+            <button onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Source Sustainably</button>
+            <button onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Minimize Food Waste</button>
+            <button onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Operate Efficiently</button>
+            <button onclick="catPos(this)" class="rounded-0 py-3 btn btn-primary" type="button">Pollinate Education</button>
           </div>
           <!-- Primary Category Button Group End -->
           <!-- Jumbotron Start -->
           <div class="bg-image mx-2 rounded-0" style="background-image: url('assets/img/bg.jpg'); background-size: cover;">
-            <div class="mask rounded-3 p-4" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="mask p-4" style="background-color: rgba(0, 0, 0, 0.6);">
               <div class="container-fluid py-4">
                 <h1 class="display-5 text-light fw-bold">Embed Circularity</h1>
                 <hr class="text-bg-dark w-50 p-0">
@@ -116,15 +116,7 @@
           </div>
           <!-- Jumbotron End -->
           <!-- Secondary Category Button Group Start -->
-          <div class="d-flex gap-4 justify-content-start py-5 mx-2" id="subCategories">
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat active" type="button">Recycling</button>
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Waste Management</button>
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Bulk Purchases</button>
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Beverages</button>
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Dining</button>
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Catering</button>
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Recycled Content</button>
-            <button id="actBut" class="btn btn-light rounded-pill px-3 sub-cat" type="button">Packaging</button>
+          <div id="subCategoryButtons" class="d-flex gap-4 justify-content-start py-5 mx-2">
           </div>
           <!-- Secondary Category Button Group End -->
           <!-- Solution Card Grid Start -->
@@ -142,35 +134,45 @@
           <hr>
           <table id="builderTable" class="compact" style="width:100%">
             <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Sub Category</th>
-                </tr>
+              <tr>
+                <th>Category</th>
+                <th></th>
+                <th>Cost</th>
+                <th></th>
+              </tr>
             </thead>
             <tbody>
-                <tr>
-                  <td>Embed Circularity</td>
-                  <td><span class="d-flex justify-content-between">Recycling : Printer cartridges (Office)<img src="assets/img/trash.svg"></span></td>
-                </tr>
-                <tr>
-                  <td>Embed Circularity</td>
-                  <td><span class="d-flex justify-content-between">Waste bins : Signage<img src="assets/img/trash.svg"></span></td>
-                </tr>
-                <tr>
-                  <td>Embed Circularity</td>
-                  <td><span class="d-flex justify-content-between">Straws : Eco-friendly<img src="assets/img/trash.svg"></span></td>
-                </tr>
-                <tr>
-                  <td>Source Sustainably</td>
-                  <td><span class="d-flex justify-content-between">On site farmer's market<img src="assets/img/trash.svg"></span></td>
-                </tr>
-                <tr>
-                  <td>Source Sustainably</td>
-                  <td><span class="d-flex justify-content-between">Cage free eggs<img src="assets/img/trash.svg"></span></td>
-                </tr>
+              <tr>
+                <td>Source Sustainably</td>
+                <td>Cage Free Eggs</td>
+                <td>4</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Source Sustainably</td>
+                <td>Hormone-free : Dairy products</td>
+                <td>3</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Source Sustainably</td>
+                <td>Hormone-free : Meat products</td>
+                <td>12</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Source Sustainably</td>
+                <td>Raised without antibiotics</td>
+                <td>7</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Source Sustainably</td>
+                <td>Sustainable seafood sourcing</td>
+                <td>8</td>
+                <td></td>
+              </tr>
             </tbody>
-            <tfoot>
-            </tfoot>
           </table>
           <a href="/checkout" class="w-100 rounded-pill btn btn-secondary mt-3">Review My Plan</a>
         </div>
@@ -188,7 +190,6 @@
                 <img src="assets/img/sustainability-logo.png" alt="Sustainability Builder" height="30">
               </a>
               <p class="text-body-secondary small mb-1 ms-2"><strong>© 2023 Aramark. All rights reserved.</strong></p>
-              <p class="text-body-secondary small ms-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
         
             <div class="col mb-3">
@@ -240,6 +241,7 @@
     <script src="https://cdn.datatables.net/rowgroup/1.4.1/js/dataTables.rowGroup.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
     <script src="assets/js/script.js" async defer></script>
-    <script src="assets/js/embed.js" async defer></script>
+    <script src="assets/js/builder.js" async defer></script>
+
   </body>
 </html>

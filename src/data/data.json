@@ -1,0 +1,859 @@
+{
+  "features":[
+    {
+      "properties":[
+        {
+          "subCategory": "Recycling",
+          "solutions": [
+            {
+              "category": "Embed Circularity",
+              "name": "Recycling : Full account",
+              "description": "Rather than sending all waste to the landfill, divert accepted materials for recycling.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$$<span class='text-white-50'>$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Recycling : E-waste (Office)",
+              "description": "Utilize a recycling solution for electronic waste, instead of sending it to the landfill.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$$<span class='text-white-50'>$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Recycling : Printer cartridges (Office)",
+              "description": "Utilize a recycling solution for printer ink cartridges, instead of sending them to the landfill.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$$<span class='text-white-50'>$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Terracycle",
+              "description": "Terracycle is a solution for difficult to recycle items that are not accepted in a traditional waste stream.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$$<span class='text-white-50'>$$</span></span></span>"],
+              "options": ["Single Source Collection Stream", "Multiple Source Collection Stream"],
+              "desOps": ["Terracycle is a solution for difficult to recycle items that are not accepted in a traditional waste stream.", "Terracycle is a solution for difficult to recycle items that are not accepted in a traditional waste stream.There are several different 'waste streams' you can choose from including candy and snack wrappers, gloves, and hotel amenties."]
+            }
+          ]
+        },
+        {
+          "subCategory": "Waste management",
+          "solutions": [
+            {
+              "category": "Embed Circularity",
+              "name": "Waste bins : Signage",
+              "description": "Label waste bins based on destination (landfill, recycle, compost), to ensure that consumers are properly sorting their waste.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$$<span class='text-white-50'>$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Waste system : Twin bins (landfill, recycle)",
+              "description": "Label waste bins based on destination (landfill, recycle, compost), to ensure that consumers are properly sorting their waste.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$<span class='text-white-50'>$$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Waste system : Triple bins (landfill, recycle, compost)",
+              "description": "Implement a triple waste bin system at every station - one for landfill, one for recycle, and one for compost.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$$<span class='text-white-50'>$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Intuitive AI- Oscar Sort",
+              "description": "Oscar Sort is a front of house tech solution to educate consumers on proper waste sorting. It also includes post consumer data tracking.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$$$<span class='text-white-50'>$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Waste audit",
+              "description": "Conduct a waste audit to analyze your waste stream and identify opportunities for waste reduction.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$<span class='text-white-50'>$$$$</span></span></span>"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Bulk purchases",
+          "solutions": [
+            {
+              "category": "Embed Circularity",
+              "name": "Bulk  : Condiments (FOH or catering)",
+              "description": "Provide bulk condiments in front of house instead of individual packets to cut down on single-use waste.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Bulk : Sugar in breakrooms",
+              "description": "Provide bulk sugar in breakrooms instead of individual packets.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Bulk : Convenience store products",
+              "description": "Utilize bulk products in convenience stores.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Beverages",
+          "solutions": [
+            {
+              "category": "Embed Circularity",
+              "name": "Straws : Eco-friendly",
+              "description": "Provide eco-friendly straws instead of plastic ones.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Straws : Eco-friendly straws (on request only)",
+              "description": "Only provide eco-friendly straws, and only when a consumer requests one.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Cups : Ball aluminum (instead of plastic)",
+              "description": "Use aluminum cups, which can be easily recycled, rather than plastic cups.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Cups : No lids in service",
+              "description": "Eliminate lids in service in order to reduce waste.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Cups : BYO program",
+              "description": "Patrons can bring their own cup to receive a discount for hot and/or cold beverages. *Local Heath Department approval may be necessary.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Cups : Supplied on site program",
+              "description": "Offer discounts to consumers that bring their own cup or mug.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "No plastic bottles : Aluminum and glass",
+              "description": "Only offer beverages in aluminum or glass bottles and cans instead of plastic bottles.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "No plastic bottles : Refill system",
+              "description": "Provide a refill system instead of plastic bottles.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Dining",
+          "solutions": [
+            {
+              "category": "Embed Circularity",
+              "name": "Durable smallwares",
+              "description": "Better smallwares to prevent breakage and reduce waste.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Single serve dispensers : Napkins",
+              "description": "Use single serve packaging dispensers instead of individually wrapped items.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Dining : Reusable to-go containers (deposit system)",
+              "description": "Provide reusable to-go containers instead of single-use containers, and charge a deposit for the container.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Dining : Reusable to-go containers (deposit system, on request only)",
+              "description": "Only provide reusable to-go containers, and only when a consumer requests one. Charge a deposit for the container.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Dining : Reusable to-go containers (deposit system, on request only)",
+              "description": "Only provide reusable to-go containers, and only when a consumer requests one. Charge a deposit for the container.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Dining : Reusable to-go containers (deposit system, on request only)",
+              "description": "Only provide reusable to-go containers, and only when a consumer requests one. Charge a deposit for the container.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Dining : Reusable to-go containers (deposit system, on request only)",
+              "description": "Only provide reusable to-go containers, and only when a consumer requests one. Charge a deposit for the container.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Dining : Reusable to-go containers (deposit system, on request only)",
+              "description": "Only provide reusable to-go containers, and only when a consumer requests one. Charge a deposit for the container.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Catering",
+          "solutions": [
+            {
+              "category": "Embed Circularity",
+              "name": "Catering : Zero waste / environmentally preferable",
+              "description": "Design catering programs to be zero waste or primarily use products with environmentally preferable specifications (fair trade, local, etc.).",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Recycled content",
+          "solutions": [
+            {
+              "category": "Embed Circularity",
+              "name": "Recycled content : Napkins",
+              "description": "Provide napkins made from post consumer content, which use less material overall.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Recycled content : Toilet paper",
+              "description": "Provide toilet paper made from post consumer content, which uses less material overall.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Recycled content : Paper towels",
+              "description": "Provide paper towels made from post consumer content, which use less material overall.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Recycled content : Uniforms",
+              "description": "Choose uniforms made from recycled content or certified organic cotton.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Packaging",
+          "solutions": [
+            {
+              "category": "Embed Circularity",
+              "name": "Compostable : To-go meals",
+              "description": "Provide compostable packaging for to-go meals.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Compostable : Meals in house",
+              "description": "Provide compostable packaging for meals in house.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Single use plastic : Elimination in service",
+              "description": "Eliminate single use plastic in service areas to cut down on packaging waste.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "No plastic bags : FOH",
+              "description": "Remove plastic bags from the front of house.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "No plastic bags : FOH and BOH",
+              "description": "Remove plastic bags from the front and back of house.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "No styrofoam (EPS)",
+              "description": "Eliminate the use of EPS (expanded polystyrene) in service.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Containers : Replace disposable with reusable",
+              "description": "Reusable containers replace disposable in operations.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            },
+            {
+              "category": "Embed Circularity",
+              "name": "Containers : Reusable rent & wash service",
+              "description": "Rent and wash reusable containers instead of using disposable containers.",
+              "lob": ["<span class='d-flex justify-content-between'><span style='margin-top: 3px;' class='badge bg-secondary'>Enterprise</span><span class='text-warning'>$$<span class='text-white-50'>$$$</span></span></span>"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "properties": [
+        {
+          "subCategory": "Local partnerships",
+          "solutions": [
+            {
+              "category": "Source Sustainably",
+              "name": "On site farmer's market",
+              "description": "Host a farmer's market on-site to support local farmers.",
+              "lob": ["Collegiate Hospitality", "Workplace Experience Group"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "CSA (community supported agriculture)",
+              "description": "Subscribe to a community-supported agriculture model of farming to receive fresh and local produce.",
+              "lob": ["Collegiate Hospitality", "Workplace Experience Group"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "Local restaurant concept",
+              "description": "Utilize local restaurants by having them come in for a rotation.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "Local farms/business partrnerships",
+              "description": "Engage in programming with local farms and businesses to cultivate relationships for local sourcing.",
+              "lob": ["Enterprise"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Growing on site",
+          "solutions": [
+            {
+              "category": "Source Sustainably",
+              "name": "Indoor farming (Babylon Micro Farm)",
+              "description": "Implement Babylon Micro Farms, which are hydroponic farms that allow the  user to grow their own leafy greens, herbs, micro-greens, and edible flowers inside on-site.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "On site garden",
+              "description": "Build a garden on-site to source fresh produce.",
+              "lob": ["Enterprise"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Sustainable ingredients",
+          "solutions": [
+            {
+              "category": "Source Sustainably",
+              "name": "Third party verified products",
+              "description": "Use third party verified products to ensure responsible sourcing. (Fair Trade, Organic, Humanely raised, etc)",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "Cage free eggs",
+              "description": "Aramark has a commitment to purchase only cage-free eggs by 2020 in the U.S. and globally by 2025.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "Sustainable seafood sourcing",
+              "description": "Aramark is committed to source 100% of contracted seafood from responsible sources by 2018.- by Enterprise guidelines",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "Hormone-free : Dairy products",
+              "description": "Source hormone-free dairy products.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "Hormone-free : Meat products",
+              "description": "Source hormone-free meat products.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "Raised without antibiotics",
+              "description": "Source animal products from farms that raise animals without antibiotics. (meat, dairy, etc.)",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "Non-dairy milk (default option)",
+              "description": "Set a non-dairy milk as the default option for consumers in order to reduce dairy consumption.",
+              "lob": ["Enterprise"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Menus",
+          "solutions": [
+            {
+              "category": "Source Sustainably",
+              "name": "Vegan : Grab-and-go",
+              "description": "Provide vegan options in grab-and-go areas.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "Vegan : Dining guide",
+              "description": "Provide a vegan dining guide for consumers.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "Plant-forward : Meal options",
+              "description": "Provide a variety of plant-forward options for consumers to reduce greenhouse gas emissions from food at your location.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "Plant-forward : Dedicated vegan/vegetarian station",
+              "description": "Have a dedicated vegan/vegetarian station.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "Low carbon : Coolfood meals",
+              "description": "Coolfood meals are meals certified by the World Resources Institute that meet both a carbon footprint and nutritional standard. Reach out to the Enterprise Sustainability Team to learn how you can implement Coolfood meals at your location (currently only available for Collegiate Hospitality, Healthcare+, and Workplace Hospitality LOBs).",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "Menu : Seasonal rotating",
+              "description": "Design your menu based on seasonal availability.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "Menu : Sustainable catering",
+              "description": "Design a catering menu that heavily features local or third party verified items.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Source Sustainably",
+              "name": "Menu : Plant-based catering",
+              "description": "NEW",
+              "lob": ["Enterprise"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "properties": [
+        {
+          "subCategory": "Food donation",
+          "solutions": [
+            {
+              "category": "Minimize Food Waste",
+              "name": "Food Donation Connection",
+              "description": "Food Donation Connection (FDC) is an Enterprise food donation program partner.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "On-campus / local food donation",
+              "description": "Donate excess food to either local or on-campus locations or a food bank. Please ensure local partnerships are approved via the Food Donation program website.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Food Recovery Network",
+              "description": "The Food Recovery Network is a Collegiate Hospitality specific food donation program.",
+              "lob": ["Collegiate Hospitality"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Goodr",
+              "description": "Goodr is a food donation program (MSA).",
+              "lob": ["Enterprise"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Reduce food waste",
+          "solutions": [
+            {
+              "category": "Minimize Food Waste",
+              "name": "Trayless Dining",
+              "description": "By removing trays from dining programs, you can save on energy and water. It can also help prevent food waste in an AYCTE setting.",
+              "lob": ["Collegiate Hospitality"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Food management process",
+              "description": "Aramark's Hospitality Enablement Program to support source reduction throughout the production process from start to finish.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Waste tracking : Manual",
+              "description": "Manually track and log pre-consumer waste (when/where/why) and enter the log into GMM.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Waste tracking : Enable",
+              "description": "Track pre-consumer waste in ENABLE technology (when/where/why).",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Waste tracking : LeanPath (BOH)",
+              "description": "Track pre-consumer waste with LeanPath technology (when/why/what). Additionally, some software includes the capability to photograph.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Waste tracking : LeanPath Spark (FOH)",
+              "description": "Track post-consumer waste with the LP Spark scale and consumer-facing display.",
+              "lob": ["Collegiate Hospitality"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Recycle food waste",
+          "solutions": [
+            {
+              "category": "Minimize Food Waste",
+              "name": "Composting : Pre-consumer (BOH)",
+              "description": "Rather than sending all waste to the landfill, compost food waste from back of house preparation.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Composting : FOH + BOH",
+              "description": "Rather than sending all waste to the landfill, compost food waste post service, from the front of house.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Composting : Pulper",
+              "description": "Invest in equipment that pulps food waste into smaller pieces, making it more ideal for composting processes and reducing its weight for hauling",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Food waste digester (ORCA)",
+              "description": "Invest in equipment (ORCA, for example) that digests food waste and produces an effluent that is then treated by wastewater treatment. Machines like ORCA can continuously be feed.",
+              "lob": ["Enterprise"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "properties": [
+        {
+          "subCategory": "Energy",
+          "solutions": [
+            {
+              "category": "Operate Efficiently",
+              "name": "On-site energy management program",
+              "description": "Aramark's Hospitality Enablement Program to support energy management throughout the production process from start to finish.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "High efficiency hand dryers in bathrooms",
+              "description": "Purchase high efficiency hand dryers when replacing old ones.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Source renewable energy",
+              "description": "Source renewable energy, whether from an offsite provider, through onsite installation, or purchasing renewable energy credits (RECs) to cut down on GHG emissions from energy use.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Utilize EnergyStar appliances",
+              "description": "Purchase EnergyStar rated appliances when replacing equipment, to maximize operating efficiency.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Energy audit",
+              "description": "Conduct an energy audit to assess the energy efficiency of your building.",
+              "lob": ["Enterprise"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Water",
+          "solutions": [
+            {
+              "category": "Operate Efficiently",
+              "name": "Faucets : Install aerators",
+              "description": "Use a faucet aerator to limit water flow in order to conserve energy and waste.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Faucets : Low flow (EPA)",
+              "description": "Purchase low flow faucets and sinks, or EPA WaterSense certified products when replacing equipment in order to maximize water usage efficiency.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Grey water : Rain capture system",
+              "description": "Implement a rainwater capture system and use the grey water in your building.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Boss Defrost",
+              "description": "Use a Boss Defrost to mimic 'slacking' (the running water method of defrosting) in order to reduce water use by 98.5%.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Water audit",
+              "description": "Conduct a water audit to account for all of the water in a water system to understand uses and losses.",
+              "lob": ["Enterprise"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Lighting & Temperature",
+          "solutions": [
+            {
+              "category": "Operate Efficiently",
+              "name": "Lighting : LED",
+              "description": "Replace incandescent, halogen, or fluorescent bulbs with LEDs to maximize energy efficiency.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Lighting : Motion sensor",
+              "description": "Switch to motion sensor lighting to reduce electricity consumption.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Lighting & temp : Control system",
+              "description": "Employ a lighting and temperature control system to maximize utility use efficiency.",
+              "lob": ["Enterprise"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Metrics",
+          "solutions": [
+            {
+              "category": "Operate Efficiently",
+              "name": "Utilities : Metrics displayed",
+              "description": "Implement a dashboard on site that displays the utility metrics of your location.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Utilities : Monitor & track use",
+              "description": "Monitor and track utilities use to identify trends and establish baselines to improve upon.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "GHG : Reduction KPI tracking",
+              "description": "Track greenhouse gas emissions and implement a reduction plan.",
+              "lob": ["Enterprise"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Programming",
+          "solutions": [
+            {
+              "category": "Operate Efficiently",
+              "name": "Conservation signage",
+              "description": "Hang signage around the back of house to encourage the conservation of resources like water and electricity. Example signage locations could be by light switches or sinks.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Green cleaning program",
+              "description": "Use environmentally preferable products for cleaning.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Blue cleaning program",
+              "description": "Use chemical-free water-based products for cleaning.",
+              "lob": ["Enterprise"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "properties": [
+        {
+          "subCategory": "Training",
+          "solutions": [
+            {
+              "category": "Pollinate Education",
+              "name": "New hires",
+              "description": "Make sustainability training mandatory for all new hires to ensure that all employees are aware of sustainability goals and practices.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Huddles",
+              "description": "Implement sustainability training during pre or post shift huddles.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Engagement sessions",
+              "description": "Host ongoing sustainability training through engagement sessions.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "On site staff SME",
+              "description": "Hire an on site sustainability staff person.",
+              "lob": ["Enterprise"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Events",
+          "solutions": [
+            {
+              "category": "Pollinate Education",
+              "name": "Education events (site-based)",
+              "description": "Host sustainability themed educational events to encourage sustainability and inform consumers on site.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Themed meals or LTO",
+              "description": "Host a sustainability themed meal or limited time offer.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Weigh the Waste",
+              "description": "Host a weigh the waste event by weighing all the waste collected from a day, in order to collect data on the location's waste output.",
+              "lob": ["Enterprise"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Marketing",
+          "solutions": [
+            {
+              "category": "Pollinate Education",
+              "name": "Social media / location website",
+              "description": "Highlight sustainable practices that are being employed at your location on social media or on the location website.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Marketing campaign : Sip Smarter",
+              "description": "Sip Smarter is Enterprise Sustainability's single use plastic straw reduction strategy.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Marketing campaign : Choose to Reuse",
+              "description": "Use best practices to engage consumers in disposables waste reduction.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Local marketing",
+              "description": "Implement signage to highlight local producers.",
+              "lob": ["Enterprise"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Reporting",
+          "solutions": [
+            {
+              "category": "Pollinate Education",
+              "name": "Metrics at POS / in location",
+              "description": "Highlight your sustainability metrics and programming at point of sale or in other places at your location.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Non-food purchases (by spend or volume)",
+              "description": "Track your sustainable non-food purchases either by spend or by volume.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Food purchases (by spend or volume)",
+              "description": "Track your sustainable food purchases either by spend or by volume.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Food emissions",
+              "description": "Track your food emissions to understand the impact of your food purchases.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Local purchases",
+              "description": "Through the Aramark Local & Regional sourcing portal, report and track your local purchases.",
+              "lob": ["Enterprise"]
+            }
+          ]
+        },
+        {
+          "subCategory": "Certifications",
+          "solutions": [
+            {
+              "category": "Pollinate Education",
+              "name": "Fair Trade : Campus designation",
+              "description": "Fair Trade Campus designations are awarded to campuses that meet three specific requirements and they distinguish institutes as leaders in social justice.",
+              "lob": ["Collegiate Hospitality"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "AASHE Stars",
+              "description": "AASHE Sustainability, Tracking, Assessment & Rating System is a self-reporting framework for CH LOBs to measure their sustainability performance.",
+              "lob": ["Collegiate Hospitality"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Sustainable Seafood Sourcing",
+              "description": "Paid certification to sell MSC certified seafood.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "WELL",
+              "description": "WELL certifications recognize buildings designed and constructed to support the health and well-being of their occupants.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "USGBC LEED",
+              "description": "The U.S. Green Building Council offers LEED certifications for buildings that meet rigorous environmental requirements. There are four different levels of certification depending on the number of points awarded.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "TRUE Zero Waste",
+              "description": "TRUE certifications are offered to physical facilities and their operations. A TRUE project's goal is to divert all solid waste from the landfill, incineration, and the environment. Facilities achieve certification if they meet the seven minimum program requirements and attain at least 31 points on the TRUE application form.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Green Restaurant Association",
+              "description": "Make your location a Certified Green Restaurant through the Green Restaurant Association.",
+              "lob": ["Enterprise"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -85,7 +85,7 @@
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: system-ui, -apple-system, "gotham-book";
+  --bs-font-sans-serif: "gotham-light";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -223,24 +223,11 @@ h6 {
   letter-spacing: 2px;
 }
 
-.second-active {
-  background-color: #007B8A !important;
-  border-color: #007B8A !important;
-  border-radius: 0 !important;
-}
-
-.blue-planet {
-  background-color: #00416A !important;
-  border-color: #00416A !important;
-  border-radius: 0 !important;
-}
-
-.btn-group.special {
-  display: flex;
-}
-
-.special .btn {
-  flex: 1
+.act-cat {
+  background-color: #007B8A!important;
+  border-color: #007B8A!important;
+  color: #FFF;
+  font-family: "gotham-medium"!important;
 }
 
 .card-bg {
@@ -276,6 +263,19 @@ h6 {
   color: #FFF;
   font-family: 'gotham-light';
 }
+
+.btn-primary:hover {
+  background-color: #007B8A;
+  border-color: #007B8A;
+  color: #FFF;
+}
+
+.btn-primary:active {
+  background-color: #00616e!important;
+  border-color: #00616e!important;
+  color: #FFF;
+}
+
 
 .btn-secondary {
   background-color: #007B8A;
@@ -328,4 +328,8 @@ th.sorting_desc::after {
   --bs-btn-active-bg: #007B8A !important;
   --bs-btn-active-color: #FFF !important;
   --bs-btn-active-border-color: #007B8A !important;
+}
+
+img.pointer:hover {
+  cursor: pointer;
 }
