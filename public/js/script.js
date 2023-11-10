@@ -2,11 +2,17 @@ $.extend( $.fn.dataTable.defaults, {
   searching: false,
   paging:  false,
   info: false,
+  stateSave: true,
+  serverSide: true,
+  ajax: {
+    url: '/src/data/defaults.json',
+    type: 'POST'
+  },
 } );
 
 
 const table = $('#builderTable').DataTable({
-  ajax: '/src/data/defaults.json',
+
   columns: [
     {data: 'category'},
     {data: 'subcategory'},

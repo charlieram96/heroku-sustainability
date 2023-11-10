@@ -445,51 +445,413 @@
     {
       "properties": [
         {
-          "subCategory": "Food donation"
+          "subCategory": "Food donation",
+          "solutions": [
+            {
+              "category": "Minimize Food Waste",
+              "name": "Food Donation Connection",
+              "description": "Food Donation Connection (FDC) is an Enterprise food donation program partner.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "On-campus / local food donation",
+              "description": "Donate excess food to either local or on-campus locations or a food bank. Please ensure local partnerships are approved via the Food Donation program website.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Food Recovery Network",
+              "description": "The Food Recovery Network is a Collegiate Hospitality specific food donation program.",
+              "lob": ["Collegiate Hospitality"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Goodr",
+              "description": "Goodr is a food donation program (MSA).",
+              "lob": ["Enterprise"]
+            }
+          ]
         },
         {
-          "subCategory": "Reduce food waste"
+          "subCategory": "Reduce food waste",
+          "solutions": [
+            {
+              "category": "Minimize Food Waste",
+              "name": "Trayless Dining",
+              "description": "By removing trays from dining programs, you can save on energy and water. It can also help prevent food waste in an AYCTE setting.",
+              "lob": ["Collegiate Hospitality"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Food management process",
+              "description": "Aramark's Hospitality Enablement Program to support source reduction throughout the production process from start to finish.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Waste tracking : Manual",
+              "description": "Manually track and log pre-consumer waste (when/where/why) and enter the log into GMM.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Waste tracking : Enable",
+              "description": "Track pre-consumer waste in ENABLE technology (when/where/why).",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Waste tracking : LeanPath (BOH)",
+              "description": "Track pre-consumer waste with LeanPath technology (when/why/what). Additionally, some software includes the capability to photograph.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Waste tracking : LeanPath Spark (FOH)",
+              "description": "Track post-consumer waste with the LP Spark scale and consumer-facing display.",
+              "lob": ["Collegiate Hospitality"]
+            }
+          ]
         },
         {
-          "subCategory": "Recycle food waste"
+          "subCategory": "Recycle food waste",
+          "solutions": [
+            {
+              "category": "Minimize Food Waste",
+              "name": "Composting : Pre-consumer (BOH)",
+              "description": "Rather than sending all waste to the landfill, compost food waste from back of house preparation.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Composting : FOH + BOH",
+              "description": "Rather than sending all waste to the landfill, compost food waste post service, from the front of house.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Composting : Pulper",
+              "description": "Invest in equipment that pulps food waste into smaller pieces, making it more ideal for composting processes and reducing its weight for hauling",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Minimize Food Waste",
+              "name": "Food waste digester (ORCA)",
+              "description": "Invest in equipment (ORCA, for example) that digests food waste and produces an effluent that is then treated by wastewater treatment. Machines like ORCA can continuously be feed.",
+              "lob": ["Enterprise"]
+            }
+          ]
         }
       ]
     },
     {
       "properties": [
         {
-          "subCategory": "Energy"
+          "subCategory": "Energy",
+          "solutions": [
+            {
+              "category": "Operate Efficiently",
+              "name": "On-site energy management program",
+              "description": "Aramark's Hospitality Enablement Program to support energy management throughout the production process from start to finish.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "High efficiency hand dryers in bathrooms",
+              "description": "Purchase high efficiency hand dryers when replacing old ones.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Source renewable energy",
+              "description": "Source renewable energy, whether from an offsite provider, through onsite installation, or purchasing renewable energy credits (RECs) to cut down on GHG emissions from energy use.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Utilize EnergyStar appliances",
+              "description": "Purchase EnergyStar rated appliances when replacing equipment, to maximize operating efficiency.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Energy audit",
+              "description": "Conduct an energy audit to assess the energy efficiency of your building.",
+              "lob": ["Enterprise"]
+            }
+          ]
         },
         {
-          "subCategory": "Water"
+          "subCategory": "Water",
+          "solutions": [
+            {
+              "category": "Operate Efficiently",
+              "name": "Faucets : Install aerators",
+              "description": "Use a faucet aerator to limit water flow in order to conserve energy and waste.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Faucets : Low flow (EPA)",
+              "description": "Purchase low flow faucets and sinks, or EPA WaterSense certified products when replacing equipment in order to maximize water usage efficiency.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Grey water : Rain capture system",
+              "description": "Implement a rainwater capture system and use the grey water in your building.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Boss Defrost",
+              "description": "Use a Boss Defrost to mimic 'slacking' (the running water method of defrosting) in order to reduce water use by 98.5%.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Water audit",
+              "description": "Conduct a water audit to account for all of the water in a water system to understand uses and losses.",
+              "lob": ["Enterprise"]
+            }
+          ]
         },
         {
-          "subCategory": "Lighting & Temperature"
+          "subCategory": "Lighting & Temperature",
+          "solutions": [
+            {
+              "category": "Operate Efficiently",
+              "name": "Lighting : LED",
+              "description": "Replace incandescent, halogen, or fluorescent bulbs with LEDs to maximize energy efficiency.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Lighting : Motion sensor",
+              "description": "Switch to motion sensor lighting to reduce electricity consumption.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Lighting & temp : Control system",
+              "description": "Employ a lighting and temperature control system to maximize utility use efficiency.",
+              "lob": ["Enterprise"]
+            }
+          ]
         },
         {
-          "subCategory": "Metrics"
+          "subCategory": "Metrics",
+          "solutions": [
+            {
+              "category": "Operate Efficiently",
+              "name": "Utilities : Metrics displayed",
+              "description": "Implement a dashboard on site that displays the utility metrics of your location.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Utilities : Monitor & track use",
+              "description": "Monitor and track utilities use to identify trends and establish baselines to improve upon.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "GHG : Reduction KPI tracking",
+              "description": "Track greenhouse gas emissions and implement a reduction plan.",
+              "lob": ["Enterprise"]
+            }
+          ]
         },
         {
-          "subCategory": "Programming"
+          "subCategory": "Programming",
+          "solutions": [
+            {
+              "category": "Operate Efficiently",
+              "name": "Conservation signage",
+              "description": "Hang signage around the back of house to encourage the conservation of resources like water and electricity. Example signage locations could be by light switches or sinks.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Green cleaning program",
+              "description": "Use environmentally preferable products for cleaning.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Operate Efficiently",
+              "name": "Blue cleaning program",
+              "description": "Use chemical-free water-based products for cleaning.",
+              "lob": ["Enterprise"]
+            }
+          ]
         }
       ]
     },
     {
       "properties": [
         {
-          "subCategory": "Training"
+          "subCategory": "Training",
+          "solutions": [
+            {
+              "category": "Pollinate Education",
+              "name": "New hires",
+              "description": "Make sustainability training mandatory for all new hires to ensure that all employees are aware of sustainability goals and practices.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Huddles",
+              "description": "Implement sustainability training during pre or post shift huddles.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Engagement sessions",
+              "description": "Host ongoing sustainability training through engagement sessions.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "On site staff SME",
+              "description": "Hire an on site sustainability staff person.",
+              "lob": ["Enterprise"]
+            }
+          ]
         },
         {
-          "subCategory": "Events"
+          "subCategory": "Events",
+          "solutions": [
+            {
+              "category": "Pollinate Education",
+              "name": "Education events (site-based)",
+              "description": "Host sustainability themed educational events to encourage sustainability and inform consumers on site.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Themed meals or LTO",
+              "description": "Host a sustainability themed meal or limited time offer.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Weigh the Waste",
+              "description": "Host a weigh the waste event by weighing all the waste collected from a day, in order to collect data on the location's waste output.",
+              "lob": ["Enterprise"]
+            }
+          ]
         },
         {
-          "subCategory": "Marketing"
+          "subCategory": "Marketing",
+          "solutions": [
+            {
+              "category": "Pollinate Education",
+              "name": "Social media / location website",
+              "description": "Highlight sustainable practices that are being employed at your location on social media or on the location website.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Marketing campaign : Sip Smarter",
+              "description": "Sip Smarter is Enterprise Sustainability's single use plastic straw reduction strategy.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Marketing campaign : Choose to Reuse",
+              "description": "Use best practices to engage consumers in disposables waste reduction.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Local marketing",
+              "description": "Implement signage to highlight local producers.",
+              "lob": ["Enterprise"]
+            }
+          ]
         },
         {
-          "subCategory": "Reporting"
+          "subCategory": "Reporting",
+          "solutions": [
+            {
+              "category": "Pollinate Education",
+              "name": "Metrics at POS / in location",
+              "description": "Highlight your sustainability metrics and programming at point of sale or in other places at your location.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Non-food purchases (by spend or volume)",
+              "description": "Track your sustainable non-food purchases either by spend or by volume.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Food purchases (by spend or volume)",
+              "description": "Track your sustainable food purchases either by spend or by volume.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Food emissions",
+              "description": "Track your food emissions to understand the impact of your food purchases.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Local purchases",
+              "description": "Through the Aramark Local & Regional sourcing portal, report and track your local purchases.",
+              "lob": ["Enterprise"]
+            }
+          ]
         },
         {
-          "subCategory": "Certifications"
+          "subCategory": "Certifications",
+          "solutions": [
+            {
+              "category": "Pollinate Education",
+              "name": "Fair Trade : Campus designation",
+              "description": "Fair Trade Campus designations are awarded to campuses that meet three specific requirements and they distinguish institutes as leaders in social justice.",
+              "lob": ["Collegiate Hospitality"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "AASHE Stars",
+              "description": "AASHE Sustainability, Tracking, Assessment & Rating System is a self-reporting framework for CH LOBs to measure their sustainability performance.",
+              "lob": ["Collegiate Hospitality"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Sustainable Seafood Sourcing",
+              "description": "Paid certification to sell MSC certified seafood.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "WELL",
+              "description": "WELL certifications recognize buildings designed and constructed to support the health and well-being of their occupants.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "USGBC LEED",
+              "description": "The U.S. Green Building Council offers LEED certifications for buildings that meet rigorous environmental requirements. There are four different levels of certification depending on the number of points awarded.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "TRUE Zero Waste",
+              "description": "TRUE certifications are offered to physical facilities and their operations. A TRUE project's goal is to divert all solid waste from the landfill, incineration, and the environment. Facilities achieve certification if they meet the seven minimum program requirements and attain at least 31 points on the TRUE application form.",
+              "lob": ["Enterprise"]
+            },
+            {
+              "category": "Pollinate Education",
+              "name": "Green Restaurant Association",
+              "description": "Make your location a Certified Green Restaurant through the Green Restaurant Association.",
+              "lob": ["Enterprise"]
+            }
+          ]
         }
       ]
     }
