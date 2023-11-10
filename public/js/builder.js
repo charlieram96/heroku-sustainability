@@ -7,6 +7,7 @@ fetch('/src/data/data.json')
   subCategories = data;
   createSubCategories(categoryIndex);
   showSolutions(categoryIndex, typeVal);
+  showCategoryDescription(categoryIndex);
 });
 
 //on click of category button, change active class and show subcategories
@@ -32,6 +33,7 @@ function catPos(el) {
   categoryIndex = i
   createSubCategories(categoryIndex);
   showSolutions(categoryIndex, typeVal);
+  showCategoryDescription(categoryIndex);
 }
 
 function subPos(el) {
@@ -67,4 +69,16 @@ function showSolutions(categoryIndex, typeVal) {
     '<button onclick="return addRow(\'' + feature.category + '\',\'' + feature.name +'\')" class="btn btn-light btn-sm rounded-pill px-3" type="button" data-bs-toggle="button" aria-pressed="true">Select</button>' +
     '</div></div></div></div>'
   });  
+}
+
+function  showCategoryDescription(categoryIndex) {
+  var categoryDescription = document.getElementById('categoryDescription');
+  categoryDescription.innerHTML = '';
+  var feature = subCategories.features[categoryIndex];
+  console.log(feature.category);
+  categoryDescription.innerHTML += 
+  '<h1 class="display-5 text-light fw-bold">' + feature.category + '</h1>' +
+  '<hr class="text-bg-dark w-50 p-0">' +
+  '<h6 class="text-light">Reduce Single-Use Plastics.</h6>' +
+  '<p class="col-md-8 text-light fs-6">' + feature.description + '</p>'
 }
