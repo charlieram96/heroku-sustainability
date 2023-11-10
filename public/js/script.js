@@ -3,11 +3,7 @@ $.extend( $.fn.dataTable.defaults, {
   paging:  false,
   info: false,
   stateSave: true,
-  serverSide: true,
-  ajax: {
-    url: '/src/data/defaults.json',
-    type: 'POST'
-  },
+
 } );
 
 
