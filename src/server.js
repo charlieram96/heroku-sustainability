@@ -24,6 +24,14 @@ app.get('/src/data/sheetInfo.json', (req, res) => {
   res.sendFile(path.join(__dirname, 'data/sheetInfo.json'));
 });
 
+app.get('/src/data/data.json', (req, res) => {
+  res.sendFile(path.join(__dirname, 'data/data.json'));
+});
+
+app.get('/src/data/defaults.json', (req, res) => {
+  res.sendFile(path.join(__dirname, 'data/defaults.json'));
+});
+
 app.use('/assets', express.static(path.join(__dirname, '../public')));
 
 app.listen(PORT, HOST, () => {

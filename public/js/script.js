@@ -1,11 +1,3 @@
-$(document).ready(function() {
-  var allData;
-
-  $.getJSON('/src/data/sheetInfo.json', function(data) {
-    allData = data;
-  });
-});
-
 $.extend( $.fn.dataTable.defaults, {
   searching: false,
   paging:  false,
@@ -13,17 +5,49 @@ $.extend( $.fn.dataTable.defaults, {
 } );
 
 
-new DataTable('#builderTable', {
+const table = $('#builderTable').DataTable({
+  ajax: '/src/data/defaults.json',
+  columns: [
+    {data: 'category'},
+    {data: 'subcategory'},
+    {data: 'cost', render: DataTable.render.number(null,null,0,'$')},
+    {data: null, className: 'dt-center editor-delete', orderable: false, defaultContent: '<img class="icon-delete pointer" src="/assets/img/trash.svg">'},
+  ],
   columnDefs: [
     {
-      target: 0,
+      targets: [0, 2],
       visible: false
     }
   ],
-  order: [[ 1, 'desc' ]],
+  order: [[0, 'asc'],[ 1, 'asc' ]],
   rowGroup: {
-    dataSrc: 0,
+    dataSrc: 'category',
   }
-})
+});
 
+$('#builderTable tbody').on('click', 'img.icon-delete', function () {
+  table
+    .row($(this).parents('tr'))
+    .remove()
+    .draw();
+});
 
+function addRow(category, solution) {
+
+  var rowItems = {
+    "category": category,
+    "subcategory": solution,
+    "cost": 0
+  }
+
+  if ( table.column(1).data().toArray().indexOf(rowItems.subcategory) === -1 ) {
+    table.row.add(rowItems).draw();
+  } else {
+    table.rows(function (idx, data, node) {
+      return data.subcategory === rowItems.subcategory ? true : false;
+    })
+    .remove()
+    .draw();
+  }
+  
+}
