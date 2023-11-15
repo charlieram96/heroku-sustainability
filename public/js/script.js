@@ -2,13 +2,23 @@ $.extend( $.fn.dataTable.defaults, {
   searching: false,
   paging:  false,
   info: false,
-  stateSave: true,
+  extend: 'savedStates',
+    config: {
+      save: true,
+      create: true,
+    }
+});
 
-} );
+const checkoutTable = $('#checkoutTable').DataTable({
+  columns: [
+    {data: 'category'},
+    {data: 'subcategory'},
+    {data: 'cost', render: DataTable.render.number(null,null,0,'$')},
+  ],
+});
 
 
 const table = $('#builderTable').DataTable({
-
   columns: [
     {data: 'category'},
     {data: 'subcategory'},
@@ -27,6 +37,9 @@ const table = $('#builderTable').DataTable({
   }
 });
 
+table.stateRestore.state("builderTable").save();
+
+
 $('#builderTable tbody').on('click', 'img.icon-delete', function () {
   table
     .row($(this).parents('tr'))
@@ -44,6 +57,7 @@ function addRow(category, solution) {
 
   if ( table.column(1).data().toArray().indexOf(rowItems.subcategory) === -1 ) {
     table.row.add(rowItems).draw();
+
   } else {
     table.rows(function (idx, data, node) {
       return data.subcategory === rowItems.subcategory ? true : false;
@@ -51,5 +65,6 @@ function addRow(category, solution) {
     .remove()
     .draw();
   }
+
   
 }
