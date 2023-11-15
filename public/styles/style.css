@@ -333,3 +333,29 @@ th.sorting_desc::after {
 img.pointer:hover {
   cursor: pointer;
 }
+
+.contain{
+  max-width:750px;
+  margin: 0 auto;
+}
+
+.big-block{
+  overflow:hidden;
+  height:65px;
+ background: -webkit-linear-gradient(bottom, transparent, #FFF 25px);
+ -webkit-background-clip:text;
+ -webkit-text-fill-color:transparent;
+ text-align:justify;
+ &.expanded{
+  height:100%;
+   -webkit-text-fill-color:#FFF;
+ }
+}
+
+  #expand{
+    display:block;
+    margin:0 auto;
+    Background:#535054;
+    color:white;
+    font-weight:bold;
+  }

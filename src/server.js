@@ -20,12 +20,9 @@ app.get('/checkout', (req, res) => {
   res.sendFile(path.join(__dirname, 'pages/checkout.html'));
 });
 
-app.get('/src/data/sheetInfo.json', (req, res) => {
-  res.sendFile(path.join(__dirname, 'data/sheetInfo.json'));
-});
 
-app.get('/src/data/data.json', (req, res) => {
-  res.sendFile(path.join(__dirname, 'data/data.json'));
+app.get('/src/data/final-data.json', (req, res) => {
+  res.sendFile(path.join(__dirname, 'data/final-data.json'));
 });
 
 app.get('/src/data/defaults.json', (req, res) => {
@@ -73,45 +70,81 @@ var options = {
 };
  
 
+
+//
+// NEW WORK FROM HERE ON 
+//
+
 smartsheet.sheets.listSheets(options)
-  .then(function (result) {
-    var sheetId = process.env.SMARTSHEET_SHEET_ID;  // Sustainability Source Data
+.then(function (result) {
+  var sheetId = process.env.SMARTSHEET_SHEET_ID; 
 
-    smartsheet.sheets.getSheet({id: sheetId})
-      .then(function(sheetInfo) {
-        fs.writeFile('src/data/sheetInfo.json', JSON.stringify(sheetInfo), function(err) {
-          sheetInfo.columns.forEach(function(column) {
-            columnMap[column.title] = column.id;
-          });
-          
-          // Accumulate rows needing update here
-          var parentRows = [];
+  smartsheet.sheets.getSheet({id: sheetId})
+    .then(function(sheetInfo) {
 
-          // Evaluate each row in sheet
-          sheetInfo.rows.forEach(function(row) {
-              let rowToReturn = evaluateRowAndBuildParentList(row);
-              if (rowToReturn)
-                parentRows.push(rowToReturn);
-          });
-
-          if (parentRows.length == 0) {
-            console.log("No Parent Rows", parentRows.length);
-          } else {
-            fs.writeFile('src/data/parentCategory.json', JSON.stringify(parentRows), function(err) {
-            console.log("Parent Rows: " + parentRows);
-            if (err) throw err;
-              console.log('Categories Saved!');
-            });
-          }
-          if (err) throw err;
-          console.log('All Data Saved!');
-        });
-
-      })
-      .catch(function(error) {
-        console.log(error);
+      sheetInfo.columns.forEach(function(column) {
+        columnMap[column.title] = column.id;
       });
-  })
-  .catch(function(error) {
-    console.log(error);
+
+      let transformedData = sheetToJSON(sheetInfo);
+
+      fs.writeFile('src/data/final-data.json', JSON.stringify(transformedData, null, 2), function(err) {
+        if (err) {
+          console.error('Error saving transformed data:', err);
+          return;
+        }
+        console.log('Transformed data saved to final-data.json');
+      });
+
+    })
+    .catch(function(error) {
+      console.error('Error fetching sheet data:', error);
+    });
+})
+.catch(function(error) {
+  console.error('Error listing sheets:', error);
+});
+
+function sheetToJSON(sheetInfo) {
+  let finalData = { features: [] };
+  let featureMap = {};
+  let subCategoryMap = {};
+
+  sheetInfo.rows.forEach(row => {
+      let cells = row.cells;
+      let level = cells[1].value; 
+
+      if (level === 0) {
+          let feature = {
+              category: cells[0].displayValue,
+              description: cells[5].displayValue,
+              properties: []
+          };
+          featureMap[row.id] = feature;
+          finalData.features.push(feature);
+      } else if (level === 1) {
+          let parentFeature = featureMap[row.parentId];
+          if (parentFeature) {
+              let property = {
+                  subCategory: cells[0].displayValue,
+                  solutions: []
+              };
+              parentFeature.properties.push(property);
+              subCategoryMap[row.id] = property;
+          }
+      } else if (level === 2) {
+          let parentProperty = subCategoryMap[row.parentId];
+          if (parentProperty) {
+              let lobArray = cells[7].displayValue ? cells[7].displayValue.split(',').map(item => item.trim()) : [];
+              let solution = {
+                  name: cells[0].displayValue,
+                  description: cells[5].displayValue,
+                  lob: lobArray
+              };
+              parentProperty.solutions.push(solution);
+          }
+      }
   });
+
+  return finalData;
+}

@@ -37,7 +37,7 @@ const table = $('#builderTable').DataTable({
   }
 });
 
-table.stateRestore.state("builderTable").save();
+// table.stateRestore.state("builderTable").save();
 
 
 $('#builderTable tbody').on('click', 'img.icon-delete', function () {

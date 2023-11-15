@@ -1,7 +1,7 @@
 let subCategories = null;
 let typeVal = 0
 let categoryIndex = 0
-fetch('/src/data/data.json')
+fetch('/src/data/final-data.json')
 .then(response => response.json())
 .then(data => {
   subCategories = data;
@@ -9,6 +9,8 @@ fetch('/src/data/data.json')
   showSolutions(categoryIndex, typeVal);
   showCategoryDescription(categoryIndex);
 });
+
+
 
 //on click of category button, change active class and show subcategories
 function createSubCategories(categoryIndex) {
@@ -46,29 +48,47 @@ function subPos(el) {
 }
 
 function showSolutions(categoryIndex, typeVal) {
+
+  
   var optionCards = document.getElementById('optionCards');
+  
   optionCards.innerHTML = '';
+
   var features = subCategories.features[categoryIndex].properties[typeVal].solutions;
+  var category = subCategories.features[categoryIndex].category;
+  let i = -1;
   features.forEach(function(feature) {
+    i++;
     optionCards.innerHTML +=
     '<div class="col mb-4">' +
-    '<div class="card h-100 card-bg p-3 d-flex flex-column">' +
-    '<div class="card-header border-bottom-0 py-0">' +
-    feature.lob +
-    '</div>' +
-    '<div class="card-body">' +
-    '<h5 class="card-title text-light">' +
-    feature.name +
-    '</h5>' +
-    '<p class="card-text text-light"><small>' +
-    feature.description +
-    '</small></p></div>' +
-    '<div class="card-footer>' +
+      '<div class="card h-100 card-bg p-3 d-flex flex-column">' +
+        '<div class="card-body">' +
+          '<h5 class="card-title text-light">' +
+            feature.name +
+          '</h5>' +
+          '<div class="contain">' +
+            '<div class="big-block">' + 
+              '<p class="card-text text-light"><small>' + feature.description + '</small></p>' +
+            '</div><button type="button" id="expand-'+i+'">more</button>' +
+          '</div>' +
+          '<h6 class="text-light pt-3" style="font-size: 12px">Learn more</h6>' +
+        '</div>' +
+    '<div class="card-footer border-0 d-flex justify-content-end">' +
     '<div class="px-2">' +
-    '<button class="btn btn-light btn-sm rounded-pill mx-3 px-3" type="button">Learn More</button>' +
-    '<button onclick="return addRow(\'' + feature.category + '\',\'' + feature.name +'\')" class="btn btn-light btn-sm rounded-pill px-3" type="button" data-bs-toggle="button" aria-pressed="true">Select</button>' +
+    '<button onclick="return addRow(\'' + category + '\',\'' + feature.name +'\')" class="btn btn-light btn-sm rounded-pill px-3 " type="button" data-bs-toggle="button" aria-pressed="true">Select</button>' +
     '</div></div></div></div>'
-  });  
+  }); 
+
+  for (let i = 0; i < features.length; i++) {
+    $('.big-block').after('');
+
+  $('#expand-' + i).click(function(){
+    $(this).prev('.big-block').toggleClass('expanded');
+   $(this).text($(this).text() == 'more' ? 'less' : 'more');
+  
+   }); 
+  }
+  
 }
 
 function  showCategoryDescription(categoryIndex) {
