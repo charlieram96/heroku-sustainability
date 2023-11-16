@@ -118,6 +118,7 @@ function sheetToJSON(sheetInfo) {
           let feature = {
               category: cells[0].displayValue,
               description: cells[5].displayValue,
+              subheader: cells[4].displayValue,
               properties: []
           };
           featureMap[row.id] = feature;

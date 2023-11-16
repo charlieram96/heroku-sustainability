@@ -231,8 +231,8 @@ h6 {
 }
 
 .card-bg {
-  background-color: #343848 !important;
-  border-color: #343848 !important;
+  background-color: #E7E7E7 !important;
+  border: none !important;
 }
 
 .bluey {
@@ -341,14 +341,14 @@ img.pointer:hover {
 
 .big-block{
   overflow:hidden;
-  height:65px;
- background: -webkit-linear-gradient(bottom, transparent, #FFF 25px);
+  height:50px;
+ background: -webkit-linear-gradient(bottom, transparent, #343a40 25px);
  -webkit-background-clip:text;
  -webkit-text-fill-color:transparent;
  text-align:justify;
  &.expanded{
   height:100%;
-   -webkit-text-fill-color:#FFF;
+   -webkit-text-fill-color:#343a40;
  }
 }
 
@@ -356,6 +356,6 @@ img.pointer:hover {
     display:block;
     margin:0 auto;
     Background:#535054;
-    color:white;
+    color: #343a40;
     font-weight:bold;
   }

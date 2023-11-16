@@ -10,8 +10,6 @@ fetch('/src/data/final-data.json')
   showCategoryDescription(categoryIndex);
 });
 
-
-
 //on click of category button, change active class and show subcategories
 function createSubCategories(categoryIndex) {
   let subCategoryButtons = document.getElementById('subCategoryButtons');
@@ -63,13 +61,13 @@ function showSolutions(categoryIndex, typeVal) {
     '<div class="col mb-4">' +
       '<div class="card h-100 card-bg p-3 d-flex flex-column">' +
         '<div class="card-body">' +
-          '<h5 class="card-title text-light">' +
+          '<h6 class="card-title">' +
             feature.name +
-          '</h5>' +
+          '</h6>' +
           '<div class="contain">' +
             '<div class="big-block">' + 
-              '<p class="card-text text-light"><small>' + feature.description + '</small></p>' +
-            '</div><a class="text-light" href="javascript:void(0)" id="expand-'+i+'">▼</a>' +
+              '<p class="card-text"><small>' + feature.description + '</small></p>' +
+            '</div><a href="javascript:void(0)" id="expand-'+i+'">[...]</a>' +
           '</div>' +
           '<h6 class="text-light pt-3" style="font-size: 12px">Learn more</h6>' +
         '</div>' +
@@ -84,7 +82,7 @@ function showSolutions(categoryIndex, typeVal) {
 
   $('#expand-' + i).click(function(){
     $(this).prev('.big-block').toggleClass('expanded');
-   $(this).text($(this).text() == '▼' ? '▲' : '▼');
+   $(this).text($(this).text() == '[...]' ? 'less' : '[...]');
   
    }); 
   }
@@ -99,6 +97,6 @@ function  showCategoryDescription(categoryIndex) {
   categoryDescription.innerHTML += 
   '<h1 class="display-5 text-light fw-bold">' + feature.category + '</h1>' +
   '<hr class="text-bg-dark w-50 p-0">' +
-  '<h6 class="text-light">Reduce Single-Use Plastics.</h6>' +
+  '<h6 class="text-light">' + feature.subheader + '</h6>' +
   '<p class="col-md-8 text-light fs-6">' + feature.description + '</p>'
 }

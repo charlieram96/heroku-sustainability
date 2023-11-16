@@ -3,6 +3,7 @@
     {
       "category": "Embed Circularity",
       "description": "When we use the term circular, we refer to our ability to keep materials in the economy in circulation and out of the environment. These solutions are focused on redesigning operations with circularity in mind through reducing the consumption of single-use plastics and other disposables, and expanding opportunities to reuse, recycle, and compost. An efficient circular system generates little to no waste.",
+      "subheader": "Reduce single use items, promote reuse, & expand recycling",
       "properties": [
         {
           "subCategory": "Recycling",
@@ -322,6 +323,7 @@
     {
       "category": "Source Sustainably",
       "description": "Aramark has a deep, long-standing commitment to global procurement practices that aim to positively impact people, animals, biodiversity, and the environment. Our Responsible Sourcing program along with additional solutions in this tool allow operators to take our commitments a step further.",
+      "subheader": "Source to positively impact people, animals, & the environment",
       "properties": [
         {
           "subCategory": "Local partnerships",
@@ -502,6 +504,7 @@
     {
       "category": "Minimize Food Waste",
       "description": "Minimizing food waste is a core commitment for Aramark’s Be Well. Do Well. ESG platform. Actions that can reduce food waste are focused on prevention, recovery, and recycling.",
+      "subheader": "Reduce, donate, and compost food waste",
       "properties": [
         {
           "subCategory": "Food donation",
@@ -621,6 +624,7 @@
     {
       "category": "Operate Efficiently",
       "description": "By operating efficiently, we decrease operational costs for the business and our clients and help achieve our planetary targets. We’ve identified key steps to conserve water, energy, and reduce fuel consumption.",
+      "subheader": "Conserve energy & water",
       "properties": [
         {
           "subCategory": "Energy",
@@ -783,8 +787,9 @@
       ]
     },
     {
-      "category": "Pollinate Education",
+      "category": "Promote Education",
       "description": "Education is an important tool in helping learners of all ages to develop the knowledge, skills, and agency to address interconnected global challenges including climate change, loss of biodiversity, unsustainable use of resources, etc. These solutions offer various methods to reach employees, consumers, and clients on the sustainability journey.",
+      "subheader": "Training, marketing, certifications, and reporting",
       "properties": [
         {
           "subCategory": "Training",
