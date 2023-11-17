@@ -8,6 +8,9 @@ fetch('/src/data/final-data.json')
   createSubCategories(categoryIndex);
   showSolutions(categoryIndex, typeVal);
   showCategoryDescription(categoryIndex);
+})
+.catch((error) => {
+  console.error('Error fetching final-data.json:', error);
 });
 
 //on click of category button, change active class and show subcategories
