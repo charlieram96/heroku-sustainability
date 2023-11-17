@@ -9,21 +9,20 @@ $.extend( $.fn.dataTable.defaults, {
     }
 });
 
-const checkoutTable = $('#checkoutTable').DataTable({
-  columns: [
-    {data: 'category'},
-    {data: 'subcategory'},
-    {data: 'cost', render: DataTable.render.number(null,null,0,'$')},
-  ],
-});
-
+var dataSet;
+try {
+  dataSet = JSON.parse(localStorage.getItem('dataSet')) || [];
+} catch (err) {
+  dataSet = [];
+}
 
 const table = $('#builderTable').DataTable({
+  data: [],
   columns: [
     {data: 'category'},
     {data: 'subcategory'},
     {data: 'cost', render: DataTable.render.number(null,null,0,'$')},
-    {data: null, className: 'dt-center editor-delete', orderable: false, defaultContent: '<img class="icon-delete pointer" src="/assets/img/trash.svg">'},
+    {data: null, className: 'dt-center', orderable: false, defaultContent: '<img class="icon-delete pointer" src="/assets/img/trash.svg">'},
   ],
   columnDefs: [
     {
@@ -37,7 +36,10 @@ const table = $('#builderTable').DataTable({
   }
 });
 
-// table.stateRestore.state("builderTable").save();
+table = $('#builderTable').DataTable();
+for (var i = 0; i < dataSet.length; i++) {
+  table.row.add(dataSet[i]).draw();
+}
 
 
 $('#builderTable tbody').on('click', 'img.icon-delete', function () {
@@ -45,7 +47,10 @@ $('#builderTable tbody').on('click', 'img.icon-delete', function () {
     .row($(this).parents('tr'))
     .remove()
     .draw();
+ dataSet.splice(index, 1);
+ localStorage.setItem('dataSet', JSON.stringify(dataSet));   
 });
+
 
 function addRow(category, solution) {
 
@@ -57,6 +62,8 @@ function addRow(category, solution) {
 
   if ( table.column(1).data().toArray().indexOf(rowItems.subcategory) === -1 ) {
     table.row.add(rowItems).draw();
+    dataSet.push(rowItems);
+    localStorage.setItem('dataSet', JSON.stringify(dataSet));
 
   } else {
     table.rows(function (idx, data, node) {

@@ -140,6 +140,8 @@ function sheetToJSON(sheetInfo) {
               let solution = {
                   name: cells[0].displayValue,
                   description: cells[5].displayValue,
+                  costicon: cells[8].displayValue,
+                  timeline: cells[9].displayValue,
                   lob: lobArray
               };
               parentProperty.solutions.push(solution);
