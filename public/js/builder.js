@@ -19,7 +19,7 @@ function createSubCategories(categoryIndex) {
   subCategoryButtons.innerHTML = '';
   let subCategory = subCategories.features[categoryIndex].properties
   subCategory.forEach(function(subCategory) {
-    subCategoryButtons.innerHTML += '<button class="sub-category btn btn-light rounded-pill px-3" type="button" onclick="subPos(this)">' + subCategory.subCategory + '</button>'
+    subCategoryButtons.innerHTML += '<button class="text-nowrap sub-category btn btn-light rounded-pill px-3" type="button" onclick="subPos(this)">' + subCategory.subCategory + '</button>'
   });
   let subCategoryClass = document.getElementsByClassName('sub-category');
   let subCategoryVal = subCategoryClass[0]
@@ -54,7 +54,7 @@ function showSolutions(categoryIndex, typeVal) {
   var features = subCategories.features[categoryIndex].properties[typeVal].solutions;
   var category = subCategories.features[categoryIndex].category;
   let i = 0;
-  jawnlob = [];
+
   features.forEach(function(feature) {
 
     if (feature.lob == 'Enterprise') {
@@ -102,16 +102,16 @@ function showSolutions(categoryIndex, typeVal) {
           if ($(this).text().length > limit) {
             trim = $(this).text().substr(0, limit);
             $(this).text(trim);
-            $(this).append('<span class="expand">Read More</span>');
+            $(this).append('<span class="expand">[...]</span>');
           };
         });
     
         $(selector).on("click",".expand", function() { //future element
-          $(this).parent().text(text).append('<span class="collapse">Read Less</span>');
+          $(this).parent().text(text).append('<span class="collapse">Less</span>');
         });
     
         $(selector).on("click", ".collapse",function() { //future element
-          $(this).parent().text(trim).append('<span class="expand">Read More</span>');
+          $(this).parent().text(trim).append('<span class="expand">[...]</span>');
         });
       };
       trimText($(".one-" + i),   70);
@@ -147,11 +147,10 @@ function showCategoryDescription(categoryIndex) {
   var categoryDescription = document.getElementById('categoryDescription');
   categoryDescription.innerHTML = '';
   var feature = subCategories.features[categoryIndex];
-  console.log(feature.category);
   categoryDescription.innerHTML += 
-  '<h1 class="display-5 text-light fw-bold">' + feature.category + '</h1>' +
+  '<h1 class="text-light fw-bold">' + feature.category + '</h1>' +
   '<hr class="text-bg-dark w-50 p-0">' +
   '<h6 class="text-light">' + feature.subheader + '</h6>' +
-  '<p class="col-md-8 text-light fs-6">' + feature.description + '</p>'
+  '<p class="py-2 text-light fs-6">' + feature.description + '</p>'
 }
 

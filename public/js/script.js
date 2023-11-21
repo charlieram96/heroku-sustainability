@@ -9,13 +9,14 @@ $.extend( $.fn.dataTable.defaults, {
     }
 });
 
-//sessionStorage.removeItem('dataSet');
 var dataSet;
 try {
   dataSet = JSON.parse(sessionStorage.getItem('dataSet')) || [];
 } catch (err) {
+  console.log("Error parsing sessionStorage.getItem('dataSet')", err);
   dataSet = [];
 }
+
 var checkoutTable = $('#checkoutTable').DataTable({
   data: dataSet,
   dom: 'Bt',
@@ -76,6 +77,10 @@ var table = $('#builderTable').DataTable({
     {
       targets: [0],
       className: 'fw-bold'
+    },
+    {
+      targets: [1],
+      width: '80%'
     }
   ],
   order: [[0, 'desc'],[ 1, 'asc' ]],
@@ -83,32 +88,6 @@ var table = $('#builderTable').DataTable({
     dataSrc: 'category',
   }
 });
-
-if (dataSet.length === 0) {
-  fetch('/src/data/defaults.json')
-  .then(response => response.json())
-  .then(data => {
-    defaults = data;
-    var rowItems = {};
-    defaults.defaults.forEach(function(feature) {
-      rowItems = {
-        "category": "Default Plan",
-        "subcategory": feature.solution,
-        "cost": 10,
-        "timeline": "0-3 months",
-      }
-      dataSet.push(rowItems);
-      sessionStorage.setItem('dataSet', JSON.stringify(dataSet));
-    });
-  })
-  .catch((error) => {
-    console.error('Error fetching defaults.json:', error);
-  });
-}
-
-for (var i = 0; i < dataSet.length; i++) {
-  table.row.add(dataSet[i]).draw();
-}
 
 $('#builderTable tbody').on('click', 'img.icon-delete', function () {
   var index = table.row($(this).parents('tr')).index();
@@ -148,4 +127,32 @@ function mergeTables() {
   checkoutData.forEach(function(row) {
     checkoutTable.row.add(row).draw();
   });
+}
+
+if (dataSet.length < 1 || dataSet === null || dataSet === undefined) {
+  console.log('dataSet is empty',dataSet)
+  fetch('/src/data/defaults.json')
+  .then(response => response.json())
+  .then(data => {
+    defaults = data;
+    var rowItems = {};
+    defaults.defaults.forEach(function(feature) {
+      rowItems = {
+        "category": "Default Plan",
+        "subcategory": feature.solution,
+        "cost": 10,
+        "timeline": "0-3 months",
+      }
+      table.row.add(rowItems).draw();
+      dataSet.push(rowItems);
+      sessionStorage.setItem('dataSet', JSON.stringify(dataSet));
+    });
+
+  })
+  .catch((error) => {
+    console.error('Error fetching defaults.json:', error);
+  });
+}
+for (var i = 0; i < dataSet.length; i++) {
+  table.row.add(dataSet[i]).draw();
 }

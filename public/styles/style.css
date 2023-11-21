@@ -374,3 +374,23 @@ table.dataTable tr.dtrg-group.dtrg-level-0 th {
 .text-trim span.collapse {
   color: #007B8A;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgba(0,123,138,0.20); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #007B8A; 
+}
+
+.dt-row {
+  --bs-gutter-x: 0!important;
+}
