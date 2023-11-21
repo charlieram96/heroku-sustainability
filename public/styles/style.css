@@ -302,18 +302,34 @@ table.dataTable tr.dtrg-group.dtrg-end th {
   font-weight: normal;
 }
 
-table.dataTable thead>tr>th.sorting_asc,
-table.dataTable thead>tr>th.sorting_desc,
-table.dataTable thead>tr>th.sorting,
-table.dataTable thead>tr>td.sorting_asc,
-table.dataTable thead>tr>td.sorting_desc,
-table.dataTable thead>tr>td.sorting {
-    padding-right: 8px;
+table.dataTable>thead .sorting::before,
+table.dataTable>thead .sorting_asc::before,
+table.dataTable>thead .sorting_desc::before,
+table.dataTable>thead .sorting_asc_disabled::before,
+table.dataTable>thead .sorting_desc_disabled::before {
+    right: 0 !important;
+    content: "" !important;
 }
- 
-th.sorting_asc::after,
-th.sorting_desc::after {
-   content:"" !important;
+  
+ table.dataTable>thead .sorting::after,
+ table.dataTable>thead .sorting_asc::after,
+ table.dataTable>thead .sorting_desc::after,
+ table.dataTable>thead .sorting_asc_disabled::after,
+ table.dataTable>thead .sorting_desc_disabled::after {
+    right: 0 !important;
+    content: "" !important;
+}
+  
+ table.dataTable>thead>tr>th:not(.sorting_disabled),
+ table.dataTable>thead>tr>td:not(.sorting_disabled) {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+  
+ table.dataTable>thead>tr>th,
+ table.dataTable>thead>tr>td {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
 }
 
 .bg-alt {
@@ -360,3 +376,7 @@ img.pointer:hover {
     font-weight:bold;
   }
 
+  table.dataTable tr.dtrg-group.dtrg-level-0 th {
+    font-family: 'gotham-bold';
+    background-color: rgba(0, 123, 138, 0.20);
+}

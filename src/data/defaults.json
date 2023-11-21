@@ -1,6 +1,27 @@
 {
   "defaults": [
     {
+      "solution": "Recycling: Full account"
+    },
+    {
+      "solution": "Recycling: E-waste (Office)"
+    },
+    {
+      "solution": "Terracycle: Single collection stream"
+    },
+    {
+      "solution": "Waste system: Twin bins (landfill, recycle)"
+    },
+    {
+      "solution": "Bulk: Convenience store products"
+    },
+    {
+      "solution": "Straws: Eco-friendly straws (on request only)"
+    },
+    {
+      "solution": "Cups: No lids in service"
+    },
+    {
       "solution": "Cage free eggs"
     },
     {

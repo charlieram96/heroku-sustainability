@@ -73,9 +73,9 @@ function showSolutions(categoryIndex, typeVal) {
           '</div><a href="javascript:void(0)" id="expand-'+i+'">[...]</a>' +
         '</div>' +
       '</div>' +
-      '<div class="card-footer  bg-transparent border-0 d-flex justify-content-between align-items-center">' +
+      '<div class="card-footer  bg-transparent border-0 d-flex justify-content-between align-content-center">' +
 
-      '<a data-bs-toggle="modal" data-bs-target="#solutionsCard" href="javascript:void(0)"><h6 style="font-size: 12px">Learn more</h6></a>' +
+      '<a class="align-self-center" data-bs-toggle="modal" data-bs-target="#solutionsCard" href="javascript:void(0)"><h6 class="mb-0" style="font-size: 12px">Learn more</h6></a>' +
       '<button onclick="return addRow(\'' + category + '\',\'' + feature.name +'\')" class="btn btn-light btn-sm rounded-pill px-3 " type="button" data-bs-toggle="button" aria-pressed="true">Select</button>' +
     '</div></div></div>'
   }); 
@@ -89,26 +89,26 @@ function showSolutions(categoryIndex, typeVal) {
       $(this).text($(this).text() == '[...]' ? 'less' : '[...]');
    });
    if (timeline.innerHTML == 'Quarter') {
-    timeline.innerHTML = '<img src="assets/img/timeline.svg" alt="timeline"><span style="font-size: 12px;"> 1 month on avg.</span>'
+    timeline.innerHTML = '<img src="assets/img/timeline.svg" alt="timeline"><span style="font-size: 12px;"> 0-3 months</span>'
    } else if(timeline.innerHTML == 'Half') {
-    timeline.innerHTML = '<img src="assets/img/timeline.svg" alt="timeline"><span style="font-size: 12px;"> 3 months on avg.</span>'
+    timeline.innerHTML = '<img src="assets/img/timeline.svg" alt="timeline"><span style="font-size: 12px;"> 4-6 months</span>'
    } else if(timeline.innerHTML == 'Three Quarter') {
-    timeline.innerHTML = '<img src="assets/img/timeline.svg" alt="timeline"><span style="font-size: 12px;"> 6 months on avg.</span>'
+    timeline.innerHTML = '<img src="assets/img/timeline.svg" alt="timeline"><span style="font-size: 12px;"> 7-9 months</span>'
    } else if(timeline.innerHTML == 'Full') {
-    timeline.innerHTML = '<img src="assets/img/timeline.svg" alt="timeline"><span style="font-size: 12px;"> 12 months on avg.</span>'
+    timeline.innerHTML = '<img src="assets/img/timeline.svg" alt="timeline"><span style="font-size: 12px;"> 10-12+ months</span>'
    } else if(timeline.innerHTML == 'Empty') {
     timeline.innerHTML = '<img src="assets/img/timeline.svg" alt="timeline"><span style="font-size: 12px;"> Immediate</span>'
    }
    if (costIcon.innerHTML == 'One') {
-    costIcon.innerHTML = '<span style="color: #007B8A">$<span style="color: rgba(0, 123, 138, 0.40);">$$$$</span></span>'
+    costIcon.innerHTML = '<span style="color: #007B8A; font-family: gotham-medium;">$<span style="color: rgba(0, 123, 138, 0.40);">$$$$</span></span>'
   } else if (costIcon.innerHTML == 'Two') {
-    costIcon.innerHTML = '<span style="color: #007B8A">$$<span style="color: rgba(0, 123, 138, 0.40);">$$$</span></span>' 
+    costIcon.innerHTML = '<span style="color: #007B8A; font-family: gotham-medium;">$$<span style="color: rgba(0, 123, 138, 0.40);">$$$</span></span>' 
   } else if (costIcon.innerHTML == 'Three') {
-    costIcon.innerHTML = '<span style="color: #007B8A">$$$<span style="color: rgba(0, 123, 138, 0.40);">$$</span></span>' 
+    costIcon.innerHTML = '<span style="color: #007B8A; font-family: gotham-medium;">$$$<span style="color: rgba(0, 123, 138, 0.40);">$$</span></span>' 
   } else if (costIcon.innerHTML == 'Four') {
-    costIcon.innerHTML = '<span style="color: #007B8A">$$$$<span style="color: rgba(0, 123, 138, 0.40);">$</span></span>' 
+    costIcon.innerHTML = '<span style="color: #007B8A; font-family: gotham-medium;">$$$$<span style="color: rgba(0, 123, 138, 0.40);">$</span></span>' 
   } else if (costIcon.innerHTML == 'Five') {
-    costIcon.innerHTML = '<span style="color: #007B8A">$$$$$</span>' 
+    costIcon.innerHTML = '<span style="color: #007B8A; font-family: gotham-medium;">$$$$$</span>' 
   } else if (costIcon.innerHTML = 'Empty') {
     costIcon.innerHTML = '';
   }
