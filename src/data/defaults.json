@@ -1,29 +1,22 @@
 {
-  "data": [
+  "defaults": [
     {
-      "category": "Source Sustainably",
-      "subcategory": "Cage free eggs",
-      "cost": 4.00
+      "solution": "Cage free eggs"
     },
     {
-      "category": "Source Sustainably",
-      "subcategory": "Sustainable seafood sourcing",
-      "cost": 8.00
+      "solution": "Sustainable seafood sourcing"
     },
     {
-      "category": "Source Sustainably",
-      "subcategory": "Hormone-free : Dairy products",
-      "cost": 3.00
+      "solution": "Hormone-free: Meat products"
     },
     {
-      "category": "Source Sustainably",
-      "subcategory": "Hormone-free : Meat products",
-      "cost": 12.00
+      "solution": "Humanely-raised Broiler Chickens"
     },
     {
-      "category": "Source Sustainably",
-      "subcategory": "Raised without antibiotics",
-      "cost": 7.00
+      "solution": "No Deforestation commitments"
+    },
+    {
+      "solution": "Group-housed Pork"
     }
   ]
 }
