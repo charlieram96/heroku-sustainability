@@ -99,12 +99,13 @@ $('#builderTable tbody').on('click', 'img.icon-delete', function () {
   sessionStorage.setItem('dataSet', JSON.stringify(dataSet));   
 });
 
-function addRow(category, solution) {
+function addRow(category, solution, progression, cost, timeline) {
+  console.log('addRow', category, solution, progression, cost, timeline)
   var rowItems = {
     "category": category,
     "subcategory": solution,
-    "cost": 10,
-    "timeline": "0-3 months",
+    "cost": cost,
+    "timeline": timeline,
   }
 
   if ( table.column(1).data().toArray().indexOf(rowItems.subcategory) === -1 ) {

@@ -152,17 +152,17 @@
         <div class="container">
           <!-- Primary Category Button Group Start -->
           <div class="btn-group d-flex flex-grow-1">
-            <button style="font-size: 12px;" onclick="catPos(this)" class="rounded-0 py-3 btn btn-primary act-cat" type="button">Embed Circularity</button>
-            <button style="font-size: 12px;" onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Source Sustainably</button>
-            <button style="font-size: 12px;" onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Minimize Food Waste</button>
-            <button style="font-size: 12px;" onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Operate Efficiently</button>
-            <button style="font-size: 12px;" onclick="catPos(this)" class="rounded-0 py-3 btn btn-primary" type="button">Promote Education</button>
+            <button style="font-size: 13px;" onclick="catPos(this)" class="rounded-0 py-3 btn btn-primary act-cat" type="button">Embed Circularity</button>
+            <button style="font-size: 13px;" onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Source Sustainably</button>
+            <button style="font-size: 13px;" onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Minimize Food Waste</button>
+            <button style="font-size: 13px;" onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Operate Efficiently</button>
+            <button style="font-size: 13px;" onclick="catPos(this)" class="rounded-0 py-3 btn btn-primary" type="button">Promote Education</button>
           </div>
           <!-- Primary Category Button Group End -->
           <!-- Jumbotron Start -->
           <div class="bg-image rounded-0" style="background-image: url('assets/img/bg.jpg'); background-size: cover;">
             <div class="mask p-4" style="background-color: rgba(0, 0, 0, 0.6);">
-              <div id="categoryDescription" class="container-fluid py-2" style="height: 250px;"></div>
+              <div id="categoryDescription" class="container-fluid py-2" style="height: 100%;"></div>
             </div>
           </div>
           <!-- Jumbotron End -->
@@ -183,10 +183,16 @@
         <div class="bg-body-tertiary h-100 p-2">
           <h6 class="text-primary pt-3">My Sustainability Plan</h6>
           <hr>
-          <table id="builderTable" class="compact" style="width:100%">
+          <table id="builderTable" class="compact row-border" style="width:100%">
           </table>
           <a href="/checkout" onclick="mergeTables()" class="w-100 rounded-pill btn btn-secondary mt-3">Review My Plan</a>
-          <p class="p-2" style="font-size: 12px;">Default Plan options are required for any Sustainability Plan.</p>
+          <div class="border rounded mt-3">
+          <div class="form-check form-switch mx-4 mt-3 d-flex justify-content-start">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+            <label class="ps-2 form-check-label" for="flexSwitchCheckChecked">Is this for an RFP?</label>
+          </div>
+          <p class="px-4" style="font-size: 12px;">If so, we'll include the defualt commitments to your plan in checkout.</p>
+        </div>
         </div>
       </section>
     </main>

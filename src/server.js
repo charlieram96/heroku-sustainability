@@ -154,6 +154,7 @@ function sheetToJSON(sheetInfo) {
         let lobArray = cells[7].displayValue ? cells[7].displayValue.split(',').map(item => item.trim()) : [];
         let solution = {
           name: cells[0].displayValue,
+          progression: cells[4].displayValue,
           description: cells[5].displayValue,
           commitment: cells[6].value,
           costicon: cells[8].displayValue,

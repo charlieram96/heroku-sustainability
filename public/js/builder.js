@@ -70,7 +70,7 @@ function showSolutions(categoryIndex, typeVal) {
     
     optionCards.innerHTML +=
     '<div class="col mb-4">' +
-      '<div class="card h-100 card-bg p-3 d-flex flex-column">' +
+      '<div class="card h-100 card-bg p-2 d-flex flex-column">' +
       '<div class="card-header border-0 bg-transparent py-0 d-flex justify-content-between">' +
         '<div id="timeline-' + i + '">' + feature.timeline + '</div>' +
         '<div id="costIcon-' + i + '">' + feature.costicon + '</div>' + 
@@ -85,7 +85,7 @@ function showSolutions(categoryIndex, typeVal) {
       '<div class="card-footer  bg-transparent border-0 d-flex justify-content-between align-content-center">' +
 
       '<a class="align-self-center" data-bs-toggle="modal" data-bs-target="#solutionsCard" href="javascript:void(0)"><h6 class="mb-0" style="font-size: 12px">Learn more</h6></a>' +
-      '<button onclick="return addRow(\'' + category + '\',\'' + feature.name +'\')" class="btn btn-light btn-sm rounded-pill px-3 " type="button" data-bs-toggle="button" aria-pressed="true">Select</button>' +
+      '<button onclick="return addRow(\'' + category + '\',\'' + feature.name +'\',\'' + feature.progression +'\',\'' + feature.costicon +'\',\'' + feature.timeline +'\')" class="btn btn-light btn-sm rounded-pill px-3 " type="button" data-bs-toggle="button" aria-pressed="true">Select</button>' +
     '</div></div></div>'
     i++;
   }); 
@@ -114,7 +114,7 @@ function showSolutions(categoryIndex, typeVal) {
           $(this).parent().text(trim).append('<span class="expand">[...]</span>');
         });
       };
-      trimText($(".one-" + i),   70);
+      trimText($(".one-" + i),   60);
     });
     if (timeline.innerHTML == 'Quarter') {
       timeline.innerHTML = '<img src="assets/img/timeline.svg" alt="timeline"><span style="font-size: 12px;"> 0-3 months</span>'
