@@ -87,7 +87,7 @@
         </div>
       </div>
 
-      <div class="px-3 py-2 text-bg-light border-bottom">
+      <div class="px-2 py-2 text-bg-light border-bottom">
         <div class="container-fluid px-4">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center my-3 my-lg-3 me-lg-auto text-dark text-decoration-none">
@@ -148,42 +148,42 @@
           </div>
         </div>
       </section>
-      <section class="col-9 mt-4">
-        <div class="container py-4">
+      <section class="col-9 mt-4 p-0">
+        <div class="container">
           <!-- Primary Category Button Group Start -->
-          <div class="btn-group d-flex flex-grow-1 mx-2">
-            <button onclick="catPos(this)" class="rounded-0 py-3 btn btn-primary act-cat" type="button">Embed Circularity</button>
-            <button onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Source Sustainably</button>
-            <button onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Minimize Food Waste</button>
-            <button onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Operate Efficiently</button>
-            <button onclick="catPos(this)" class="rounded-0 py-3 btn btn-primary" type="button">Promote Education</button>
+          <div class="btn-group d-flex flex-grow-1">
+            <button style="font-size: 12px;" onclick="catPos(this)" class="rounded-0 py-3 btn btn-primary act-cat" type="button">Embed Circularity</button>
+            <button style="font-size: 12px;" onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Source Sustainably</button>
+            <button style="font-size: 12px;" onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Minimize Food Waste</button>
+            <button style="font-size: 12px;" onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Operate Efficiently</button>
+            <button style="font-size: 12px;" onclick="catPos(this)" class="rounded-0 py-3 btn btn-primary" type="button">Promote Education</button>
           </div>
           <!-- Primary Category Button Group End -->
           <!-- Jumbotron Start -->
-          <div class="bg-image mx-2 rounded-0" style="background-image: url('assets/img/bg.jpg'); background-size: cover;">
+          <div class="bg-image rounded-0" style="background-image: url('assets/img/bg.jpg'); background-size: cover;">
             <div class="mask p-4" style="background-color: rgba(0, 0, 0, 0.6);">
-              <div id="categoryDescription" class="container-fluid py-4" style="height: 300px;"></div>
+              <div id="categoryDescription" class="container-fluid py-2" style="height: 250px;"></div>
             </div>
           </div>
           <!-- Jumbotron End -->
           <!-- Secondary Category Button Group Start -->
-          <div id="subCategoryButtons" class="d-flex gap-4 justify-content-start py-5 mx-2">
+          <div id="subCategoryButtons" class="overflow-auto d-flex gap-4 justify-content-start py-3">
           </div>
           <!-- Secondary Category Button Group End -->
           <!-- Solution Card Grid Start -->
           <div class="container-fluid">
-            <div id="optionCards" class="row row-cols-3 py-3">
+            <div id="optionCards" class="mt-4 row row-cols-xl-3 row-cols-md-2">
               
             </div>
           </div>
           <!-- Solution Card Grid End -->
         </div>
       </section>
-      <section class="col-3 pe-0">
-        <div class="bg-body-tertiary h-100 p-5">
-          <h6 class="text-primary pt-4">My Sustainability Plan</h6>
+      <section class="col-3 p-0">
+        <div class="bg-body-tertiary h-100 p-2">
+          <h6 class="text-primary pt-3">My Sustainability Plan</h6>
           <hr>
-          <table id="builderTable" class="compact nowrap" style="width:100%">
+          <table id="builderTable" class="compact" style="width:100%">
           </table>
           <a href="/checkout" onclick="mergeTables()" class="w-100 rounded-pill btn btn-secondary mt-3">Review My Plan</a>
           <p class="p-2" style="font-size: 12px;">Default Plan options are required for any Sustainability Plan.</p>
