@@ -11,7 +11,7 @@
             {
               "name": "Recycling: Full account",
               "description": "Rather than sending all waste to the landfill, divert accepted materials for recycling. Recycling programs will differ by location and municipality.",
-              "commitment": true,
+              "commitment": false,
               "costicon": "Two",
               "timeline": "Quarter",
               "lob": [
@@ -21,7 +21,7 @@
             {
               "name": "Recycling: E-waste (Office)",
               "description": "Utilize a recycling solution for electronic waste, instead of sending it to the landfill. Electronics recycling will differ by location and municipality. Often it is a free service.",
-              "commitment": true,
+              "commitment": false,
               "costicon": "One",
               "timeline": "Quarter",
               "lob": [
@@ -41,7 +41,7 @@
             {
               "name": "Terracycle: Single collection stream",
               "description": "Terracycle is a solution for difficult to recycle items that are not accepted in a traditional waste stream. There are several different \"waste streams\" you can choose from including candy and snack wrappers, gloves, and hotel amenties.",
-              "commitment": true,
+              "commitment": false,
               "costicon": "One",
               "timeline": "Quarter",
               "lob": [
@@ -75,7 +75,7 @@
             {
               "name": "Waste system: Twin bins (landfill, recycle)",
               "description": "Implement a twin waste bin system at every station with one for trash and one for recycling. To avoid confusion or contamination, it is important that trash and recycling bins are always available together vs. separated. Cost is dependent on the number of bins needed.",
-              "commitment": true,
+              "commitment": false,
               "costicon": "Three",
               "timeline": "Quarter",
               "lob": [
@@ -140,7 +140,7 @@
             {
               "name": "Bulk: Convenience store products",
               "description": "Utilize bulk products in convenience stores. We have several supplier partnerships for solutions but generally bulk products are in a refill display for customers to select the portion of the product they would like to purchase. In order to be a sustainable solution, you will need to consider the container you are selling the products in as well. Review options from the suggestions provided.",
-              "commitment": true,
+              "commitment": false,
               "costicon": "One",
               "timeline": "Quarter",
               "lob": [
@@ -165,7 +165,7 @@
             {
               "name": "Straws: Eco-friendly straws (on request only)",
               "description": "Only provide eco-friendly straws, and only when a consumer requests one.",
-              "commitment": true,
+              "commitment": false,
               "costicon": "Two",
               "timeline": "Empty",
               "lob": [
@@ -185,7 +185,7 @@
             {
               "name": "Cups: No lids in service",
               "description": "Eliminate lids for cold beverages in service in order to reduce waste.",
-              "commitment": true,
+              "commitment": false,
               "costicon": "Empty",
               "timeline": "Quarter",
               "lob": [
@@ -445,7 +445,7 @@
           "subCategory": "Local partnerships",
           "solutions": [
             {
-              "name": "On site farmer's market",
+              "name": "On site farmers market",
               "description": "Host a farmer's market on-site to support local farmers and artisans.",
               "commitment": false,
               "costicon": "One",
@@ -477,7 +477,7 @@
               ]
             },
             {
-              "name": "Local farms/business partrnerships",
+              "name": "Local farms/business partnerships",
               "description": "Engage in programming with local farms and businesses to cultivate relationships for local sourcing.",
               "commitment": false,
               "costicon": "One",

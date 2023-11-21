@@ -350,33 +350,27 @@ img.pointer:hover {
   cursor: pointer;
 }
 
-.contain{
-  max-width:750px;
+table.dataTable tr.dtrg-group.dtrg-level-0 th {
+  font-family: 'gotham-bold';
+  background-color: rgba(0, 123, 138, 0.20);
+}
+
+.text-trim {
   margin: 0 auto;
+  font-family: 'gotham-light';
+  line-height: 1.5;
+  font-size: 14px;
 }
 
-.big-block{
-  overflow:hidden;
-  height:50px;
- background: -webkit-linear-gradient(bottom, transparent, #343a40 25px);
- -webkit-background-clip:text;
- -webkit-text-fill-color:transparent;
- text-align:justify;
- &.expanded{
-  height:100%;
-   -webkit-text-fill-color:#343a40;
- }
+.text-trim span.expand,
+.text-trim span.collapse {
+  font-family: 'gotham-medium';
+  padding-left: 10px;
+  color: #00416A;
+  cursor: pointer;
+  display: inline-block
 }
 
-  #expand{
-    display:block;
-    margin:0 auto;
-    Background:#535054;
-    color: #343a40;
-    font-weight:bold;
-  }
-
-  table.dataTable tr.dtrg-group.dtrg-level-0 th {
-    font-family: 'gotham-bold';
-    background-color: rgba(0, 123, 138, 0.20);
+.text-trim span.collapse {
+  color: #007B8A;
 }

@@ -9,10 +9,10 @@ $.extend( $.fn.dataTable.defaults, {
     }
 });
 
-//localStorage.removeItem('dataSet');
+//sessionStorage.removeItem('dataSet');
 var dataSet;
 try {
-  dataSet = JSON.parse(localStorage.getItem('dataSet')) || [];
+  dataSet = JSON.parse(sessionStorage.getItem('dataSet')) || [];
 } catch (err) {
   dataSet = [];
 }
@@ -22,10 +22,10 @@ var checkoutTable = $('#checkoutTable').DataTable({
   columns: [
     {data: 'category', className: 'fw-bold'},
     {data: 'subcategory'},
-    {data: 'timeline', className: 'dt-center'},
     {data: 'cost', render: DataTable.render.number(null,null,0,'$')},
+    {data: 'timeline', className: 'dt-center'},
     {data: null, className: 'dt-right', orderable: false, "render": function(data, type, row) {
-      if (row.category === 'Aramark Commitments') {
+      if (row.category === 'Default Plan') {
         return '';
       }
       return '<img class="icon-delete pointer" src="/assets/img/trash.svg">'}
@@ -62,7 +62,7 @@ var table = $('#builderTable').DataTable({
     {data: 'cost', render: DataTable.render.number(null,null,0,'$')},
     {data: 'timeline', className: 'dt-center'},
     {data: null, className: 'dt-right', orderable: false, "render": function(data, type, row) {
-      if (row.category === 'Aramark Commitments') {
+      if (row.category === 'Default Plan') {
         return '';
       }
       return '<img class="icon-delete pointer" src="/assets/img/trash.svg">'}
@@ -98,7 +98,7 @@ if (dataSet.length === 0) {
         "timeline": "0-3 months",
       }
       dataSet.push(rowItems);
-      localStorage.setItem('dataSet', JSON.stringify(dataSet));
+      sessionStorage.setItem('dataSet', JSON.stringify(dataSet));
     });
   })
   .catch((error) => {
@@ -117,7 +117,7 @@ $('#builderTable tbody').on('click', 'img.icon-delete', function () {
     .remove()
     .draw();
   dataSet.splice(index, 1);
-  localStorage.setItem('dataSet', JSON.stringify(dataSet));   
+  sessionStorage.setItem('dataSet', JSON.stringify(dataSet));   
 });
 
 function addRow(category, solution) {
@@ -131,7 +131,7 @@ function addRow(category, solution) {
   if ( table.column(1).data().toArray().indexOf(rowItems.subcategory) === -1 ) {
     table.row.add(rowItems).draw();
     dataSet.push(rowItems);
-    localStorage.setItem('dataSet', JSON.stringify(dataSet));
+    sessionStorage.setItem('dataSet', JSON.stringify(dataSet));
 
   } else {
     table.rows(function (idx, data, node) {
