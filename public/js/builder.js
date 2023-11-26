@@ -1,3 +1,4 @@
+/* Fetch and load final-data.json and run functions */
 let subCategories = null;
 let typeVal = 0
 let categoryIndex = 0
@@ -5,6 +6,7 @@ fetch('/src/data/final-data.json')
 .then(response => response.json())
 .then(data => {
   subCategories = data;
+  createCategories();
   createSubCategories(categoryIndex);
   showSolutions(categoryIndex, typeVal);
   showCategoryDescription(categoryIndex);
@@ -13,7 +15,19 @@ fetch('/src/data/final-data.json')
   console.error('Error fetching final-data.json:', error);
 });
 
-//on click of category button, change active class and show subcategories
+/* Create Category Buttons */
+function createCategories() {
+  subCategories.features.forEach(function(feature) {
+    let categoryButtons = document.getElementById('category-buttons');
+    categoryButtons.innerHTML += `<button style="font-size: 13px;" onclick="catPos(this)" class="category-button rounded-0 py-3 btn btn-primary" type="button">${feature.category}</button>`
+  });
+  let categoryButton = document.getElementsByClassName('category-button');
+  categoryButton[0].className += ' act-cat';
+}
+
+/* Create Category Description */
+
+/* Change Category Active Class and show Sub Categories */
 function createSubCategories(categoryIndex) {
   let subCategoryButtons = document.getElementById('subCategoryButtons');
   subCategoryButtons.innerHTML = '';
@@ -153,4 +167,5 @@ function showCategoryDescription(categoryIndex) {
   '<h6 class="text-light">' + feature.subheader + '</h6>' +
   '<p class="py-2 text-light fs-6">' + feature.description + '</p>'
 }
+
 

@@ -1,14 +1,4 @@
-$.extend( $.fn.dataTable.defaults, {
-  searching: false,
-  paging:  false,
-  info: false,
-  extend: 'savedStates',
-    config: {
-      save: true,
-      create: true,
-    }
-});
-
+/* Create or Load Session Storage */
 var dataSet;
 try {
   dataSet = JSON.parse(sessionStorage.getItem('dataSet')) || [];
@@ -17,6 +7,7 @@ try {
   dataSet = [];
 }
 
+/* Table for Checkout Page */
 var checkoutTable = $('#checkoutTable').DataTable({
   data: dataSet,
   dom: 'Bt',
@@ -52,9 +43,13 @@ var checkoutTable = $('#checkoutTable').DataTable({
       })
       var modalToggle = document.getElementById('exampleModal'); myModal.show(modalToggle)
     }
-  }]
+  }],
+  paging: false,
+  searching: false,
+  info: false,
 });
 
+/* Table for side panel cart */
 var table = $('#builderTable').DataTable({
   data: [],
   columns: [
@@ -86,9 +81,13 @@ var table = $('#builderTable').DataTable({
   order: [[0, 'desc'],[ 1, 'asc' ]],
   rowGroup: {
     dataSrc: 'category',
-  }
+  },
+  paging: false,
+  searching: false,
+  info: false,
 });
 
+/* Delete Row in Side Panel Cart and Session Storage */
 $('#builderTable tbody').on('click', 'img.icon-delete', function () {
   var index = table.row($(this).parents('tr')).index();
   table
@@ -99,6 +98,7 @@ $('#builderTable tbody').on('click', 'img.icon-delete', function () {
   sessionStorage.setItem('dataSet', JSON.stringify(dataSet));   
 });
 
+/* Add Row in Side Panel Cart and Session Storage */
 function addRow(category, solution, progression, cost, timeline) {
   console.log('addRow', category, solution, progression, cost, timeline)
   var rowItems = {
@@ -122,6 +122,7 @@ function addRow(category, solution, progression, cost, timeline) {
   }  
 }
 
+/* Merge Builder Table to Checkout Table */
 function mergeTables() {
   checkoutTable.clear().draw();
   var checkoutData = table.data().toArray();
@@ -130,6 +131,7 @@ function mergeTables() {
   });
 }
 
+/* Build Default dataSet object if one doesn't exist */
 if (dataSet.length < 1 || dataSet === null || dataSet === undefined) {
   console.log('dataSet is empty',dataSet)
   fetch('/src/data/defaults.json')
