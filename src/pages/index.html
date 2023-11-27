@@ -22,6 +22,7 @@
   <body>
     <!-- Header Start -->
     <header>
+      <!-- How To Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
@@ -86,7 +87,7 @@
           </div>
         </div>
       </div>
-
+      <!-- Nav Bar -->
       <div class="px-2 py-2 text-bg-light border-bottom">
         <div class="container-fluid px-4">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -109,6 +110,7 @@
     <!-- Header End -->
     <!-- Main Page Start -->
     <main class="row m-0 p-0">
+      <!-- Learn More Modal -->
       <section>
         <div class="modal fade" id="solutionsCard" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -148,78 +150,224 @@
           </div>
         </div>
       </section>
+      <!-- Main Section -->
       <section class="col-9 mt-4 p-0">
         <div class="container">
-          <!-- Primary Category Button Group Start -->
-          <div class="btn-group d-flex flex-grow-1">
-            <button style="font-size: 12px;" onclick="catPos(this)" class="rounded-0 py-3 btn btn-primary act-cat" type="button">Embed Circularity</button>
-            <button style="font-size: 12px;" onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Source Sustainably</button>
-            <button style="font-size: 12px;" onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Minimize Food Waste</button>
-            <button style="font-size: 12px;" onclick="catPos(this)" class="py-3 btn btn-primary" type="button">Operate Efficiently</button>
-            <button style="font-size: 12px;" onclick="catPos(this)" class="rounded-0 py-3 btn btn-primary" type="button">Promote Education</button>
-          </div>
-          <!-- Primary Category Button Group End -->
-          <!-- Jumbotron Start -->
-          <div class="bg-image rounded-0" style="background-image: url('assets/img/bg.jpg'); background-size: cover;">
-            <div class="mask p-4" style="background-color: rgba(0, 0, 0, 0.6);">
-              <div id="categoryDescription" class="container-fluid py-2" style="height: 250px;"></div>
+          <!-- Category Button Group -->
+          <div id="categoryButtons"></div>
+          <!-- Hero Image and Category Description  -->
+          <div class="bg-image rounded-0">
+            <div class="mask p-4">
+              <div class="d-flex">
+                <div class="py-2 pe-4 h-100">
+                  <div id="categoryDescription"></div>
+                </div>
+                <div class="w-75">
+                  <div class="container h-100 bg-form rounded-3 p-3 d-flex flex-column justify-content-between">
+                    <div class="btn-group">
+                      <div class="dropdown px-2">
+                        <button type="button" class="rounded-0 btn btn-sm dropdown-toggle filter-buttons" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                          Line of Business
+                        </button>
+                        <form class="dropdown-menu">
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="enterpriseChecked" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="enterpriseChecked">
+                                Enterprise
+                              </label>
+                            </div>
+                          </div>
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="cohoChecked" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="cohoChecked">
+                                Collegiate Hospitality
+                              </label>
+                            </div>
+                          </div>
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="correctionsChecked" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="correctionsChecked">
+                                Corrections
+                              </label>
+                            </div>
+                          </div>
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="destinationsChecked" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="destinationsChecked">
+                                Destinations
+                              </label>
+                            </div>
+                          </div>
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="healthcareChecked" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="healthcareChecked">
+                                Healthcare+
+                              </label>
+                            </div>
+                          </div>
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="sportsChecked" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="sportsChecked">
+                                Sports & Entertainment
+                              </label>
+                            </div>
+                          </div>
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="studentChecked" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="studentChecked">
+                                Student Nutrition
+                              </label>
+                            </div>
+                          </div>
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="wxgChecked" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="wxgChecked">
+                                Workplace Experience
+                              </label>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="dropdown px-2">
+                        <button type="button" class="rounded-0 btn btn-sm dropdown-toggle filter-buttons" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                          Cost
+                        </button>
+                        <form class="dropdown-menu">
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="costOne" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="costOne">
+                                $
+                              </label>
+                            </div>
+                          </div>
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="costTwo" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="costTwo">
+                                $$
+                              </label>
+                            </div>
+                          </div>
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="costThree" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="costThree">
+                                $$$
+                              </label>
+                            </div>
+                          </div>
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="costFour" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="costFour">
+                                $$$$
+                              </label>
+                            </div>
+                          </div>
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="costFive" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="costFive">
+                                $$$$$
+                              </label>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="dropdown px-2">
+                        <button type="button" class="rounded-0 btn btn-sm dropdown-toggle filter-buttons" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                          Timeline
+                        </button>
+                        <form class="dropdown-menu">
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="timeImmediate" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeImmediate">
+                                Immediate
+                              </label>
+                            </div>
+                          </div>
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="timeOne" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeOne">
+                                0-3 Months
+                              </label>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="btn-group pt-2">
+                    <input type="radio" class="btn-check" name="options-base" id="allTypes" autocomplete="off" checked>
+                    <label style="font-size: 13px; font-family: 'gotham-medium';" class="btn text-light rounded-0" for="allTypes">All</label>
+                    <input type="radio" class="btn-check rounded-0" name="options-base" id="zeroWaste" autocomplete="off">
+                    <label style="font-size: 13px; font-family: 'gotham-medium';" class="btn text-light rounded-0" for="zeroWaste">Zero Waste</label>
+                    <input type="radio" class="btn-check rounded-0" name="options-base" id="reducedEmissions" autocomplete="off">
+                    <label style="font-size: 13px; font-family: 'gotham-medium';" class="btn text-light rounded-0" for="reducedEmissions">Reduced Emissions</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- Jumbotron End -->
-          <!-- Secondary Category Button Group Start -->
-          <div id="subCategoryButtons" class="overflow-auto d-flex gap-4 justify-content-start py-3">
-          </div>
-          <!-- Secondary Category Button Group End -->
-          <!-- Solution Card Grid Start -->
-          <div class="container-fluid">
-            <div id="optionCards" class="mt-4 row row-cols-xl-3 row-cols-md-2">
-              
-            </div>
-          </div>
-          <!-- Solution Card Grid End -->
+          <!-- Sub-Category Button Group -->
+          <div id="subCategoryButtons"></div>
+          <!-- Solution Card Grid -->
+          <div id="optionCards"></div>
         </div>
       </section>
+      <!-- Side Cart Section -->
       <section class="col-3 p-0">
         <div class="bg-body-tertiary h-100 p-2">
           <h6 class="text-primary pt-3">My Sustainability Plan</h6>
           <hr>
-          <table id="builderTable" class="compact" style="width:100%">
+          <table id="builderTable" class="compact row-border" style="width:100%">
           </table>
           <a href="/checkout" onclick="mergeTables()" class="w-100 rounded-pill btn btn-secondary mt-3">Review My Plan</a>
-          <p class="p-2" style="font-size: 12px;">Default Plan options are required for any Sustainability Plan.</p>
+          <div class="border rounded mt-3">
+          <div class="form-check form-switch mx-4 mt-3 d-flex justify-content-start">
+            <input class="form-check-input" type="checkbox" role="switch" id="addDefaults" onchange="rfpToggle()">
+            <label class="ps-2 form-check-label" for="addDefaults">Is this for an RFP?</label>
+          </div>
+          <p class="px-4" style="font-size: 12px;">If so, we'll include the defualt commitments to your plan in checkout.</p>
+        </div>
         </div>
       </section>
     </main>
 
-    <!-- Main Page End -->
-    <!-- Footer Start -->
+    <!-- Footer -->
     <footer>
       <div class="px-3 py-2 text-bg-light">
         <div class="container-fluid px-3">
-          <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top text-bg-light">
+          <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-2 py-5 my-5 border-top text-bg-light justify-content-between">
             <div class="col mb-3">
               <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
                 <img src="assets/img/sustainability-logo.png" alt="Sustainability Builder" height="30">
               </a>
-              <p class="text-body-secondary small mb-1 ms-2"><strong>© 2023 Aramark. All rights reserved.</strong></p>
+              <p class="text-body-secondary small mb-1 ms-2"><strong>© 2023 Aramark.</strong> All rights reserved.</p>
             </div>
-            <div class="col mb-3"></div>
-            <div class="col mb-3"></div>
-            <div class="col mb-3"></div>
-            <div class="col mb-3">
+            <div class="col mb-3 text-end pe-4">
               <h5>Links</h5>
               <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Teams</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SharePoint</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">EX Group</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">BWDW SharePoint</a></li>
               </ul>
             </div>
           </footer>
         </div>
       </div>
     </footer>
-    <!-- Footer End -->
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- PopperJS -->

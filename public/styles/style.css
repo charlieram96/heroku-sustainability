@@ -1,21 +1,25 @@
 @font-face {
   font-family: 'gotham-book';
   src: url('/assets/fonts/GothamHTF-Book.otf') format('opentype');
+  font-weight: 300;
 }
 
 @font-face {
   font-family: 'gotham-medium';
   src: url('/assets/fonts/GothamHTF-Medium.otf') format('opentype');
+  font-weight: 500;
 }
 
 @font-face {
   font-family: 'gotham-bold';
   src: url('/assets/fonts/GothamHTF-Bold.otf') format('opentype');
+  font-weight: 700;
 }
 
 @font-face {
   font-family: 'gotham-light';
   src: url('/assets/fonts/GothamHTF-Light.otf') format('opentype');
+  font-weight: 100;
 }
 
 :root,
@@ -199,7 +203,7 @@ h1 {
   font-family: 'gotham-bold';
 }
 
-h2 {
+h2, label, strong{
   font-family: 'gotham-medium';
 }
 
@@ -208,22 +212,18 @@ h5 {
 }
 
 h6 {
-  font-family: 'gotham-medium';
+  font-family: 'gotham-bold';
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: #00416A!important;
 }
 
 p, li {
   font-family: 'gotham-light';
 }
 
-h6 {
-  font-family: 'gotham-medium';
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
 
-.act-cat {
+.active-category {
   background-color: #007B8A!important;
   border-color: #007B8A!important;
   color: #FFF;
@@ -275,7 +275,6 @@ h6 {
   border-color: #00616e!important;
   color: #FFF;
 }
-
 
 .btn-secondary {
   background-color: #007B8A;
@@ -393,4 +392,25 @@ table.dataTable tr.dtrg-group.dtrg-level-0 th {
 
 .dt-row {
   --bs-gutter-x: 0!important;
+}
+
+.bg-form {
+  background-color: rgba(0,0,0,0.6)
+}
+
+.mask {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.lob-icons {
+  margin-right: 15px;
+  width: 15px; 
+  height: 15px;
+}
+
+.filter-buttons {
+  background-color: transparent!important;
+  font-family: 'gotham-medium'!important;
+  border-bottom: 1px solid #FFF!important;
+  color: #FFF!important;
 }

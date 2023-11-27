@@ -1,14 +1,4 @@
-$.extend( $.fn.dataTable.defaults, {
-  searching: false,
-  paging:  false,
-  info: false,
-  extend: 'savedStates',
-    config: {
-      save: true,
-      create: true,
-    }
-});
-
+/* Create or Load Session Storage */
 var dataSet;
 try {
   dataSet = JSON.parse(sessionStorage.getItem('dataSet')) || [];
@@ -17,6 +7,9 @@ try {
   dataSet = [];
 }
 
+rfpToggle();
+
+/* Table for Checkout Page */
 var checkoutTable = $('#checkoutTable').DataTable({
   data: dataSet,
   dom: 'Bt',
@@ -52,9 +45,13 @@ var checkoutTable = $('#checkoutTable').DataTable({
       })
       var modalToggle = document.getElementById('exampleModal'); myModal.show(modalToggle)
     }
-  }]
+  }],
+  paging: false,
+  searching: false,
+  info: false,
 });
 
+/* Table for side panel cart */
 var table = $('#builderTable').DataTable({
   data: [],
   columns: [
@@ -86,9 +83,13 @@ var table = $('#builderTable').DataTable({
   order: [[0, 'desc'],[ 1, 'asc' ]],
   rowGroup: {
     dataSrc: 'category',
-  }
+  },
+  paging: false,
+  searching: false,
+  info: false,
 });
 
+/* Delete Row in Side Panel Cart and Session Storage */
 $('#builderTable tbody').on('click', 'img.icon-delete', function () {
   var index = table.row($(this).parents('tr')).index();
   table
@@ -99,12 +100,14 @@ $('#builderTable tbody').on('click', 'img.icon-delete', function () {
   sessionStorage.setItem('dataSet', JSON.stringify(dataSet));   
 });
 
-function addRow(category, solution) {
+/* Add Row in Side Panel Cart and Session Storage */
+function addRow(category, solution, progression, cost, timeline) {
+  console.log('addRow', category, solution, progression, cost, timeline)
   var rowItems = {
     "category": category,
     "subcategory": solution,
-    "cost": 10,
-    "timeline": "0-3 months",
+    "cost": cost,
+    "timeline": timeline,
   }
 
   if ( table.column(1).data().toArray().indexOf(rowItems.subcategory) === -1 ) {
@@ -121,6 +124,7 @@ function addRow(category, solution) {
   }  
 }
 
+/* Merge Builder Table to Checkout Table */
 function mergeTables() {
   checkoutTable.clear().draw();
   var checkoutData = table.data().toArray();
@@ -129,30 +133,42 @@ function mergeTables() {
   });
 }
 
-if (dataSet.length < 1 || dataSet === null || dataSet === undefined) {
-  console.log('dataSet is empty',dataSet)
-  fetch('/src/data/defaults.json')
-  .then(response => response.json())
-  .then(data => {
-    defaults = data;
-    var rowItems = {};
-    defaults.defaults.forEach(function(feature) {
-      rowItems = {
-        "category": "Default Plan",
-        "subcategory": feature.solution,
-        "cost": 10,
-        "timeline": "0-3 months",
+/* Create Defaults if RFP toggle is checked */
+function rfpToggle() {
+  var rfpToggle = document.getElementById('addDefaults');
+  
+    fetch('/src/data/defaults.json')
+    .then(response => response.json())
+    .then(data => {
+      defaults = data;
+      if (rfpToggle.checked) {
+        var rowItems = {};
+        defaults.defaults.forEach(function(feature) {
+          rowItems = {
+            "category": "Default Plan",
+            "subcategory": feature.solution,
+            "cost": 10,
+            "timeline": "0-3 months",
+          }
+          table.row.add(rowItems).draw();
+          dataSet.push(rowItems);
+          sessionStorage.setItem('dataSet', JSON.stringify(dataSet));
+        });
+      } else {
+        table.rows(function (idx, data, node) {
+          return data.category === 'Default Plan' ? true : false;
+        })
+        .remove()
+        .draw();
+        dataSet = [];
+        sessionStorage.setItem('dataSet', JSON.stringify(dataSet));
       }
-      table.row.add(rowItems).draw();
-      dataSet.push(rowItems);
-      sessionStorage.setItem('dataSet', JSON.stringify(dataSet));
+    })
+    .catch((error) => {
+      console.error('Error fetching defaults.json:', error);
     });
-
-  })
-  .catch((error) => {
-    console.error('Error fetching defaults.json:', error);
-  });
 }
+
 for (var i = 0; i < dataSet.length; i++) {
   table.row.add(dataSet[i]).draw();
 }
