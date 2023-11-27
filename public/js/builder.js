@@ -106,7 +106,7 @@ function showSolutions(categoryIndex, typeVal) {
           <p class="mt-3 text-trim one-${i} card-text">${feature.description}</p>
         </div>
         <div class="card-footer bg-transparent border-0 d-flex flex-row-reverse align-items-center justify-content-between">
-          <button onclick="return addRow(${category}, ${feature.name}, ${feature.progression}, ${feature.costicon}, ${feature.timeline})" class="btn btn-light btn-sm rounded-pill px-3" type="button" data-bs-toggle="button" aria-pressed="true">Select</button>
+          <button onclick="return addRow('${category}', '${feature.name}', '${feature.progression}', '${feature.costicon}', '${feature.timeline}')" class="btn btn-light btn-sm rounded-pill px-3" type="button" data-bs-toggle="button" aria-pressed="true">Select</button>
           ${feature.lob}
         </div>
       </div>

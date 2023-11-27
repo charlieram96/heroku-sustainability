@@ -1091,7 +1091,7 @@
       ]
     },
     {
-      "category": "Promote Education",
+      "category": "Train & Certify",
       "description": "Education is an important tool in helping learners of all ages to develop the knowledge, skills, and agency to address interconnected global challenges including climate change, loss of biodiversity, unsustainable use of resources, etc. These solutions offer various methods to reach employees, consumers, and clients on the sustainability journey.",
       "subheader": "Training, marketing, certifications, and reporting",
       "properties": [
@@ -1255,6 +1255,7 @@
             },
             {
               "name": "Food emissions",
+              "description": "Annually track emissions from food: Aramark's Food Emissions Report provides clients with insight and analysis into the carbon emissions associated with the food served at their account. We developed this report to help us work together with our clients to reduce emissions from food.",
               "costicon": "Empty",
               "timeline": "Quarter",
               "lob": [

@@ -7,6 +7,8 @@ try {
   dataSet = [];
 }
 
+rfpToggle();
+
 /* Table for Checkout Page */
 var checkoutTable = $('#checkoutTable').DataTable({
   data: dataSet,
@@ -131,31 +133,42 @@ function mergeTables() {
   });
 }
 
-/* Build Default dataSet object if one doesn't exist */
-if (dataSet.length < 1 || dataSet === null || dataSet === undefined) {
-  console.log('dataSet is empty',dataSet)
-  fetch('/src/data/defaults.json')
-  .then(response => response.json())
-  .then(data => {
-    defaults = data;
-    var rowItems = {};
-    defaults.defaults.forEach(function(feature) {
-      rowItems = {
-        "category": "Default Plan",
-        "subcategory": feature.solution,
-        "cost": 10,
-        "timeline": "0-3 months",
+/* Create Defaults if RFP toggle is checked */
+function rfpToggle() {
+  var rfpToggle = document.getElementById('addDefaults');
+  
+    fetch('/src/data/defaults.json')
+    .then(response => response.json())
+    .then(data => {
+      defaults = data;
+      if (rfpToggle.checked) {
+        var rowItems = {};
+        defaults.defaults.forEach(function(feature) {
+          rowItems = {
+            "category": "Default Plan",
+            "subcategory": feature.solution,
+            "cost": 10,
+            "timeline": "0-3 months",
+          }
+          table.row.add(rowItems).draw();
+          dataSet.push(rowItems);
+          sessionStorage.setItem('dataSet', JSON.stringify(dataSet));
+        });
+      } else {
+        table.rows(function (idx, data, node) {
+          return data.category === 'Default Plan' ? true : false;
+        })
+        .remove()
+        .draw();
+        dataSet = [];
+        sessionStorage.setItem('dataSet', JSON.stringify(dataSet));
       }
-      table.row.add(rowItems).draw();
-      dataSet.push(rowItems);
-      sessionStorage.setItem('dataSet', JSON.stringify(dataSet));
+    })
+    .catch((error) => {
+      console.error('Error fetching defaults.json:', error);
     });
-
-  })
-  .catch((error) => {
-    console.error('Error fetching defaults.json:', error);
-  });
 }
+
 for (var i = 0; i < dataSet.length; i++) {
   table.row.add(dataSet[i]).draw();
 }
