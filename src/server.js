@@ -15,6 +15,10 @@ app.get('/builder', (req, res) => {
   res.sendFile(path.join(__dirname, 'pages/builder.html'));
 });
 
+app.get('/form-test', (req, res) => {
+  res.sendFile(path.join(__dirname, 'pages/form-test.html'));
+});
+
 app.get('/checkout', (req, res) => {
   res.sendFile(path.join(__dirname, 'pages/checkout.html'));
 });
