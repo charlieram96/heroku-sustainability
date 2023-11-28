@@ -1,22 +1,57 @@
 {
   "defaults": [
     {
-      "solution": "Cage free eggs"
+      "id": 0,
+      "solution": "Cage free eggs",
+      "description": "Aramark is committed to purchase only cage-free eggs by 2020 in the U.S. and globally by 2025.",
+      "commitment": true,
+      "costicon": "Empty",
+      "timeline": "Empty",
+      "active": false
     },
     {
-      "solution": "Sustainable seafood sourcing"
+      "id": 1,
+      "solution": "Sustainable seafood sourcing",
+      "description": "Aramark is committed to source 100% of contracted seafood from responsible sources by 2018.- by Enterprise guidelines.",
+      "commitment": true,
+      "costicon": "Empty",
+      "timeline": "Empty",
+      "active": false
     },
     {
-      "solution": "Hormone-free: Meat products"
+      "id": 2,
+      "solution": "Hormone-free: Meat products",
+      "description": "Aramark is committed to phasing out the routine use of antibiotics for use as growth promoters or disease prevention across poultry, beef, pork and seafood categories in our supply chain.",
+      "commitment": true,
+      "costicon": "Empty",
+      "timeline": "Empty",
+      "active": false
     },
     {
-      "solution": "Humanely-raised Broiler Chickens"
+      "id": 3,
+      "solution": "Humanely-raised Broiler Chickens",
+      "description": "Aramark is committed to purchase only humanely-raised broiler chickens by 2024",
+      "commitment": true,
+      "costicon": "Empty",
+      "timeline": "Empty",
+      "active": false
     },
     {
-      "solution": "No Deforestation commitments"
+      "id": 4,
+      "solution": "No Deforestation commitments",
+      "description": "Aramark is committed to purchasing contracted soy-based oils, specified margarines and shortenings, and beef products with no deforestation risk by 2025.",
+      "commitment": true,
+      "costicon": "Empty",
+      "timeline": "Empty",
+      "active": false
     },
     {
-      "solution": "Group-housed Pork"
+      "id": 5,
+      "solution": "Group-housed Pork",
+      "description": "Aramark is committed to purchasing only 100% group-house pork",
+      "commitment": true,
+      "costicon": "Empty",
+      "active": false
     }
   ]
 }

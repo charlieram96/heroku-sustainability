@@ -107,7 +107,7 @@ smartsheet.sheets.listSheets(options)
 
 function commitmentData(sheetInfo) {
   let defaultData = { defaults: [] };
-
+  let i = 0;
   sheetInfo.rows.forEach(row => {
     let cells = row.cells;
     let level = cells[1].value;
@@ -122,10 +122,10 @@ function commitmentData(sheetInfo) {
           commitment: cells[6].value,
           costicon: cells[8].displayValue,
           timeline: cells[9].displayValue,
-          lob: lobArray,
           active: false
         };
         defaultData.defaults.push(feature);
+        i++;
       }
     }
   });
