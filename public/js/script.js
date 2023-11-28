@@ -102,6 +102,7 @@ $('#builderTable tbody').on('click', 'img.icon-delete', function () {
 
 /* Add Row in Side Panel Cart and Session Storage */
 function addRow(category, solution, progression, cost, timeline) {
+  
   console.log('addRow', category, solution, progression, cost, timeline)
   var rowItems = {
     "category": category,
@@ -117,10 +118,13 @@ function addRow(category, solution, progression, cost, timeline) {
 
   } else {
     table.rows(function (idx, data, node) {
+      dataSet.splice(node, 1, rowItems);
+      sessionStorage.removeItem('dataSet', JSON.stringify(dataSet));
       return data.subcategory === rowItems.subcategory ? true : false;
     })
     .remove()
     .draw();
+    
   }  
 }
 

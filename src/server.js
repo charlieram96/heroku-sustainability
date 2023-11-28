@@ -115,7 +115,15 @@ function commitmentData(sheetInfo) {
     if (level === 2) {
       if (cells[6].value === true) {
         let feature = {
+          id: i,
           solution: cells[0].displayValue,
+          progression: cells[4].displayValue,
+          description: cells[5].displayValue,
+          commitment: cells[6].value,
+          costicon: cells[8].displayValue,
+          timeline: cells[9].displayValue,
+          lob: lobArray,
+          active: false
         };
         defaultData.defaults.push(feature);
       }
@@ -125,10 +133,10 @@ function commitmentData(sheetInfo) {
 }
 
 function sheetToJSON(sheetInfo) {
+  let i = 0;
   let finalData = { features: [] };
   let featureMap = {};
   let subCategoryMap = {};
-
   sheetInfo.rows.forEach(row => {
     let cells = row.cells;
     let level = cells[1].value; 
@@ -153,21 +161,26 @@ function sheetToJSON(sheetInfo) {
         subCategoryMap[row.id] = property;
       }
     } else if (level === 2) {
+      
       let parentProperty = subCategoryMap[row.parentId];
       if (parentProperty) {
         let lobArray = cells[7].displayValue ? cells[7].displayValue.split(',').map(item => item.trim()) : [];
         let solution = {
+          id: i,
           name: cells[0].displayValue,
           progression: cells[4].displayValue,
           description: cells[5].displayValue,
           commitment: cells[6].value,
           costicon: cells[8].displayValue,
           timeline: cells[9].displayValue,
-          lob: lobArray
+          lob: lobArray,
+          active: false
         };
         parentProperty.solutions.push(solution);
+        i++;
       }
     }
+
   });
   return finalData;
   
