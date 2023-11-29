@@ -82,7 +82,7 @@ function getSubcategoryPosition(el) {
 /* Show the Solution Cards */
 function showSolutions(categoryIndex, typeVal) {
   var optionCards = document.getElementById('optionCards');
-  optionCards.classList.add('mt-4', 'row', 'row-cols-xl-3', 'row-cols-md-2', 'py-5');
+  optionCards.classList.add('mt-4', 'row', 'row-cols-xl-3', 'row-cols-md-2', 'pb-5');
   optionCards.innerHTML = '';
   var features = subCategories.features[categoryIndex].properties[typeVal].solutions;
   var category = subCategories.features[categoryIndex].category;
@@ -102,9 +102,9 @@ function showSolutions(categoryIndex, typeVal) {
     optionCards.innerHTML +=
     `<div class="col mb-4">
       <div class="card h-100 card-bg p-2 d-flex flex-column">
-        <div class="card-body">
+        <div class="card-body d-flex flex-column justify-content-between">
           <h6 class="card-title">${feature.name}</h6>
-          <p class="mt-3 text-trim one-${i} card-text">${feature.description}</p>
+          <p class="text-trim one-${i} card-text">${feature.description}</p>
         </div>
         <div class="card-footer bg-transparent border-0 d-flex flex-row-reverse align-items-center justify-content-between">
           <button onclick="addActive('${feature.name}', '${feature.id}'); return addRow('${category}', '${feature.name}', '${feature.progression}', '${feature.costicon}', '${feature.timeline}', '${feature.id}', '${feature.commitment}')" class="btn btn-light btn-sm rounded-pill px-3" id="active-check-${feature.id}" type="button" >Select</button>
