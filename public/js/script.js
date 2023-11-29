@@ -4,10 +4,9 @@ try {
   dataSet = JSON.parse(sessionStorage.getItem('dataSet')) || [];
 } catch (err) {
   console.log("Error parsing sessionStorage.getItem('dataSet')", err);
-  dataSet = [];
 }
 
-rfpToggle();
+
 
 /* Table for Checkout Page */
 var checkoutTable = $('#checkoutTable').DataTable({
@@ -39,12 +38,16 @@ var checkoutTable = $('#checkoutTable').DataTable({
   buttons: [{
     extend: 'pdfHtml5',
     text: 'Download plan',
+    download: true,
     action: function ( e, dt, node, config ) {
+
       const myModal = new bootstrap.Modal('#exampleModal', {
         keyboard: false
       })
       var modalToggle = document.getElementById('exampleModal'); myModal.show(modalToggle)
-    }
+      checkoutTable.button( 0,0 ).open;
+    },
+    download: true,
   }],
   paging: false,
   searching: false,
@@ -80,7 +83,7 @@ var table = $('#builderTable').DataTable({
       width: '80%'
     }
   ],
-  order: [[0, 'desc'],[ 1, 'asc' ]],
+  order: [[0, 'asc'],[ 1, 'asc' ]],
   rowGroup: {
     dataSrc: 'category',
   },
@@ -149,7 +152,7 @@ function rfpToggle() {
         var rowItems = {};
         defaults.defaults.forEach(function(feature) {
           rowItems = {
-            "category": "Default Plan",
+            "category": feature.category,
             "subcategory": feature.solution,
             "cost": 10,
             "timeline": "0-3 months",

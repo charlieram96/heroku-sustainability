@@ -162,13 +162,13 @@ function addActive(name, active, index) {
       if (feature.active === false || feature.active === '') {
         console.log(feature.name, feature.active)
         feature.active = " active";
-        activeCheck[index].innerHTML = '&#10003;';
-        activeCheck[index].className += feature.active;
+        activeCheck[0].innerHTML = '&#10003;';
+        activeCheck[0].className += feature.active;
       } else if (feature.active === " active") {
         console.log(feature.name, feature.active)
         feature.active = false;
-        activeCheck[index].innerHTML = 'Select';
-        activeCheck[index].className = activeCheck[i].className.replace(' active', '');
+        activeCheck[0].innerHTML = 'Select';
+        activeCheck[0].className = activeCheck[i].className.replace(' active', '');
       }
     } 
   });

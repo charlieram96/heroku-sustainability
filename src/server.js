@@ -111,7 +111,7 @@ function commitmentData(sheetInfo) {
   sheetInfo.rows.forEach(row => {
     let cells = row.cells;
     let level = cells[1].value;
-
+    
     if (level === 2) {
       if (cells[6].value === true) {
         let feature = {
