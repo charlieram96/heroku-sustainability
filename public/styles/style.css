@@ -235,14 +235,6 @@ p, li {
   border: none !important;
 }
 
-.bluey {
-  background-color: #8B97FF !important;
-}
-
-.redy {
-  background-color: #E56E6E !important;
-}
-
 .bg-image {
   background-image: url("/assets/img/bg.jpg");
   background-size: cover;
@@ -413,4 +405,10 @@ table.dataTable tr.dtrg-group.dtrg-level-0 th {
   font-family: 'gotham-medium'!important;
   border-bottom: 1px solid #FFF!important;
   color: #FFF!important;
+}
+
+.reset {
+  color: #000!important;
+  background-color: #F8F9Fa!important;
+  border-color: #F8F9Fa!important;
 }

@@ -2,13 +2,14 @@
   "features": [
     {
       "category": "Embed Circularity",
-      "description": "When we use the term circular, we refer to our ability to keep materials in the economy in circulation and out of the environment. An efficient circular system generates little to no waste.",
-      "subheader": "Reduce single use items, promote reuse, & expand recycling",
+      "description": "When we use the term circular, this refers to our ability to keep materials in the economy & out of the environment. An efficient circular system generates little to no waste.",
+      "subheader": "Reduce single use, promote reuse & expand recycling",
       "properties": [
         {
           "subCategory": "Recycling",
           "solutions": [
             {
+              "id": 0,
               "name": "Recycling: Full account",
               "description": "Rather than sending all waste to the landfill, divert accepted materials for recycling. Recycling programs will differ by location and municipality.",
               "commitment": false,
@@ -16,29 +17,35 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "Recycling: E-waste (Office)",
+              "id": 1,
+              "name": "Recycling: E-waste",
               "description": "Utilize a recycling solution for electronic waste, instead of sending it to the landfill. Electronics recycling will differ by location and municipality. Often it is a free service.",
               "commitment": false,
               "costicon": "One",
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "Recycling: Printer cartridges (Office)",
+              "id": 2,
+              "name": "Recycling: Printer cartridges",
               "description": "Utilize a recycling solution for printer ink cartridges, instead of sending them to the landfill. Our supplier partnership with HP provides this recycling solution to us at no cost.",
               "commitment": false,
               "costicon": "Empty",
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 3,
               "name": "Terracycle: Single collection stream",
               "progression": "Prog - Terracyle",
               "description": "Terracycle is a solution for difficult to recycle items that are not accepted in a traditional waste stream. There are several different \"waste streams\" you can choose from including candy and snack wrappers, gloves, and hotel amenties.",
@@ -47,9 +54,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 4,
               "name": "Terracycle: Multiple collection streams",
               "progression": "Prog - Terracyle",
               "description": "Terracycle is a solution for difficult to recycle items that are not accepted in a traditional waste stream.There are several different \"waste streams\" you can choose from including candy and snack wrappers, gloves, and hotel amenties.",
@@ -57,7 +66,8 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -65,6 +75,7 @@
           "subCategory": "Waste management",
           "solutions": [
             {
+              "id": 5,
               "name": "Waste bins: Signage",
               "description": "Label waste bins based on their destination (landfill, recycle, compost), to ensure that consumers are properly sorting their waste.",
               "commitment": false,
@@ -72,9 +83,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 6,
               "name": "Waste system: Twin bins (landfill, recycle)",
               "progression": "Prog - Waste system",
               "description": "Implement a twin waste bin system at every station with one for trash and one for recycling. To avoid confusion or contamination, it is important that trash and recycling bins are always available together vs. separated. Cost is dependent on the number of bins needed.",
@@ -83,9 +96,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 7,
               "name": "Waste system: Triple bins (landfill, recycle, compost)",
               "progression": "Prog - Waste system",
               "description": "Implement a triple waste bin system at every station - one for landfill, one for recycling, and one for compost. To avoid confusion or contamination, it is important that trash recycling and compost bins are always available together vs. separated. Cost is dependent on the number of bins needed.",
@@ -94,9 +109,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 8,
               "name": "Intuitive AI- Oscar Sort",
               "description": "Oscar Sort is a front of house tech solution to educate consumers on proper waste sorting. It also includes post consumer data tracking.",
               "commitment": false,
@@ -104,9 +121,11 @@
               "timeline": "Half",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 9,
               "name": "Waste audit",
               "description": "Conduct a waste audit to analyze your waste stream and identify opportunities for waste reduction. Waste audits can be conducted by staff or a professional paid auditor.",
               "commitment": false,
@@ -114,7 +133,8 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -122,16 +142,19 @@
           "subCategory": "Bulk purchases",
           "solutions": [
             {
-              "name": "Bulk: Condiments (FOH or catering)",
+              "id": 10,
+              "name": "Bulk: Condiments",
               "description": "Provide bulk condiments utilizing dispensers in front of house instead of individual packets to cut down on single-use waste.",
               "commitment": false,
               "costicon": "One",
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 11,
               "name": "Bulk: Sugar in break rooms",
               "description": "Provide bulk sugar in breakrooms instead of individual packets.",
               "commitment": false,
@@ -139,17 +162,20 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "Bulk: Convenience store products",
+              "id": 12,
+              "name": "Bulk: C-store products",
               "description": "Utilize bulk products in convenience stores. We have several supplier partnerships for solutions but generally bulk products are in a refill display for customers to select the portion of the product they would like to purchase. In order to be a sustainable solution, you will need to consider the container you are selling the products in as well. Review options from the suggestions provided.",
               "commitment": false,
               "costicon": "One",
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -157,6 +183,7 @@
           "subCategory": "Beverages",
           "solutions": [
             {
+              "id": 13,
               "name": "Straws: Eco-friendly",
               "progression": "Pick - Straws",
               "description": "Only provide eco-friendly straws in operations. Eco-friendly versions include paper and compostable options made of PLA or PHA. Operations can also sell reusable straws made of durable ideally non-plastic materials.",
@@ -165,10 +192,12 @@
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "Straws: Eco-friendly straws (on request only)",
+              "id": 14,
+              "name": "Straws: Eco-friendly (on request only)",
               "progression": "Pick - Straws",
               "description": "Only provide eco-friendly straws, and only when a consumer requests one.",
               "commitment": false,
@@ -176,19 +205,23 @@
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "Cups: Ball aluminum (instead of plastic)",
+              "id": 15,
+              "name": "Cups: Ball aluminum",
               "description": "Use aluminum cups, which can be easily recycled or even reused by the customer, rather than plastic cups.",
               "commitment": false,
               "costicon": "Two",
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 16,
               "name": "Cups: No lids in service",
               "description": "Eliminate lids for cold beverages in service in order to reduce waste.",
               "commitment": false,
@@ -196,9 +229,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 17,
               "name": "Cups: BYO program",
               "progression": "Pick - Cups",
               "description": "Customers can bring their own cup to receive a discount for hot and/or cold beverages.",
@@ -207,10 +242,12 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "Cups: Supplied on site program",
+              "id": 18,
+              "name": "Cups: Reusable",
               "progression": "Pick - Cups",
               "description": "Offer a reusable cup program where cups are provided on-site. In larger volume locations, these programs typically work best in a deposit return systemwhere a small fee is charged and returned after use so customers are incentivized to return their cups.",
               "commitment": false,
@@ -218,19 +255,23 @@
               "timeline": "Half",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "No plastic bottles: Aluminum and glass",
+              "id": 19,
+              "name": "No plastic bottles: Aluminum/glass",
               "description": "Only offer beverages in aluminum or glass bottles and cans instead of plastic bottles.",
               "commitment": false,
               "costicon": "Two",
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 20,
               "name": "No plastic bottles: Refill system",
               "description": "Provide a refill system instead of offering single-use plastic bottles.There are options for water, soda, and other various beverages that can be incorporated in operations.",
               "commitment": false,
@@ -238,7 +279,8 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -246,6 +288,7 @@
           "subCategory": "Dining",
           "solutions": [
             {
+              "id": 21,
               "name": "Durable smallwares",
               "description": "Use of durable small wares in operations rather than disposables.",
               "commitment": false,
@@ -253,9 +296,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 22,
               "name": "Single serve dispensers: Napkins",
               "description": "Use single-serve napkin dispensers instead of individually wrapped napkins. To further reduce napkin use, place in central areas vs. on each individual table.",
               "commitment": false,
@@ -263,9 +308,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 23,
               "name": "Single serve dispensers: Utensils",
               "description": "Use single-serve utensil dispensers instead of individually wrapped cutlery or cutlery kits.",
               "commitment": false,
@@ -273,9 +320,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 24,
               "name": "Single serve dispensers: Paper towels",
               "description": "Use single-serve paper towel dispensers instead of individually wrapped items.",
               "commitment": false,
@@ -283,9 +332,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 25,
               "name": "Mobile orders: Opt out of cutlery",
               "description": "Provide an option in your mobile ordering system prompting consumers with the choice to decline cutlery.",
               "commitment": false,
@@ -293,7 +344,8 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -301,6 +353,7 @@
           "subCategory": "Catering",
           "solutions": [
             {
+              "id": 26,
               "name": "Catering: Zero waste / environmentally preferable",
               "description": "Design catering programs to be zero waste or only use disposable products with environmentally preferable specifications (compostable or recyclable).",
               "commitment": false,
@@ -308,7 +361,8 @@
               "timeline": "Half",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -316,6 +370,7 @@
           "subCategory": "Recycled content",
           "solutions": [
             {
+              "id": 27,
               "name": "Recycled content: Napkins",
               "progression": "Level - Standard or FSC",
               "description": "Provide napkins made from post-consumer content, which uses less material overall since it is made of recycled inputs.",
@@ -324,9 +379,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 28,
               "name": "Recycled content: Toilet paper",
               "progression": "Level - Standard or FSC",
               "description": "Provide toilet paper made from post-consumer content, which uses less material overall since it is made of recycled inputs.",
@@ -335,9 +392,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 29,
               "name": "Recycled content: Paper towels",
               "progression": "Level - Standard or FSC",
               "description": "Provide paper towels made from post-consumer content, which uses less material overall since it is made of recycled inputs.",
@@ -346,9 +405,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 30,
               "name": "Recycled content: Uniforms",
               "description": "Choose uniforms made from recycled content or certified organic cotton.",
               "commitment": false,
@@ -356,7 +417,8 @@
               "timeline": "Half",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -364,6 +426,7 @@
           "subCategory": "Packaging",
           "solutions": [
             {
+              "id": 31,
               "name": "Compostable: To-go meals",
               "description": "Provide compostable packaging for to-go meals.",
               "commitment": false,
@@ -371,9 +434,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 32,
               "name": "Compostable: Meals in house",
               "description": "Offer compostable disposables in locations where dishwashing is not available, but front-of-house composting is.",
               "commitment": false,
@@ -381,9 +446,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 33,
               "name": "Single use plastic: Elimination in service",
               "description": "Eliminate single-use plastic in food service areas to cut down on packaging waste. This will involve inventorying disposables and products in the service location.",
               "commitment": false,
@@ -391,9 +458,11 @@
               "timeline": "Full",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 34,
               "name": "No plastic bags: FOH",
               "progression": "Prog - Plastic bags",
               "description": "Remove plastic to-go bags from the front-of-house operations. If to-go bags are necessary, they can be replaced with FSC paper, reusable, or compostable options.",
@@ -402,9 +471,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 35,
               "name": "No plastic bags: FOH and BOH",
               "progression": "Prog - Plastic bags",
               "description": "Remove plastic bags from the front and back of house operations.",
@@ -413,9 +484,11 @@
               "timeline": "Full",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 36,
               "name": "No styrofoam (EPS)",
               "description": "Eliminate the use of EPS (expanded polystyrene) in service.",
               "commitment": false,
@@ -423,10 +496,12 @@
               "timeline": "Half",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "Containers: Replace disposable with reusable",
+              "id": 37,
+              "name": "Containers: Reusable",
               "progression": "Pick - Containers",
               "description": "Reusable containers replace disposables in operations. Aramark is partnered with OZZI, G.E.T, and Whirley-DrinkWorks on reusable container solutions. Recommend considering a tracking solution with these types of programs to understand usage and support reducing container loss. Further details provided in the \"Learn More' resources.",
               "commitment": false,
@@ -434,9 +509,11 @@
               "timeline": "Three Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 38,
               "name": "Containers: Reusable rent & wash service",
               "progression": "Pick - Containers",
               "description": "A full turnkey reusable container program where containers are washed at off-site warewashing facilities. This solution is only available in specific geographic areas.",
@@ -445,7 +522,8 @@
               "timeline": "Half",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         }
@@ -460,6 +538,7 @@
           "subCategory": "Local partnerships",
           "solutions": [
             {
+              "id": 39,
               "name": "On site farmers market",
               "description": "Host a farmer's market on-site to support local farmers and artisans.",
               "commitment": false,
@@ -468,9 +547,11 @@
               "lob": [
                 "Collegiate Hospitality",
                 "Workplace Experience"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 40,
               "name": "CSA (community supported agriculture)",
               "description": "Partner with local farmer(s) and/or distributors to offer a community-supported agriculture program to offer customers an opportunity to purchased fresh and local produce. CSAs can be offered in the late spring, summer, or fall and are dependent on crop availabilty.",
               "commitment": false,
@@ -479,9 +560,11 @@
               "lob": [
                 "Collegiate Hospitality",
                 "Workplace Experience"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 41,
               "name": "Local restaurant concept",
               "description": "Utilize local restaurants or food trucks by having them come in for a rotation through Local Restaurant Row partnership.",
               "commitment": false,
@@ -489,9 +572,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 42,
               "name": "Local farms/business partnerships",
               "description": "Engage in programming with local farms and businesses to cultivate relationships for local sourcing.",
               "commitment": false,
@@ -499,7 +584,8 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -507,16 +593,19 @@
           "subCategory": "Growing on site",
           "solutions": [
             {
-              "name": "Indoor farming (Babylon Micro Farm)",
+              "id": 43,
+              "name": "Babylon MicroFarm",
               "description": "Implement Babylon Micro Farms, which are hydroponic farms that allow the  user to grow their own leafy greens, herbs, micro-greens, and edible flowers inside on-site.",
               "commitment": false,
               "costicon": "Three",
               "timeline": "Half",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 44,
               "name": "On site garden",
               "description": "Build a garden on-site to source fresh produce. Please follow guidance in the \"Learn More' section to ensure you are following appropriate Safety and Risk Control protocols.",
               "commitment": false,
@@ -524,7 +613,8 @@
               "timeline": "Three Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -532,6 +622,7 @@
           "subCategory": "Sustainable ingredients",
           "solutions": [
             {
+              "id": 45,
               "name": "Third party verified products",
               "description": "Use third party verified products to ensure responsible sourcing. (Fair Trade, Organic, Humanely raised, etc)",
               "commitment": false,
@@ -539,9 +630,11 @@
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 46,
               "name": "Cage free eggs",
               "description": "Aramark is committed to purchase only cage-free eggs by 2020 in the U.S. and globally by 2025.",
               "commitment": true,
@@ -549,9 +642,11 @@
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 47,
               "name": "Sustainable seafood sourcing",
               "description": "Aramark is committed to source 100% of contracted seafood from responsible sources by 2018.- by Enterprise guidelines.",
               "commitment": true,
@@ -559,9 +654,11 @@
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 48,
               "name": "Hormone-free: Meat products",
               "description": "Aramark is committed to phasing out the routine use of antibiotics for use as growth promoters or disease prevention across poultry, beef, pork and seafood categories in our supply chain.",
               "commitment": true,
@@ -569,17 +666,21 @@
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 49,
               "name": "Humanely-raised Broiler Chickens",
               "description": "Aramark is committed to purchase only humanely-raised broiler chickens by 2024",
               "commitment": true,
               "costicon": "Empty",
               "timeline": "Empty",
-              "lob": []
+              "lob": [],
+              "active": false
             },
             {
+              "id": 50,
               "name": "No Deforestation commitments",
               "description": "Aramark is committed to purchasing contracted soy-based oils, specified margarines and shortenings, and beef products with no deforestation risk by 2025.",
               "commitment": true,
@@ -587,16 +688,21 @@
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 51,
               "name": "Group-housed Pork",
               "description": "Aramark is committed to purchasing only 100% group-house pork",
               "commitment": true,
               "costicon": "Empty",
-              "lob": []
+              "timeline": "Empty",
+              "lob": [],
+              "active": false
             },
             {
+              "id": 52,
               "name": "Non-dairy milk (default option)",
               "description": "Set non-dairy milk as the default option for consumers as a step to further reduce greenhouse gas emissions from food at your location.",
               "commitment": false,
@@ -604,7 +710,8 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -612,6 +719,7 @@
           "subCategory": "Menus",
           "solutions": [
             {
+              "id": 53,
               "name": "Low carbon: Coolfood meals",
               "description": "Coolfood meals are meals certified by the World Resources Institute that meet both a carbon footprint and nutritional standard. Reach out to the Enterprise Sustainability Team to learn how you can implement Coolfood meals at your location (currently only available for Collegiate Hospitality, Healthcare+, and Workplace Hospitality LOBs).",
               "commitment": false,
@@ -621,9 +729,11 @@
                 "Healthcare+",
                 "Collegiate Hospitality",
                 "Workplace Experience"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 54,
               "name": "Vegan: Grab-and-go",
               "description": "Provide vegan options in grab-and-go areas.",
               "commitment": false,
@@ -631,9 +741,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 55,
               "name": "Vegan: Dining guide",
               "description": "Provide a vegan dining guide for consumers.",
               "commitment": false,
@@ -641,9 +753,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 56,
               "name": "Plant-forward: Meal options",
               "progression": "Pick - Plant forward",
               "description": "Menu and label a variety of plant-forward options to reduce greenhouse gas emissions from food at your location.",
@@ -652,10 +766,12 @@
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "Plant-forward: Dedicated vegan/vegetarian station",
+              "id": 57,
+              "name": "Dedicated vegan/vegetarian station",
               "progression": "Pick - Plant forward",
               "description": "Have a dedicated vegan/vegetarian station in operation.",
               "commitment": false,
@@ -663,9 +779,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 58,
               "name": "Menu: Seasonal rotating",
               "description": "Design your menu based on the seasonal availability of produce.",
               "commitment": false,
@@ -673,9 +791,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 59,
               "name": "Menu: Sustainable catering",
               "description": "Design a catering menu that heavily features local or third-party verified sustainable ingredients.",
               "commitment": false,
@@ -683,9 +803,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 60,
               "name": "Menu: Plant-based catering",
               "description": "Develop a catering menu that is plant based. This is a way to provide a sustainable catering event that not only accommodates vegans but is also lower in carbon.",
               "commitment": false,
@@ -693,7 +815,8 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         }
@@ -708,15 +831,18 @@
           "subCategory": "Food donation",
           "solutions": [
             {
+              "id": 61,
               "name": "Food Donation Connection",
               "description": "Donate excess food via a partnership with the Food Donation Connection (FDC). FDC is an Enterprise food donation program partner that matches donations to local recipients.",
               "costicon": "One",
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 62,
               "name": "On-campus / local food donation",
               "description": "Donate excess food to either local or on-campus locations or a food bank. Please ensure local partnerships are approved via the Food Donation program website.",
               "commitment": false,
@@ -724,9 +850,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 63,
               "name": "Food Recovery Network",
               "description": "Donate excess food via a partnership with The Food Recovery Network (FRN). FRN is a Collegiate hospitality-specific food donation program where students support the donation process. Requires interested student group on campus.",
               "commitment": false,
@@ -734,9 +862,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Collegiate Hospitality"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 64,
               "name": "Goodr",
               "description": "Donate excess food via a partnership with Goodr. Goodr is a food donation program where food pickups can be scheduled weekly or on demand.Program fees pay for transportation to donation partners, donation materials, and tracking via the organization's app.",
               "commitment": false,
@@ -744,7 +874,8 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -752,6 +883,7 @@
           "subCategory": "Reduce food waste",
           "solutions": [
             {
+              "id": 65,
               "name": "Trayless Dining",
               "description": "Remove trays from dining programs. This enables both energy and water savings. It can also help prevent food waste in an AYCTE setting.",
               "commitment": false,
@@ -759,9 +891,11 @@
               "timeline": "Empty",
               "lob": [
                 "Collegiate Hospitality"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 66,
               "name": "Food management process",
               "description": "Aramark's Hospitality Enablement Program to support source reduction throughout the food production process from start to finish.",
               "commitment": false,
@@ -769,9 +903,11 @@
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 67,
               "name": "Waste tracking: Manual",
               "progression": "Prog - Waste tracking",
               "description": "Manually track and log pre-consumer waste (when/where/why) and enter the log into GMM.",
@@ -780,10 +916,12 @@
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "Waste tracking: Enable",
+              "id": 68,
+              "name": "Waste tracking: ENABLE",
               "progression": "Prog - Waste tracking",
               "description": "Track and target reduction of pre-consumer waste in ENABLE technology. Operators record prep, service, and storage waste. Culinary teams should then be targeting opportunities to reduce waste such as staff training on trimming or portioning.",
               "commitment": false,
@@ -791,9 +929,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 69,
               "name": "Waste tracking: LeanPath (BOH)",
               "progression": "Prog - Waste tracking",
               "description": "Track and target reduction of pre-consumer waste with LeanPath technology. Additionally, some software includes the capability to photograph.",
@@ -802,9 +942,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 70,
               "name": "Waste tracking: LeanPath Spark (FOH)",
               "progression": "Prog - Waste tracking",
               "description": "Track post-consumer waste and educate consumers with the LeanPath Spark scale and consumer-facing display.",
@@ -813,7 +955,8 @@
               "timeline": "Quarter",
               "lob": [
                 "Collegiate Hospitality"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -821,6 +964,7 @@
           "subCategory": "Recycle food waste",
           "solutions": [
             {
+              "id": 71,
               "name": "Composting: Pre-consumer (BOH)",
               "progression": "Prog - Composting",
               "description": "Compost food waste from back of house operations rather than sending it to the landfill through a contracted service. t",
@@ -829,9 +973,11 @@
               "timeline": "Half",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 72,
               "name": "Composting: FOH + BOH",
               "progression": "Prog - Composting",
               "description": "Compost food waste from front and back of house operations rather than sending it to the landfill through a contracted service.",
@@ -840,9 +986,11 @@
               "timeline": "Half",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 73,
               "name": "Composting: Pulper",
               "description": "Invest in equipment that pulps food waste into smaller pieces, making it more ideal for composting processes and reducing its weight for hauling",
               "commitment": false,
@@ -850,17 +998,20 @@
               "timeline": "Half",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "Food waste digester (ORCA)",
+              "id": 74,
+              "name": "ORCA Food waste digester",
               "description": "Invest in ORCA equipment that digests food waste and produces an effluent that is then treated by wastewater treatment. This machine can be continuously be fed food waste to allow for real-time processing.",
               "commitment": false,
               "costicon": "Three",
               "timeline": "Half",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         }
@@ -875,6 +1026,7 @@
           "subCategory": "Energy",
           "solutions": [
             {
+              "id": 75,
               "name": "On-site energy management program",
               "description": "Third-party energy management program is deployed to monitor usage and identify opportunities for efificiences.",
               "commitment": false,
@@ -882,9 +1034,11 @@
               "timeline": "Full",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 76,
               "name": "High efficiency hand dryers in bathrooms",
               "description": "Purchase high efficiency Energy Star hand dryers when replacing old ones.",
               "commitment": false,
@@ -892,9 +1046,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 77,
               "name": "Source renewable energy",
               "description": "Source renewable energy, whether from an offsite provider, through onsite installation, or purchasing renewable energy credits (RECs) to cut down on GHG emissions from energy use.",
               "commitment": false,
@@ -902,9 +1058,11 @@
               "timeline": "Half",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 78,
               "name": "Utilize EnergyStar appliances",
               "description": "Purchase EnergyStar-rated appliances when replacing equipment, to maximize operating efficiency by decreasing energy and water usage as well as lowering site-based greenhouse gas emissions.",
               "commitment": false,
@@ -912,9 +1070,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 79,
               "name": "Energy audit",
               "description": "Conduct an energy audit to assess the energy efficiency of your building.",
               "commitment": false,
@@ -922,7 +1082,8 @@
               "timeline": "Half",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -930,6 +1091,7 @@
           "subCategory": "Water",
           "solutions": [
             {
+              "id": 80,
               "name": "Faucets: Install aerators",
               "description": "Install faucet aerators on hand and prep sinks to limit water flow in order to conserve energy and waste.",
               "commitment": false,
@@ -937,9 +1099,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 81,
               "name": "Faucets: Low flow (EPA)",
               "description": "Purchase low flow faucets and sinks, or EPA WaterSense certified products when replacing equipment in order to maximize water usage efficiency.",
               "commitment": false,
@@ -947,9 +1111,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 82,
               "name": "Grey water: Rain capture system",
               "description": "Implement a rainwater capture system and use the grey water in your building.",
               "commitment": false,
@@ -957,9 +1123,11 @@
               "timeline": "Full",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 83,
               "name": "Boss Defrost",
               "description": "Use a Boss Defrost to mimic \"slacking\" (the running water method of defrosting) in order to reduce water use by 98.5%.",
               "commitment": false,
@@ -967,9 +1135,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 84,
               "name": "Water audit",
               "description": "Conduct a water audit to account for all of the water in a water system to understand uses and losses.",
               "commitment": false,
@@ -977,7 +1147,8 @@
               "timeline": "Half",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -985,6 +1156,7 @@
           "subCategory": "Lighting and temperature",
           "solutions": [
             {
+              "id": 85,
               "name": "Lighting: LED",
               "description": "Replace incandescent, halogen, or fluorescent bulbs with LEDs to maximize energy efficiency.",
               "commitment": false,
@@ -992,9 +1164,11 @@
               "timeline": "Full",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 86,
               "name": "Lighting: Motion sensor",
               "description": "Switch to motion sensor lighting to reduce electricity consumption and site-based greenhouse gas emissions..",
               "commitment": false,
@@ -1002,9 +1176,11 @@
               "timeline": "Three Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 87,
               "name": "Lighting & temp: Control system",
               "description": "Employ a lighting and temperature control system to maximize utility use efficiency.",
               "commitment": false,
@@ -1012,7 +1188,8 @@
               "timeline": "Full",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -1020,6 +1197,7 @@
           "subCategory": "Metrics",
           "solutions": [
             {
+              "id": 88,
               "name": "Utilities: Metrics displayed",
               "description": "Implement a dashboard on site that displays the utility metrics of your location.",
               "commitment": false,
@@ -1027,9 +1205,11 @@
               "timeline": "Full",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 89,
               "name": "Utilities: Monitor & track use",
               "description": "Monitor and track utilities use to identify trends and establish baselines to improve upon.",
               "commitment": false,
@@ -1037,9 +1217,11 @@
               "timeline": "Full",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 90,
               "name": "GHG: Reduction KPI tracking",
               "description": "Track greenhouse gas emissions and implement a reduction plan.",
               "commitment": false,
@@ -1047,7 +1229,8 @@
               "timeline": "Full",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -1055,6 +1238,7 @@
           "subCategory": "Programming",
           "solutions": [
             {
+              "id": 91,
               "name": "Conservation signage",
               "description": "Hang signage around the back of house to encourage the conservation of resources like water and electricity. Example signage locations could be by light switches or sinks.",
               "commitment": false,
@@ -1062,9 +1246,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 92,
               "name": "Green cleaning program",
               "progression": "Pick - Cleaning",
               "description": "Use environmentally preferable products for cleaning.",
@@ -1073,9 +1259,11 @@
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 93,
               "name": "Blue cleaning program",
               "progression": "Pick - Cleaning",
               "description": "Use chemical-free water-based products for cleaning.",
@@ -1084,7 +1272,8 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         }
@@ -1099,6 +1288,7 @@
           "subCategory": "Training",
           "solutions": [
             {
+              "id": 94,
               "name": "New hires",
               "description": "Make sustainability training mandatory for all new hires to ensure that all employees are aware of sustainability goals and practices.",
               "commitment": false,
@@ -1106,9 +1296,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 95,
               "name": "Huddles",
               "description": "Implement sustainability training during pre or post shift huddles.",
               "commitment": false,
@@ -1116,9 +1308,11 @@
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 96,
               "name": "Engagement sessions",
               "description": "Host ongoing sustainability training through engagement sessions.",
               "commitment": false,
@@ -1126,9 +1320,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 97,
               "name": "On site staff SME",
               "description": "Hire an on site sustainability staff person to support client and Enterprise sustainability priorities in operations.",
               "commitment": false,
@@ -1136,7 +1332,8 @@
               "timeline": "Half",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -1144,6 +1341,7 @@
           "subCategory": "Events",
           "solutions": [
             {
+              "id": 98,
               "name": "Education events (site-based)",
               "description": "Host sustainability themed educational events to encourage sustainability and inform consumers on site.",
               "commitment": false,
@@ -1151,9 +1349,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 99,
               "name": "Themed meals or LTO",
               "description": "Host sustainability-themed meal(s) or feature limited-time sustainability menu offerings.",
               "commitment": false,
@@ -1161,9 +1361,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 100,
               "name": "Weigh the Waste",
               "description": "Host a weigh the waste event by weighing all the waste collected from a day, in order to collect data on the location's waste output.",
               "commitment": false,
@@ -1171,7 +1373,8 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -1179,6 +1382,7 @@
           "subCategory": "Marketing",
           "solutions": [
             {
+              "id": 101,
               "name": "Social media / location website",
               "description": "Highlight sustainable practices that are being employed at your location on social media or on the location's website.",
               "commitment": false,
@@ -1186,9 +1390,11 @@
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 102,
               "name": "Marketing campaign: Sip Smarter",
               "description": "Implement Sip Smarter, Enterprise Sustainability's single-use plastic straw reduction strategy.",
               "commitment": false,
@@ -1196,9 +1402,11 @@
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 103,
               "name": "Marketing campaign: Choose to Reuse",
               "description": "Implement Choose to Reuse marketing campaign that highlights reusable options in the dining operations. Ex: BYO cup, utensils, napkins, bags, etc.",
               "commitment": false,
@@ -1206,9 +1414,11 @@
               "timeline": "Empty",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 104,
               "name": "Local marketing",
               "description": "Implement signage to highlight local producers and businesses.",
               "commitment": false,
@@ -1216,7 +1426,8 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -1224,6 +1435,7 @@
           "subCategory": "Reporting",
           "solutions": [
             {
+              "id": 105,
               "name": "Metrics at POS / in location",
               "description": "Highlight your sustainability metrics and programming at point of sale or in other places at your location.",
               "commitment": false,
@@ -1231,9 +1443,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 106,
               "name": "Non-food purchases (by spend or volume)",
               "description": "Track your sustainable non-food purchases either by spend or by volume. Report to client on established cadence",
               "commitment": false,
@@ -1241,9 +1455,11 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 107,
               "name": "Food purchases (by spend or volume)",
               "description": "Track your sustainable food purchases either by spend or by volume. Report to client on established cadence.",
               "commitment": false,
@@ -1251,18 +1467,22 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "Food emissions",
+              "id": 108,
+              "name": "Food Emissions Reporting",
               "description": "Annually track emissions from food: Aramark's Food Emissions Report provides clients with insight and analysis into the carbon emissions associated with the food served at their account. We developed this report to help us work together with our clients to reduce emissions from food.",
               "costicon": "Empty",
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 109,
               "name": "Local purchases",
               "description": "Report and track your local purchases through the Aramark Local & Regional sourcing portal.",
               "commitment": false,
@@ -1270,7 +1490,8 @@
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         },
@@ -1278,6 +1499,7 @@
           "subCategory": "Certifications",
           "solutions": [
             {
+              "id": 110,
               "name": "Fair Trade: Campus designation",
               "description": "Complete requirements to become a Fair Trade School. Fair Trade Campus designations are awarded to campuses that meet three specific requirements and they distinguish institutes as leaders in social justice.",
               "commitment": false,
@@ -1285,9 +1507,11 @@
               "timeline": "Full",
               "lob": [
                 "Collegiate Hospitality"
-              ]
+              ],
+              "active": false
             },
             {
+              "id": 111,
               "name": "AASHE Stars",
               "description": "Support AASHE Sustainability, Tracking, Assessment & Rating System is a self-reporting framework for CH LOBs to measure their sustainability performance.",
               "commitment": false,
@@ -1295,57 +1519,68 @@
               "timeline": "Quarter",
               "lob": [
                 "Collegiate Hospitality"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "Sustainable Seafood Sourcing",
-              "description": "Purchase only MSC certified seafood.",
+              "id": 112,
+              "name": "MSC Seafood Certification",
+              "description": "Site based MSC certification for purchasing these seafood products.",
               "commitment": false,
               "costicon": "One",
               "timeline": "Quarter",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "WELL",
+              "id": 113,
+              "name": "WELL Certification",
               "description": "Achevie WELL certfication. WELL certifications recognize buildings designed and constructed to support the health and well-being of their occupants.",
               "commitment": false,
               "costicon": "Two",
               "timeline": "Full",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "USGBC LEED",
+              "id": 114,
+              "name": "LEED Certification",
               "description": "In partnership with client, build to LEED standards. The U.S. Green Building Council offers LEED certifications for buildings that meet rigorous environmental requirements. There are four different levels of certification depending on the number of points awarded.",
               "commitment": false,
               "costicon": "Four",
               "timeline": "Full",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "TRUE Zero Waste",
+              "id": 115,
+              "name": "TRUE Zero Waste Certification",
               "description": "Certify a location as TRUE Zero Waste. TRUE certifications are offered to physical facilities and their operations. A TRUE project's goal is to divert all solid waste from the landfill, incineration, and the environment. Facilities achieve certification if they meet the seven minimum program requirements and attain at least 31 points on the TRUE application form.",
               "commitment": false,
               "costicon": "Three",
               "timeline": "Full",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             },
             {
-              "name": "Green Restaurant Association",
+              "id": 116,
+              "name": "Green Restaurant Association Certification",
               "description": "Certify location(s) as a Green Restaurant through the Green Restaurant Association. This is a transparent way for an operation to demonstrate all the sustainable steps being taken.",
               "commitment": false,
               "costicon": "Three",
               "timeline": "Full",
               "lob": [
                 "Enterprise"
-              ]
+              ],
+              "active": false
             }
           ]
         }
