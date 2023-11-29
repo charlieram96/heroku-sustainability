@@ -32,10 +32,11 @@
             </div>
             <div class="modal-body">
               <div class="card text-bg-dark my-4">
-                <img src="/assets/img/bg2.jpg" class="card-img" alt="...">
+                <img src="/assets/img/ara-bg.jpg" class="card-img h-25" alt="...">
                 <div class="card-img-overlay d-flex flex-column justify-content-center">
                   <h2 class="card-title">Need a BWDW refresher?</h2>
-                  <p class="card-text">We know there's a lot of information out there, here's a primer on our 5 pillars: <a href="javascript:void(0)" target="_blank">link</a></p>
+                  <p class="card-text">We know there's a lot of information out there, click here for more information.</p>
+                  <a href="/assets" class="rounded-pill px-3 btn btn-secondary">Learn More</a>
                 </div>
               </div>
               <div class="row">
@@ -307,6 +308,10 @@
         <div class="bg-body-tertiary h-100 p-2">
           <h6 class="text-primary pt-3">My Sustainability Plan</h6>
           <hr>
+          
+          <table id="builderTable" class="compact row-border" style="width:100%">
+          </table>
+          <a href="/checkout" onclick="mergeTables()" class="w-100 rounded-pill btn btn-secondary mt-3">Review My Plan</a>
           <div class="border rounded mt-3">
             <div class="form-check form-switch mx-4 mt-3 d-flex justify-content-start">
               <input class="form-check-input" type="checkbox" role="switch" id="addDefaults" onchange="rfpToggle()">
@@ -314,10 +319,6 @@
             </div>
             <p class="px-4" style="font-size: 12px;">If so, we'll include the defualt commitments to your plan in checkout.</p>
           </div>
-          <table id="builderTable" class="compact row-border" style="width:100%">
-          </table>
-          <a href="/checkout" onclick="mergeTables()" class="w-100 rounded-pill btn btn-secondary mt-3">Review My Plan</a>
-
         </div>
       </section>
     </main>

@@ -197,7 +197,7 @@
             },
             {
               "id": 14,
-              "name": "Straws: Eco-friendly straws (on request only)",
+              "name": "Straws: Eco-friendly (on request only)",
               "progression": "Pick - Straws",
               "description": "Only provide eco-friendly straws, and only when a consumer requests one.",
               "commitment": false,
@@ -210,7 +210,7 @@
             },
             {
               "id": 15,
-              "name": "Cups: Ball aluminum (instead of plastic)",
+              "name": "Cups: Ball aluminum",
               "description": "Use aluminum cups, which can be easily recycled or even reused by the customer, rather than plastic cups.",
               "commitment": false,
               "costicon": "Two",
@@ -247,7 +247,7 @@
             },
             {
               "id": 18,
-              "name": "Cups: Supplied on site program",
+              "name": "Cups: Reusable",
               "progression": "Pick - Cups",
               "description": "Offer a reusable cup program where cups are provided on-site. In larger volume locations, these programs typically work best in a deposit return systemwhere a small fee is charged and returned after use so customers are incentivized to return their cups.",
               "commitment": false,
@@ -260,7 +260,7 @@
             },
             {
               "id": 19,
-              "name": "No plastic bottles: Aluminum and glass",
+              "name": "No plastic bottles: Aluminum/glass",
               "description": "Only offer beverages in aluminum or glass bottles and cans instead of plastic bottles.",
               "commitment": false,
               "costicon": "Two",
@@ -501,7 +501,7 @@
             },
             {
               "id": 37,
-              "name": "Containers: Replace disposable with reusable",
+              "name": "Containers: Reusable",
               "progression": "Pick - Containers",
               "description": "Reusable containers replace disposables in operations. Aramark is partnered with OZZI, G.E.T, and Whirley-DrinkWorks on reusable container solutions. Recommend considering a tracking solution with these types of programs to understand usage and support reducing container loss. Further details provided in the \"Learn More' resources.",
               "commitment": false,
@@ -594,7 +594,7 @@
           "solutions": [
             {
               "id": 43,
-              "name": "Indoor farming (Babylon Micro Farm)",
+              "name": "Babylon MicroFarm",
               "description": "Implement Babylon Micro Farms, which are hydroponic farms that allow the  user to grow their own leafy greens, herbs, micro-greens, and edible flowers inside on-site.",
               "commitment": false,
               "costicon": "Three",
@@ -771,7 +771,7 @@
             },
             {
               "id": 57,
-              "name": "Plant-forward: Dedicated vegan/vegetarian station",
+              "name": "Dedicated vegan/vegetarian station",
               "progression": "Pick - Plant forward",
               "description": "Have a dedicated vegan/vegetarian station in operation.",
               "commitment": false,
@@ -921,7 +921,7 @@
             },
             {
               "id": 68,
-              "name": "Waste tracking: Enable",
+              "name": "Waste tracking: ENABLE",
               "progression": "Prog - Waste tracking",
               "description": "Track and target reduction of pre-consumer waste in ENABLE technology. Operators record prep, service, and storage waste. Culinary teams should then be targeting opportunities to reduce waste such as staff training on trimming or portioning.",
               "commitment": false,
@@ -1003,7 +1003,7 @@
             },
             {
               "id": 74,
-              "name": "Food waste digester (ORCA)",
+              "name": "ORCA Food waste digester",
               "description": "Invest in ORCA equipment that digests food waste and produces an effluent that is then treated by wastewater treatment. This machine can be continuously be fed food waste to allow for real-time processing.",
               "commitment": false,
               "costicon": "Three",
@@ -1472,7 +1472,7 @@
             },
             {
               "id": 108,
-              "name": "Food emissions",
+              "name": "Food Emissions Reporting",
               "description": "Annually track emissions from food: Aramark's Food Emissions Report provides clients with insight and analysis into the carbon emissions associated with the food served at their account. We developed this report to help us work together with our clients to reduce emissions from food.",
               "costicon": "Empty",
               "timeline": "Quarter",
@@ -1524,8 +1524,8 @@
             },
             {
               "id": 112,
-              "name": "Sustainable Seafood Sourcing",
-              "description": "Purchase only MSC certified seafood.",
+              "name": "MSC Seafood Certification",
+              "description": "Site based MSC certification for purchasing these seafood products.",
               "commitment": false,
               "costicon": "One",
               "timeline": "Quarter",
@@ -1536,7 +1536,7 @@
             },
             {
               "id": 113,
-              "name": "WELL",
+              "name": "WELL Certification",
               "description": "Achevie WELL certfication. WELL certifications recognize buildings designed and constructed to support the health and well-being of their occupants.",
               "commitment": false,
               "costicon": "Two",
@@ -1548,7 +1548,7 @@
             },
             {
               "id": 114,
-              "name": "USGBC LEED",
+              "name": "LEED Certification",
               "description": "In partnership with client, build to LEED standards. The U.S. Green Building Council offers LEED certifications for buildings that meet rigorous environmental requirements. There are four different levels of certification depending on the number of points awarded.",
               "commitment": false,
               "costicon": "Four",
@@ -1560,7 +1560,7 @@
             },
             {
               "id": 115,
-              "name": "TRUE Zero Waste",
+              "name": "TRUE Zero Waste Certification",
               "description": "Certify a location as TRUE Zero Waste. TRUE certifications are offered to physical facilities and their operations. A TRUE project's goal is to divert all solid waste from the landfill, incineration, and the environment. Facilities achieve certification if they meet the seven minimum program requirements and attain at least 31 points on the TRUE application form.",
               "commitment": false,
               "costicon": "Three",
@@ -1572,7 +1572,7 @@
             },
             {
               "id": 116,
-              "name": "Green Restaurant Association",
+              "name": "Green Restaurant Association Certification",
               "description": "Certify location(s) as a Green Restaurant through the Green Restaurant Association. This is a transparent way for an operation to demonstrate all the sustainable steps being taken.",
               "commitment": false,
               "costicon": "Three",
