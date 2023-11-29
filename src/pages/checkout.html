@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="Sustainability Builder" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Checkout</title>
+    <title>Sustainability Solutions Tool</title>
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <!-- Bootstrap CSS -->
@@ -21,8 +21,70 @@
   <body>
     <!-- Header Start -->
     <header>
-      <div class="px-3 py-2 text-bg-light border-bottom">
-        <div class="container-fluid px-3">
+      <!-- How To Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">How it works</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="card text-bg-dark mb-4">
+                <img src="/assets/img/ara-bg.jpg" class="card-img h-25" alt="...">
+                <div class="card-img-overlay d-flex flex-column justify-content-center">
+                  <h2 class="card-title">Need a BWDW refresher?</h2>
+                  <p class="card-text">We know there's a lot of information out there, click here for more information.</p>
+                  <a href="/assets/files/BWDW.pdf" target="_blank" class="w-25 rounded-pill px-3 btn btn-secondary">Learn More</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4 mb-3 mb-sm-0">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title text-primary">What's important to your client?</h5>
+                      <p class="card-text">
+                        Review key themes & budget flexibility.
+                      </p>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-3 mb-sm-0">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title text-primary">How will you meet your goals?</h5>
+                      <p class="card-text">Select items that optimize goals for Aramark, the client and sustainability.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-3 mb-sm-0">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title text-primary">What do you need to do next?</h5>
+                      <p class="card-text">Be sure to click into any “Learn more” links to understand all needs for execution.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                <div class="card text-bg-dark my-4">
+                  <img src="/assets/img/watering-bg.jpg" class="card-img" alt="...">
+                  <div class="card-img-overlay d-flex flex-column justify-content-center">
+                    <h2 class="card-title">Prep your Sustainability Plan</h2>
+                    <p class="card-text">Export the details to excel or PDF to finish your sustainability section.  Here’s a sample of what a completed PDF could look like.</p>
+                    <a href="/assets/files/BWDW.pdf" target="_blank" class="w-25 rounded-pill px-3 btn btn-secondary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <!-- Nav Bar -->
+      <div class="px-2 py-2 text-bg-light border-bottom">
+        <div class="container-fluid px-4">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center my-3 my-lg-3 me-lg-auto text-dark text-decoration-none">
               <img src="assets/img/sustainability-logo.png" alt="Sustainability Builder" width="165" height="30">
@@ -30,7 +92,7 @@
   
             <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li>
-                <a href="#" class="nav-link text-dark">
+                <a href="javascript:void(0)" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
                   <i class="bi-mortarboard"></i>
                   How To
                 </a>
@@ -43,25 +105,6 @@
     <!-- Header End -->
     <!-- Main Page Start -->
     <main>
-      <section>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Supporting Documentation</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><a href="/assets/files/test-pdf.pdf" target="_blank">Details</a></li>
-                  <li class="list-group-item"><a href="/assets/files/test-excel.xlsx" target="_blank">Intake Form</a></li>
-                  <li class="list-group-item"><a href="https://aramark365.sharepoint.com/sites/Supply-Chain" target="_blank">SharePoint</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section class="my-5">
         <div class="container">
         <a href="/"><span class="pb-0 ps-4 mt-4"><img class="pe-2" src=/assets/img/back-arrow.svg>Back</span></a>
@@ -98,8 +141,8 @@
             <div class="col mb-3 text-end pe-4">
               <h5>Links</h5>
               <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">BWDW SharePoint</a></li>
+                <li class="nav-item mb-2"><a href="mailto:sustainability@aramark.com" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
+                <li class="nav-item mb-2"><a href="https://aramark365.sharepoint.com/sites/BeWellDoWell/SitePages/Planet.aspx" target="_blank" class="nav-link p-0 text-body-secondary">BWDW SharePoint</a></li>
               </ul>
             </div>
           </footer>
@@ -126,5 +169,6 @@
     <!-- Custom JS -->
 
     <script src="assets/js/script.js" async defer></script>
+    <script src="assets/js/checkout.js" async defer></script>
   </body>
 </html>

@@ -82,13 +82,24 @@ function getSubcategoryPosition(el) {
 /* Show the Solution Cards */
 function showSolutions(categoryIndex, typeVal) {
   var optionCards = document.getElementById('optionCards');
-  optionCards.classList.add('mt-4', 'row', 'row-cols-xl-3', 'row-cols-md-2', 'pb-5');
+  optionCards.classList.add('mt-4', 'row', 'row-cols-xl-3', 'row-cols-md-2', 'py-5');
   optionCards.innerHTML = '';
   var features = subCategories.features[categoryIndex].properties[typeVal].solutions;
+
+  // Not needed
   var category = subCategories.features[categoryIndex].category;
   let i = 0;
+  // 
 
-  features.forEach(function(feature) {    
+  let selectedCosts = Array.from(document.querySelectorAll('.cost-filter:checked')).map(el => el.value);
+  let selectedTimelines = Array.from(document.querySelectorAll('.timeline-filter:checked')).map(el => el.value);
+
+  var filteredFeatures = features.filter(feature => 
+    selectedCosts.includes(feature.costicon) && selectedTimelines.includes(feature.timeline)
+  );
+  
+  filteredFeatures.forEach(function(feature, i) {
+
     if (feature.lob == 'Enterprise') {
       feature.lob = '';
     } else if (feature.lob == 'Collegiate Hospitality') {
@@ -102,23 +113,30 @@ function showSolutions(categoryIndex, typeVal) {
     optionCards.innerHTML +=
     `<div class="col mb-4">
       <div class="card h-100 card-bg p-2 d-flex flex-column">
-        <div class="card-body d-flex flex-column justify-content-between">
+        <div class="card-body">
           <h6 class="card-title">${feature.name}</h6>
-          <p class="text-trim one-${i} card-text">${feature.description}</p>
+          <p class="mt-3 text-trim one-${i} card-text">${feature.description}</p>
         </div>
         <div class="card-footer bg-transparent border-0 d-flex flex-row-reverse align-items-center justify-content-between">
-          <button onclick="addActive('${feature.name}', '${feature.id}'); return addRow('${category}', '${feature.name}', '${feature.progression}', '${feature.costicon}', '${feature.timeline}', '${feature.id}', '${feature.commitment}')" class="btn btn-light btn-sm rounded-pill px-3" id="active-check-${feature.id}" type="button" >Select</button>
+          <button onclick="return addRow('${subCategories.features[categoryIndex].category}', '${feature.name}', '${feature.progression}', '${feature.costicon}', '${feature.timeline}')" class="btn btn-light btn-sm rounded-pill px-3" type="button" data-bs-toggle="button" aria-pressed="true">Select</button>
           ${feature.lob}
         </div>
       </div>
-    </div>`
-    i++;
+    </div>`;
+
     if (feature.active === ' active') {
       var activeLook = document.getElementById('active-check-' + feature.id);
       activeLook.className += ' active';
       activeLook.innerHTML = '&#10003;';
     } 
   }); 
+
+  // When a user checks or unchecks a box, the showSolutions function is called again with the updated filters
+  document.querySelectorAll('.cost-filter, .timeline-filter').forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      showSolutions(categoryIndex, typeVal);
+    });
+  });
 
   /* Add elipsis for trimmed text, i.e.: "Read More" */
   for (let i = 0; i < features.length; i++) {
