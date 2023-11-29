@@ -34,7 +34,7 @@ var checkoutTable = $('#checkoutTable').DataTable({
     {data: 'timeline', className: 'dt-center'},
     {data: null, className: 'dt-right', orderable: false, "render": function(data, type, row) {
       if (row.commitment === true) {
-        return '<span class="badge bg-primary">commitment</span>';
+        return '<span class="badge bg-primary">default</span>';
       }
       return '<img class="icon-delete pointer" src="/assets/img/trash.svg">'}
     },
@@ -55,6 +55,9 @@ var checkoutTable = $('#checkoutTable').DataTable({
   buttons: [{
     extend: 'pdfHtml5',
     text: 'Download plan',
+    exportOptions: {
+      columns: [0, 1, 2, 3]
+    },
     
     // action: function ( e, dt, node, config ) {
 
