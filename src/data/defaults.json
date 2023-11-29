@@ -20,7 +20,7 @@
     },
     {
       "id": 2,
-      "solution": "Hormone-free: Meat products",
+      "solution": "Hormone-free: meat products",
       "description": "Aramark is committed to phasing out the routine use of antibiotics for use as growth promoters or disease prevention across poultry, beef, pork and seafood categories in our supply chain.",
       "commitment": true,
       "costicon": "No Cost",
@@ -29,7 +29,7 @@
     },
     {
       "id": 3,
-      "solution": "Humanely-raised Broiler Chickens",
+      "solution": "Humanely-raised broiler chickens",
       "description": "Aramark is committed to purchase only humanely-raised broiler chickens by 2024",
       "commitment": true,
       "costicon": "No Cost",
@@ -38,7 +38,7 @@
     },
     {
       "id": 4,
-      "solution": "No Deforestation commitments",
+      "solution": "No deforestation commitments",
       "description": "Aramark is committed to purchasing contracted soy-based oils, specified margarines and shortenings, and beef products with no deforestation risk by 2025.",
       "commitment": true,
       "costicon": "No Cost",
@@ -47,7 +47,7 @@
     },
     {
       "id": 5,
-      "solution": "Group-housed Pork",
+      "solution": "Group-housed pork",
       "description": "Aramark is committed to purchasing only 100% group-house pork",
       "commitment": true,
       "costicon": "No Cost",
