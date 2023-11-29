@@ -697,6 +697,7 @@
               "description": "Aramark is committed to purchasing only 100% group-house pork",
               "commitment": true,
               "costicon": "Empty",
+              "timeline": "Empty",
               "lob": [],
               "active": false
             },

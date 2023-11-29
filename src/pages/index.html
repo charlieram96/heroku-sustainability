@@ -180,16 +180,16 @@
                           </div>
                           <div class="mb-2 px-2">
                             <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="cohoChecked" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="cohoChecked">
-                                Reduced Emissions
+                              <input type="checkbox" class="form-check-input" id="reduceEmissions" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="reduceEmissions">
+                                Reduce Emissions
                               </label>
                             </div>
                           </div>
                           <div class="mb-2 px-2">
                             <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="cohoChecked" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="cohoChecked">
+                              <input type="checkbox" class="form-check-input" id="zeroWaste" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="zeroWaste">
                                 Zero Waste
                               </label>
                             </div>
@@ -250,40 +250,40 @@
                         <form class="dropdown-menu">
                           <div class="mb-2 px-2">
                             <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="timeImmediate" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeImmediate">
+                              <input type="checkbox" class="form-check-input" id="timeEmpty" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeEmpty">
                                 Immediate
                               </label>
                             </div>
                           </div>
                           <div class="mb-2 px-2">
                             <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="timeOne" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeOne">
+                              <input type="checkbox" class="form-check-input" id="timeQuarter" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeQuarter">
                                 0-3 Months
                               </label>
                             </div>
                           </div>
                           <div class="mb-2 px-2">
                             <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="timeOne" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeOne">
+                              <input type="checkbox" class="form-check-input" id="timeHalf" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeHalf">
                                 4-6 Months
                               </label>
                             </div>
                           </div>
                           <div class="mb-2 px-2">
                             <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="timeOne" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeOne">
+                              <input type="checkbox" class="form-check-input" id="timeThreeQuarter" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeThreeQuarter">
                                 7-9 Months
                               </label>
                             </div>
                           </div>
                           <div class="mb-2 px-2">
                             <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="timeOne" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeOne">
+                              <input type="checkbox" class="form-check-input" id="timeFull" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeFull">
                                 10-12+ Months
                               </label>
                             </div>
@@ -307,16 +307,17 @@
         <div class="bg-body-tertiary h-100 p-2">
           <h6 class="text-primary pt-3">My Sustainability Plan</h6>
           <hr>
+          <div class="border rounded mt-3">
+            <div class="form-check form-switch mx-4 mt-3 d-flex justify-content-start">
+              <input class="form-check-input" type="checkbox" role="switch" id="addDefaults" onchange="rfpToggle()">
+              <label class="ps-2 form-check-label" for="addDefaults">Is this for an RFP?</label>
+            </div>
+            <p class="px-4" style="font-size: 12px;">If so, we'll include the defualt commitments to your plan in checkout.</p>
+          </div>
           <table id="builderTable" class="compact row-border" style="width:100%">
           </table>
           <a href="/checkout" onclick="mergeTables()" class="w-100 rounded-pill btn btn-secondary mt-3">Review My Plan</a>
-          <div class="border rounded mt-3">
-          <div class="form-check form-switch mx-4 mt-3 d-flex justify-content-start">
-            <input class="form-check-input" type="checkbox" role="switch" id="addDefaults" onchange="rfpToggle()">
-            <label class="ps-2 form-check-label" for="addDefaults">Is this for an RFP?</label>
-          </div>
-          <p class="px-4" style="font-size: 12px;">If so, we'll include the defualt commitments to your plan in checkout.</p>
-        </div>
+
         </div>
       </section>
     </main>

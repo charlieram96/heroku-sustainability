@@ -11,6 +11,7 @@ fetch('/src/data/final-data.json')
   showSolutions(categoryIndex, typeVal);
   showCategoryDescription(categoryIndex);
   console.log("Data Loaded");
+  checkDataSet();
 })
 .catch((error) => {
   console.error('Error fetching final-data.json:', error);
@@ -87,10 +88,7 @@ function showSolutions(categoryIndex, typeVal) {
   var category = subCategories.features[categoryIndex].category;
   let i = 0;
 
-  features.forEach(function(feature) {
-    
-    console.log(feature.id, feature.active)
-    
+  features.forEach(function(feature) {    
     if (feature.lob == 'Enterprise') {
       feature.lob = '';
     } else if (feature.lob == 'Collegiate Hospitality') {
@@ -109,18 +107,16 @@ function showSolutions(categoryIndex, typeVal) {
           <p class="mt-3 text-trim one-${i} card-text">${feature.description}</p>
         </div>
         <div class="card-footer bg-transparent border-0 d-flex flex-row-reverse align-items-center justify-content-between">
-          <button onclick="addActive('${feature.name}', '${feature.active}', ${feature.id}); return addRow('${category}', '${feature.name}', '${feature.progression}', '${feature.costicon}', '${feature.timeline}')" class="btn btn-light btn-sm rounded-pill px-3 active-check-${feature.id}" type="button" >Select</button>
+          <button onclick="addActive('${feature.name}', '${feature.id}'); return addRow('${category}', '${feature.name}', '${feature.progression}', '${feature.costicon}', '${feature.timeline}', '${feature.id}', '${feature.commitment}')" class="btn btn-light btn-sm rounded-pill px-3" id="active-check-${feature.id}" type="button" >Select</button>
           ${feature.lob}
         </div>
       </div>
     </div>`
     i++;
-    if (feature.active != false || feature.active != '') {
-      
-      console.log("here's the thing.");
-      var activeLook = document.getElementsByClassName('active-check-' + feature.id);
-      activeLook[0].className += ' active';
-      activeLook[0].innerHTML = '&#10003;';
+    if (feature.active === ' active') {
+      var activeLook = document.getElementById('active-check-' + feature.id);
+      activeLook.className += ' active';
+      activeLook.innerHTML = '&#10003;';
     } 
   }); 
 
@@ -152,24 +148,29 @@ function showSolutions(categoryIndex, typeVal) {
   }
 }
 
-function addActive(name, active, index) {
-  console.log(name, active, index)
-  var activeCheck = document.getElementsByClassName('active-check-' + index);
+function addActive(name, index) {
+  var activeCheck = document.getElementById('active-check-' + index);
   var features = subCategories.features[categoryIndex].properties[typeVal].solutions;
-  console.log(activeCheck);
   features.forEach(function(feature) {
     if (feature.name === name) {
       if (feature.active === false || feature.active === '') {
-        console.log(feature.name, feature.active)
         feature.active = " active";
-        activeCheck[0].innerHTML = '&#10003;';
-        activeCheck[0].className += feature.active;
+        activeCheck.innerHTML = '&#10003;';
+        activeCheck.className += feature.active;
       } else if (feature.active === " active") {
-        console.log(feature.name, feature.active)
         feature.active = false;
-        activeCheck[0].innerHTML = 'Select';
-        activeCheck[0].className = activeCheck[i].className.replace(' active', '');
+        activeCheck.innerHTML = 'Select';
+        activeCheck.className = activeCheck.className.replace(' active', '');
       }
     } 
   });
+}
+
+
+function checkDataSet() {
+  if (dataSet.length > 0) {
+    for(var i = 0; i < dataSet.length; i++) {
+      addActive(dataSet[i].subcategory, dataSet[i].id);
+    }
+  }
 }
