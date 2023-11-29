@@ -108,33 +108,41 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="SolutionsCardLabel">Recycling: Full Account</h1>
+                <h1 class="modal-title fs-5" id="SolutionsCardLabel">Coolfood Meals</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">
                     <div class="d-flex justify-content-between">
-                      <span><img src="assets/img/timeline.svg"><span> Time to deploy:</span></span>
-                      <p>1 month on avg.</p>
+                      <span><img class="pe-2" src="assets/img/geography.svg"></span>
+                      <p>This solution is available for Collegiate Hospitality, Workplace Hospitality, and patient dining in Healthcare+.</p>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="d-flex justify-content-between">
-                      <span><img src="assets/img/cost.svg"><span> Average Cost:</span></span>
-                      <p>$1k - 4k</p>
+                      <span><img class="pe-2" src="assets/img/cost.svg"></span>
+                      <p>There is no cost associated with implementing this solution. In fact menuing CFM often result in cost savings as these meals are plant forward or plant based.</p>
                     </div>
                   </li>
+                  
+                  
                   <li class="list-group-item">
                     <div class="d-flex justify-content-between">
-                      <span><img src="assets/img/geography.svg"><span> Geographic Restrictions:</span></span>
-                      <p>N/A</p>
+                      <span><img class="pe-2" src="assets/img/open.svg"></span>
+                      <p>This is a high impact solution that supports reducing emissions and meeting our net zero commitments.</p>
                     </div>
                   </li>
                 </ul>
-                <p>Description:</p>
+                <p><strong>Description:</strong></p>
                 <p>Rather than sending all waste to the landfill, divert accepted materials for recycling. Recycling programs will differ by location and municipality.</p>
               </div>
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="https://aramark365.sharepoint.com/:u:/r/sites/BeWellDoWell/SitePages/Climate.aspx?csf=1&web=1&e=3jJvXX" target="_blank">Climate & GHG Emissions</a></li>
+                <li class="list-group-item"><a href="https://portal.assets.site/ssosaml/17492/catalog/categories/3129545" target="_blank">B2C Collateral from The Market</a></li>
+                <li class="list-group-item"><a href="https://aramark365.sharepoint.com/:u:/r/sites/CulinaryEnablement/SitePages/Cool.aspx?csf=1&web=1&e=GjrGVv" target="_blank">SharePoint</a></li>
+              </ul>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary">Select</button>
               </div>
@@ -193,6 +201,14 @@
                           Cost
                         </button>
                         <form class="dropdown-menu">
+                          <div class="mb-2 px-2">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input cost-filter" value="No Cost" id="noCost" checked>
+                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="noCost">
+                                No Cost
+                              </label>
+                            </div>
+                          </div>
                           <div class="mb-2 px-2">
                             <div class="form-check">
                               <input type="checkbox" class="form-check-input cost-filter" value="$" id="costOne" checked>

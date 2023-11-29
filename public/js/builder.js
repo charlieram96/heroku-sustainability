@@ -86,11 +86,6 @@ function showSolutions(categoryIndex, typeVal) {
   optionCards.innerHTML = '';
   var features = subCategories.features[categoryIndex].properties[typeVal].solutions;
 
-
-
-
-
-
   let selectedCosts = Array.from(document.querySelectorAll('.cost-filter:checked')).map(el => el.value);
   let selectedTimelines = Array.from(document.querySelectorAll('.timeline-filter:checked')).map(el => el.value);
 
@@ -109,13 +104,17 @@ function showSolutions(categoryIndex, typeVal) {
     } else if (feature.lob == 'Healthcare+,Collegiate Hospitality,Workplace Experience') {
       feature.lob = '<span><img class="lob-icons" src="assets/img/coho.svg"><img class="lob-icons" src="assets/img/wxg.svg"><img class="lob-icons" src="assets/img/healthcare.svg"></span>';
     } 
-    
+
+    if (feature.name == 'Low carbon: Coolfood meals') {
+      var learnMore = `<h6 style="font-size: 13px;" class="card-title mt-2"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#solutionsCard">Learn More</a></h6>`
+    }
     optionCards.innerHTML +=
     `<div class="col mb-4">
       <div class="card h-100 card-bg p-2 d-flex flex-column">
         <div class="card-body">
           <h6 class="card-title">${feature.name}</h6>
           <p class="mt-3 text-trim one-${i} card-text">${feature.description}</p>
+          ${learnMore}
         </div>
         <div class="card-footer bg-transparent border-0 d-flex flex-row-reverse align-items-center justify-content-between">
         <button onclick="addActive('${feature.name}', '${feature.id}'); return addRow('${subCategories.features[categoryIndex].category}', '${feature.name}', '${feature.progression}', '${feature.costicon}', '${feature.timeline}','${feature.id}', '${feature.commitment}')" class="btn btn-light btn-sm rounded-pill px-3" type="button" data-bs-toggle="button" aria-pressed="true" id="active-check-${feature.id}">Select</button>
