@@ -104,9 +104,11 @@ function showSolutions(categoryIndex, typeVal) {
     } else if (feature.lob == 'Healthcare+,Collegiate Hospitality,Workplace Experience') {
       feature.lob = '<span><img class="lob-icons" src="assets/img/coho.svg"><img class="lob-icons" src="assets/img/wxg.svg"><img class="lob-icons" src="assets/img/healthcare.svg"></span>';
     } 
-
+    var learnMore = '';
     if (feature.name == 'Low carbon: Coolfood meals') {
-      var learnMore = `<h6 style="font-size: 13px;" class="card-title mt-2"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#solutionsCard">Learn More</a></h6>`
+      learnMore = `<h6 style="font-size: 13px;" class="card-title mt-2"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#solutionsCard">Learn More</a></h6>`
+    } else {
+      learnMore = '';
     }
     optionCards.innerHTML +=
     `<div class="col mb-4">

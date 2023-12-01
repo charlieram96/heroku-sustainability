@@ -15,13 +15,9 @@ try {
   } else {
     document.getElementById('addDefaults').checked = false;
   }
-  
 } catch (err) {
   console.log("");
 }
-
-
-
 
 /* Table for Checkout Page */
 var checkoutTable = $('#checkoutTable').DataTable({
@@ -58,23 +54,11 @@ var checkoutTable = $('#checkoutTable').DataTable({
     exportOptions: {
       columns: [0, 1, 2, 3]
     },
-    
-    // action: function ( e, dt, node, config ) {
-
-    //   const myModal = new bootstrap.Modal('#exampleModal', {
-    //     keyboard: false
-    //   })
-    //   var modalToggle = document.getElementById('exampleModal'); myModal.show(modalToggle)
-    //   checkoutTable.button( 0,0 ).open;
-    // },
   }],
   paging: false,
   searching: false,
   info: false,
-  
 });
-
-
 
 $('#checkoutTable tbody').on('click', '.icon-delete', function () {
   var index = table.row($(this).parents('tr')).index();
