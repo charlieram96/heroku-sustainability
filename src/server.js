@@ -121,7 +121,7 @@ function commitmentData(sheetInfo) {
           description: cells[5].displayValue,
           commitment: cells[6].value,
           costicon: cells[8].displayValue,
-          timeline: cells[9].displayValue,
+          timeline: cells[10].displayValue,
           active: false
         };
         defaultData.defaults.push(feature);
@@ -172,7 +172,7 @@ function sheetToJSON(sheetInfo) {
           description: cells[5].displayValue,
           commitment: cells[6].value,
           costicon: cells[8].displayValue,
-          timeline: cells[9].displayValue,
+          timeline: cells[10].displayValue,
           lob: lobArray,
           active: false
         };
