@@ -10,7 +10,6 @@ fetch('/src/data/final-data.json')
   createSubCategories(categoryIndex);
   showSolutions(categoryIndex, typeVal);
   showCategoryDescription(categoryIndex);
-  console.log("Data Loaded");
   checkDataSet();
 })
 .catch((error) => {
@@ -119,17 +118,16 @@ function showSolutions(categoryIndex, typeVal) {
           ${learnMore}
         </div>
         <div class="card-footer bg-transparent border-0 d-flex flex-row-reverse align-items-center justify-content-between">
-        <button onclick="addActive('${feature.name}', '${feature.id}'); return addRow('${subCategories.features[categoryIndex].category}', '${feature.name}', '${feature.progression}', '${feature.costicon}', '${feature.timeline}','${feature.id}', '${feature.commitment}')" class="btn btn-light btn-sm rounded-pill px-3" type="button" data-bs-toggle="button" aria-pressed="true" id="active-check-${feature.id}">Select</button>
+        <button onclick="addActive('${feature.name}', '${feature.id}'); return addRow('${subCategories.features[categoryIndex].category}', '${feature.name}', '${feature.progression}', '${feature.costicon}', '${feature.timeline}','${feature.id}', '${feature.commitment}')" class="btn btn-light btn-sm rounded-pill px-3" type="button" aria-pressed="true" id="active-check-${feature.id}">Select</button>
           ${feature.lob}
         </div>
       </div>
     </div>`;
- 
-    if (feature.active === ' active') {
-      var activeLook = document.getElementById('active-check-' + feature.id);
-      activeLook.className += ' active';
+    var activeLook = document.getElementById('active-check-' + feature.id);
+    if ( table.column(1).data().toArray().indexOf(feature.name) !== -1 ) {
+      activeLook.className += ' actived';
       activeLook.innerHTML = '&#10003;';
-    } 
+    }
   }); 
 
   // When a user checks or unchecks a box, the showSolutions function is called again with the updated filters
@@ -173,13 +171,13 @@ function addActive(name, index) {
   features.forEach(function(feature) {
     if (feature.name === name) {
       if (feature.active === false || feature.active === '') {
-        feature.active = " active";
+        feature.active = " actived";
         activeCheck.innerHTML = '&#10003;';
         activeCheck.className += feature.active;
-      } else if (feature.active === " active") {
+      } else if (feature.active === " actived") {
         feature.active = false;
-        activeCheck.innerHTML = 'Select';
-        activeCheck.className = activeCheck.className.replace(' active', '');
+        activeCheck.innerHTML = `<style="color: #000; background-color: #F8F9FA; border-color: #F8F9FA;">Select</style>`;
+        activeCheck.className = activeCheck.className.replace(' actived', '');
       }
     } 
   });
@@ -193,3 +191,4 @@ function checkDataSet() {
     }
   }
 }
+
