@@ -80,21 +80,13 @@ smartsheet.sheets.listSheets(options)
           columnMap[column.title] = column.id;
         });
         let transformedData = sheetToJSON(sheetInfo);
-        let initializedData = commitmentData(sheetInfo);
+
         fs.writeFile('src/data/final-data.json', JSON.stringify(transformedData, null, 2), function(err) {
           if (err) {
             console.error('Error saving transformed data:', err);
             return;
           }
           console.log('Transformed data saved to final-data.json');
-        });
-
-        fs.writeFile('src/data/defaults.json', JSON.stringify(initializedData, null, 2), function(err) {
-          if (err) {
-            console.error('Error saving initialized data:', err);
-            return;
-          }
-          console.log('Initialized data saved to defaults.json');
         });
       })
       .catch(function(error) {
@@ -104,33 +96,6 @@ smartsheet.sheets.listSheets(options)
   .catch(function(error) {
     console.error('Error listing sheets:', error);
   });
-
-function commitmentData(sheetInfo) {
-  let defaultData = { defaults: [] };
-  let i = 0;
-  sheetInfo.rows.forEach(row => {
-    let cells = row.cells;
-    let level = cells[1].value;
-    
-    if (level === 2) {
-      if (cells[6].value === true) {
-        let feature = {
-          id: i,
-          solution: cells[0].displayValue,
-          progression: cells[4].displayValue,
-          description: cells[5].displayValue,
-          commitment: cells[6].value,
-          costicon: cells[8].displayValue,
-          timeline: cells[10].displayValue,
-          active: false
-        };
-        defaultData.defaults.push(feature);
-        i++;
-      }
-    }
-  });
-  return defaultData;
-}
 
 function sheetToJSON(sheetInfo) {
   let i = 0;
