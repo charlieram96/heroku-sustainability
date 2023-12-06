@@ -17,34 +17,30 @@ fetch('/src/data/final-data.json')
 });
 
 /* Create Category Buttons */
-function createCategories() {
+const createCategories = () => {
   subCategories.features.forEach(function(feature) {
     let categoryButtons = document.getElementById('categoryButtons');
-    categoryButtons.classList.add('btn-group', 'd-flex', 'flex-grow-1')
-    categoryButtons.innerHTML += 
-    `<button style="font-size: 14px;" onclick="getCategoryPosition(this)" class="category-button rounded-0 py-3 btn btn-primary" type="button">${feature.category}</button>`
+    categoryButtons.innerHTML += `<button style="font-size: 14px;" onclick="getCategoryPosition(this)" class="category-button rounded-0 py-3 btn btn-primary" type="button">${feature.category}</button>`
   });
   let activeCategory = document.getElementsByClassName('category-button');
   activeCategory[0].className += ' active-category';
 }
 
 /* Create Category Description */
-function showCategoryDescription(categoryIndex) {
+const showCategoryDescription = (categoryIndex) => {
+  const feature = subCategories.features[categoryIndex];
   var categoryDescription = document.getElementById('categoryDescription');
   categoryDescription.innerHTML = '';
-  var feature = subCategories.features[categoryIndex];
-  categoryDescription.innerHTML += 
-  `<h6 class="text-light">${feature.subheader}</h6>
+  categoryDescription.innerHTML += `<h6 class="text-light">${feature.subheader}</h6>
   <p class="pt-2 mb-0 text-light fs-6">${feature.description}</p>`
 }
 
 /* Change Category Active Class and show Sub Categories */
-function createSubCategories(categoryIndex) {
+const createSubCategories = (categoryIndex) => {
+  const subCategory = subCategories.features[categoryIndex].properties
   let subCategoryButtons = document.getElementById('subCategoryButtons');
-  subCategoryButtons.classList.add('overflow-auto', 'd-flex', 'gap-4', 'justify-content-start', 'py-3')
   subCategoryButtons.innerHTML = '';
-  let subCategory = subCategories.features[categoryIndex].properties
-  subCategory.forEach(function(subCategory) {
+  subCategory.forEach((subCategory) => {
     subCategoryButtons.innerHTML += 
     `<button class="text-nowrap sub-category btn btn-light rounded-pill px-3" type="button" onclick="getSubcategoryPosition(this)"> ${subCategory.subCategory}</button>`
   });
@@ -54,9 +50,9 @@ function createSubCategories(categoryIndex) {
 }
 
 /* Get the position of the current active Category */ 
-function getCategoryPosition(el) {
+const getCategoryPosition = (el) => {
   typeVal = 0;
-  var optionCards = document.getElementById('optionCards');
+  let optionCards = document.getElementById('optionCards');
   optionCards.innerHTML = '';
   let activeCategory = document.getElementsByClassName('active-category');
   activeCategory[0].className = activeCategory[0].className.replace(' active-category', '');
@@ -69,7 +65,7 @@ function getCategoryPosition(el) {
 }
 
 /* Get the position of the current active Sub Category */
-function getSubcategoryPosition(el) {
+const getSubcategoryPosition = (el) => {
   let active = document.getElementsByClassName('active');
   active[0].className = active[0].className.replace(' active', '');
   el.className += ' active';
@@ -79,12 +75,11 @@ function getSubcategoryPosition(el) {
 }
 
 /* Show the Solution Cards */
-function showSolutions(categoryIndex, typeVal) {
+const showSolutions = (categoryIndex, typeVal) => {
+  const features = subCategories.features[categoryIndex].properties[typeVal].solutions;
   var optionCards = document.getElementById('optionCards');
-  optionCards.classList.add('mt-4', 'row', 'row-cols-xl-3', 'row-cols-md-2', 'pb-5');
   optionCards.innerHTML = '';
-  var features = subCategories.features[categoryIndex].properties[typeVal].solutions;
-
+  
   let selectedCosts = Array.from(document.querySelectorAll('.cost-filter:checked')).map(el => el.value);
   let selectedTimelines = Array.from(document.querySelectorAll('.timeline-filter:checked')).map(el => el.value);
 
@@ -92,7 +87,7 @@ function showSolutions(categoryIndex, typeVal) {
     selectedCosts.includes(feature.costicon) && selectedTimelines.includes(feature.timeline)
   );
   
-  filteredFeatures.forEach(function(feature, i) {
+  filteredFeatures.forEach((feature, i) => {
 
     if (feature.lob == 'Enterprise') {
       feature.lob = '';
@@ -103,12 +98,9 @@ function showSolutions(categoryIndex, typeVal) {
     } else if (feature.lob == 'Healthcare+,Collegiate Hospitality,Workplace Experience') {
       feature.lob = '<span><img class="lob-icons" src="assets/img/coho.svg"><img class="lob-icons" src="assets/img/wxg.svg"><img class="lob-icons" src="assets/img/healthcare.svg"></span>';
     } 
-    var learnMore = '';
-    if (feature.name == 'Low carbon: Coolfood meals') {
-      learnMore = `<h6 style="font-size: 13px;" class="card-title mt-2"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#solutionsCard">Learn More</a></h6>`
-    } else {
-      learnMore = '';
-    }
+    
+    var learnMore = feature.name === 'Low carbon: Coolfood meals' ? `<h6 style="font-size: 13px;" class="card-title mt-2"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#solutionsCard">Learn More</a></h6>` : '';
+
     optionCards.innerHTML +=
     `<div class="col mb-4">
       <div class="card h-100 card-bg p-2 d-flex flex-column">
@@ -138,37 +130,31 @@ function showSolutions(categoryIndex, typeVal) {
   });
 
   /* Add elipsis for trimmed text, i.e.: "Read More" */
-  for (let i = 0; i < features.length; i++) {
-    $(function () {
-      function trimText(selector, limit) {    
-        var text = selector.text(),
-          trim;
-
-        selector.each(function() {
-          if ($(this).text().length > limit) {
-            trim = $(this).text().substr(0, limit);
-            $(this).text(trim);
-            $(this).append('<span class="expand">[...]</span>');
-          };
-        });
-    
-        $(selector).on("click",".expand", function() { //future element
-          $(this).parent().text(text).append('<span class="collapse">Less</span>');
-        });
-    
-        $(selector).on("click", ".collapse",function() { //future element
-          $(this).parent().text(trim).append('<span class="expand">[...]</span>');
-        });
-      };
-      trimText($(".one-" + i),   60);
-    });
-  }
+  features.forEach((feature, i) => {
+    const trimText = (selector, limit) => {
+      const text = selector.text();
+      let trim;
+      selector.each(function() {
+        if ($(this).text().length > limit) {
+          trim = $(this).text().substr(0, limit);
+          $(this).text(trim).append('<span class="expand">[...]</span>');
+        }
+      });
+      $(selector).on("click", ".expand", function() {
+        $(this).parent().text(text).append('<span class="collapse">Less</span>');
+      });
+      $(selector).on("click", ".collapse", function() {
+        $(this).parent().text(trim).append('<span class="expand">[...]</span>');
+      });
+    };
+    trimText($(`.one-${i}`), 60);
+  });
 }
 
-function addActive(name, index) {
-  var activeCheck = document.getElementById('active-check-' + index);
-  var features = subCategories.features[categoryIndex].properties[typeVal].solutions;
-  features.forEach(function(feature) {
+const addActive = (name, index) => {
+  const features = subCategories.features[categoryIndex].properties[typeVal].solutions;
+  let activeCheck = document.getElementById('active-check-' + index);
+  features.forEach((feature) => {
     if (feature.name === name) {
       if (feature.active === false || feature.active === '') {
         feature.active = " actived";
@@ -184,11 +170,10 @@ function addActive(name, index) {
 }
 
 
-function checkDataSet() {
+const checkDataSet = () => {
   if (dataSet.length > 0) {
-    for(var i = 0; i < dataSet.length; i++) {
+    for(let i = 0; i < dataSet.length; i++) {
       addActive(dataSet[i].subcategory, dataSet[i].id);
     }
   }
 }
-

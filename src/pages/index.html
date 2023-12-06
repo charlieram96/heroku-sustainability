@@ -22,7 +22,7 @@
     <!-- Header Start -->
     <header>
       <!-- How To Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModal" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
@@ -83,7 +83,7 @@
   
             <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li>
-                <a href="javascript:void(0)" class="px-4 rounded-pill bg-secondary nav-link text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <a href="javascript:void(0)" class="px-4 rounded-pill bg-secondary nav-link text-light" data-bs-toggle="modal" data-bs-target="#helpModal">
                   <i class="bi-info-circle"></i>
                   Need Help?
                 </a>
@@ -98,11 +98,11 @@
     <main class="row m-0 p-0">
       <!-- Learn More Modal -->
       <section>
-        <div class="modal fade" id="solutionsCard" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="solutionsCard" tabindex="-1" aria-labelledby="solutionsCard" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="SolutionsCardLabel">Coolfood Meals</h1>
+                <h1 class="modal-title fs-5" id="solutionCardLabel">Coolfood Meals</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -159,7 +159,7 @@
       <section class="col-9 mt-4 p-0">
         <div class="container">
           <!-- Category Button Group -->
-          <div id="categoryButtons"></div>
+          <div id="categoryButtons" class="btn-group d-flex flex-grow-1"></div>
           <!-- Hero Image and Category Description  -->
           <div class="bg-image rounded-0">
             <div class="mask p-4">
@@ -310,9 +310,9 @@
             </div>
           </div>
           <!-- Sub-Category Button Group -->
-          <div id="subCategoryButtons"></div>
+          <div id="subCategoryButtons" class="overflow-auto d-flex gap-4 justify-content-start py-3"></div>
           <!-- Solution Card Grid -->
-          <div id="optionCards"></div>
+          <div id="optionCards" class="mt-4 row row-cols-xl-3 row-cols-md-2 pb-5"></div>
         </div>
       </section>
       <!-- Side Cart Section -->

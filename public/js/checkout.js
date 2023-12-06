@@ -1,82 +1,60 @@
-var noCost = 0;
-var oneCost = 0;
-var twoCost = 0;
-var threeCost = 0;
-var fourCost = 0;
-var fiveCost = 0;
-var costTotal = 0;
-var costAverage = 0;
-var immediate = 0;
-var zeroMonth = 0;
-var fourMonth = 0;
-var sevenMonth = 0;
-var tenMonth = 0;
-var timeTotal = 0;
-var timeAverage = 0;
+const costWeights = {
+  'No Cost': 0,
+  '$': 1,
+  '$$': 2,
+  '$$$': 3,
+  '$$$$': 4,
+  '$$$$$': 5
+};
 
-var rowCount = checkoutTable.rows()[0].length;
+const timeWeights = {
+  'Immediate': 0,
+  '0-3 Months': 1,
+  '4-6 Months': 2,
+  '7-9 Months': 3,
+  '10-12+ Months': 4
+};
+
+let costTotal = 0;
+let timeTotal = 0;
+
+const rowCount = checkoutTable.rows()[0].length;
 if (rowCount > 0) {
-  for (var row=0;row<rowCount;row++) {
-    if (checkoutTable.cells(row, 2).data().indexOf('No Cost')>-1) {
-        noCost++;
-    } else if (checkoutTable.cells(row, 2).data().indexOf('$')>-1) {
-        oneCost++;
-    } else if (checkoutTable.cells(row, 2).data().indexOf('$$')>-1) {
-        twoCost++;
-    } else if (checkoutTable.cells(row, 2).data().indexOf('$$$')>-1) {
-        threeCost++;
-    } else if (checkoutTable.cells(row, 2).data().indexOf('$$$$')>-1) {
-        fourCost++;
-    } else if (checkoutTable.cells(row, 2).data().indexOf('$$$$$')>-1) {
-        fiveCost++;
+  for (let row = 0; row < rowCount; row++) {
+    const costCellValue = checkoutTable.cells(row, 2).data()[0];
+    const timeCellValue = checkoutTable.cells(row, 3).data()[0];
+    if (costWeights.hasOwnProperty(costCellValue)) {
+      costTotal += costWeights[costCellValue];
     }
 
-    if (checkoutTable.cells(row, 3).data().indexOf('Immediate')>-1) {
-      immediate++;
-    } else if (checkoutTable.cells(row, 3).data().indexOf('0-3 Months')>-1) {
-      zeroMonth++;
-    } else if (checkoutTable.cells(row, 3).data().indexOf('4-6 Months')>-1) {
-      fourMonth++;
-    } else if (checkoutTable.cells(row, 3).data().indexOf('7-9 Months')>-1) {
-      sevenMonth++;
-    } else if (checkoutTable.cells(row, 3).data().indexOf('10-12+ Months')>-1) {
-      tenMonth++;
+    if (timeWeights.hasOwnProperty(timeCellValue)) {
+      timeTotal += timeWeights[timeCellValue];
     }
   }
-  noCost = noCost * 0; oneCost = oneCost * 1; twoCost = twoCost * 2; threeCost = threeCost * 3; fourCost = fourCost * 4; fiveCost = fiveCost * 5; 
-  costTotal = noCost + oneCost + twoCost + threeCost + fourCost + fiveCost;
-  costAverage = costTotal / rowCount;
 
-  immediate = immediate * 0; zeroMonth = zeroMonth * 1; fourMonth = fourMonth * 2; sevenMonth = sevenMonth * 3; tenMonth = tenMonth * 4;  
-  timeTotal = immediate + zeroMonth + fourMonth + sevenMonth + tenMonth;
-  timeAverage = timeTotal / rowCount;
+  const costAverage = costTotal / rowCount;
+  const timeAverage = timeTotal / rowCount;
 
-  if (costAverage <= 0) {
-    costAverage = "No Cost";
-  } else if (costAverage <= 1) {
-    costAverage = "$";
-  } else if (costAverage <= 2) {
-    costAverage = "$$";
-  } else if (costAverage <= 3) {
-    costAverage = "$$$";
-  } else if (costAverage <= 4) {
-    costAverage = "$$$$";
-  } else if (costAverage <= 5) {
-    costAverage = "$$$$$";
+  const getCostLabel = (value) => {
+    if (value <= 0) return "No Cost";
+    if (value <= 1) return "$";
+    if (value <= 2) return "$$";
+    if (value <= 3) return "$$$";
+    if (value <= 4) return "$$$$";
+    if (value <= 5) return "$$$$$";
   };
 
-  if (timeAverage <= 0) {
-    timeAverage = "Immediate";
-  } else if (timeAverage <= 1) {
-    timeAverage = "0-3 Months";
-  } else if (timeAverage <= 2) {
-    timeAverage = "4-6 Months";
-  } else if (timeAverage <= 3) {
-    timeAverage = "7-9 Months";
-  } else if (timeAverage <= 4) {
-    timeAverage = "10-12+ Months";
+  const getTimeLabel = (value) => {
+    if (value <= 0) return "Immediate";
+    if (value <= 1) return "0-3 Months";
+    if (value <= 2) return "4-6 Months";
+    if (value <= 3) return "7-9 Months";
+    if (value <= 4) return "10-12+ Months";
   };
 
-  document.getElementById("costAvg").innerHTML = "<strong>Avg. Cost: </strong>" + costAverage;
-  document.getElementById("timeAvg").innerHTML = "<strong>Avg. Time: </strong>" + timeAverage;
+  const costLabel = getCostLabel(costAverage);
+  const timeLabel = getTimeLabel(timeAverage);
+
+  document.getElementById("costAvg").innerHTML = "<strong>Avg. Cost: </strong>" + costLabel;
+  document.getElementById("timeAvg").innerHTML = "<strong>Avg. Time: </strong>" + timeLabel;
 }
