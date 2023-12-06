@@ -139,6 +139,7 @@ $('#builderTable tbody').on('click', 'img.icon-delete', function () {
     .row($(this).parents('tr'))
     .remove()
     .draw();
+    
   dataSet.splice(index, 1);
   sessionStorage.setItem('dataSet', JSON.stringify(dataSet));
 });
@@ -194,6 +195,7 @@ function rfpToggle() {
         var solutions = props[prop].solutions;
         for (var solution in solutions) {
           if (solutions[solution].commitment === true){
+            addActive(solutions[solution].name, solutions[solution].id)
             rowItems = {
               "category": subCategories.features[i].category,
               "subcategory": solutions[solution].name,
@@ -212,8 +214,8 @@ function rfpToggle() {
   } else {
     sessionStorage.setItem('rfpToggleCheck', false);
     for (var i = 0; i < dataSet.length; i++) {
-      console.log(i);
       if (dataSet[i].commitment === true) {
+        addActive(solutions[solution].name, solutions[solution].id)
         dataSet.splice(i, 1);
         sessionStorage.setItem('dataSet', JSON.stringify(dataSet));
         i--;
