@@ -163,148 +163,145 @@
           <!-- Hero Image and Category Description  -->
           <div class="bg-image rounded-0">
             <div class="mask p-4">
-              <div class="d-flex">
-                <div class="py-2 pe-4 h-100">
+              <div class="d-flex flex-sm-column flex-md-row ">
+                <div class="py-2 pe-4 h-100 flex-grow-1">
                   <div id="categoryDescription"></div>
                 </div>
-                <div class="w-75">
-                  <div class="container h-100 bg-form rounded-3 p-3 d-flex flex-column justify-content-between">
-                    <div class="btn-group">
-                      <div class="dropdown px-2">
-                        <button type="button" class="rounded-0 btn btn-sm dropdown-toggle filter-buttons" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                          Impact
-                        </button>
-                        <form class="dropdown-menu">
-                          <div class="mb-2 px-2">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="enterpriseChecked" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="enterpriseChecked">
-                                All
-                              </label>
-                            </div>
+                <div class="h-100 bg-form rounded-3 p-3 text-center">
+                    <div class="dropdown px-2">
+                      <button type="button" class="rounded-0 btn btn-sm dropdown-toggle filter-buttons" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                        Impact
+                      </button>
+                      <form class="dropdown-menu">
+                        <div class="mb-2 px-2">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="enterpriseChecked" checked>
+                            <label style="font-size: 13px;" class="form-check-label text-nowrap" for="enterpriseChecked">
+                              All
+                            </label>
                           </div>
-                          <div class="mb-2 px-2">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="reduceEmissions" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="reduceEmissions">
-                                Reduce Emissions
-                              </label>
-                            </div>
+                        </div>
+                        <div class="mb-2 px-2">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="reduceEmissions" checked>
+                            <label style="font-size: 13px;" class="form-check-label text-nowrap" for="reduceEmissions">
+                              Reduce Emissions
+                            </label>
                           </div>
-                          <div class="mb-2 px-2">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="zeroWaste" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="zeroWaste">
-                                Zero Waste
-                              </label>
-                            </div>
+                        </div>
+                        <div class="mb-2 px-2">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="zeroWaste" checked>
+                            <label style="font-size: 13px;" class="form-check-label text-nowrap" for="zeroWaste">
+                              Zero Waste
+                            </label>
                           </div>
-                        </form>
-                      </div>
-                      <div class="dropdown px-2">
-                        <button type="button" class="rounded-0 btn btn-sm dropdown-toggle filter-buttons" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                          Cost
-                        </button>
-                        <form class="dropdown-menu">
-                          <div class="mb-2 px-2">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input cost-filter" value="No Cost" id="noCost" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="noCost">
-                                No Cost
-                              </label>
-                            </div>
-                          </div>
-                          <div class="mb-2 px-2">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input cost-filter" value="$" id="costOne" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="costOne">
-                                $
-                              </label>
-                            </div>
-                          </div>
-                          <div class="mb-2 px-2">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input cost-filter" value="$$" id="costTwo" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="costTwo">
-                                $$
-                              </label>
-                            </div>
-                          </div>
-                          <div class="mb-2 px-2">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input cost-filter" value="$$$" id="costThree" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="costThree">
-                                $$$
-                              </label>
-                            </div>
-                          </div>
-                          <div class="mb-2 px-2">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input cost-filter" value="$$$$" id="costFour" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="costFour">
-                                $$$$
-                              </label>
-                            </div>
-                          </div>
-                          <div class="mb-2 px-2">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input cost-filter" value="$$$$$" id="costFive" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="costFive">
-                                $$$$$
-                              </label>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="dropdown px-2">
-                        <button type="button" class="rounded-0 btn btn-sm dropdown-toggle filter-buttons" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                          Timeline
-                        </button>
-                        <form class="dropdown-menu">
-                          <div class="mb-2 px-2">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input timeline-filter" value="Immediate" id="timeEmpty" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeEmpty">
-                                Immediate
-                              </label>
-                            </div>
-                          </div>
-                          <div class="mb-2 px-2">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input timeline-filter" value="0-3 Months" id="timeQuarter" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeQuarter">
-                                0-3 Months
-                              </label>
-                            </div>
-                          </div>
-                          <div class="mb-2 px-2">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input timeline-filter" value="4-6 Months" id="timeHalf" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeHalf">
-                                4-6 Months
-                              </label>
-                            </div>
-                          </div>
-                          <div class="mb-2 px-2">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input timeline-filter" value="7-9 Months" id="timeThreeQuarter" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeThreeQuarter">
-                                7-9 Months
-                              </label>
-                            </div>
-                          </div>
-                          <div class="mb-2 px-2">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input timeline-filter" value="10-12+ Months" id="timeFull" checked>
-                              <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeFull">
-                                10-12+ Months
-                              </label>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
+                        </div>
+                      </form>
                     </div>
-                  </div>
+                    <div class="dropdown px-2">
+                      <button type="button" class="rounded-0 btn btn-sm dropdown-toggle filter-buttons" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                        Cost
+                      </button>
+                      <form class="dropdown-menu">
+                        <div class="mb-2 px-2">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input cost-filter" value="No Cost" id="noCost" checked>
+                            <label style="font-size: 13px;" class="form-check-label text-nowrap" for="noCost">
+                              No Cost
+                            </label>
+                          </div>
+                        </div>
+                        <div class="mb-2 px-2">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input cost-filter" value="$" id="costOne" checked>
+                            <label style="font-size: 13px;" class="form-check-label text-nowrap" for="costOne">
+                              $
+                            </label>
+                          </div>
+                        </div>
+                        <div class="mb-2 px-2">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input cost-filter" value="$$" id="costTwo" checked>
+                            <label style="font-size: 13px;" class="form-check-label text-nowrap" for="costTwo">
+                              $$
+                            </label>
+                          </div>
+                        </div>
+                        <div class="mb-2 px-2">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input cost-filter" value="$$$" id="costThree" checked>
+                            <label style="font-size: 13px;" class="form-check-label text-nowrap" for="costThree">
+                              $$$
+                            </label>
+                          </div>
+                        </div>
+                        <div class="mb-2 px-2">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input cost-filter" value="$$$$" id="costFour" checked>
+                            <label style="font-size: 13px;" class="form-check-label text-nowrap" for="costFour">
+                              $$$$
+                            </label>
+                          </div>
+                        </div>
+                        <div class="mb-2 px-2">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input cost-filter" value="$$$$$" id="costFive" checked>
+                            <label style="font-size: 13px;" class="form-check-label text-nowrap" for="costFive">
+                              $$$$$
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="dropdown px-2">
+                      <button type="button" class="rounded-0 btn btn-sm dropdown-toggle filter-buttons" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                        Timeline
+                      </button>
+                      <form class="dropdown-menu">
+                        <div class="mb-2 px-2">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input timeline-filter" value="Immediate" id="timeEmpty" checked>
+                            <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeEmpty">
+                              Immediate
+                            </label>
+                          </div>
+                        </div>
+                        <div class="mb-2 px-2">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input timeline-filter" value="0-3 Months" id="timeQuarter" checked>
+                            <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeQuarter">
+                              0-3 Months
+                            </label>
+                          </div>
+                        </div>
+                        <div class="mb-2 px-2">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input timeline-filter" value="4-6 Months" id="timeHalf" checked>
+                            <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeHalf">
+                              4-6 Months
+                            </label>
+                          </div>
+                        </div>
+                        <div class="mb-2 px-2">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input timeline-filter" value="7-9 Months" id="timeThreeQuarter" checked>
+                            <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeThreeQuarter">
+                              7-9 Months
+                            </label>
+                          </div>
+                        </div>
+                        <div class="mb-2 px-2">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input timeline-filter" value="10-12+ Months" id="timeFull" checked>
+                            <label style="font-size: 13px;" class="form-check-label text-nowrap" for="timeFull">
+                              10-12+ Months
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
                 </div>
               </div>
             </div>

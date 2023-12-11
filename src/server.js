@@ -133,11 +133,21 @@ function sheetToJSON(sheetInfo) {
         let solution = {
           id: i,
           name: cells[0].displayValue,
+          solutionUrl: cells[2].displayValue,
           progression: cells[4].displayValue,
           description: cells[5].displayValue,
           commitment: cells[6].value,
           costicon: cells[8].displayValue,
+          costActual: cells[9].displayValue,
           timeline: cells[10].displayValue,
+          zeroWaste: cells[11].value,
+          reduceEmissions: cells[12].value,
+          titleOne: cells[13].value,
+          urlOne: cells[14].displayValue,
+          titleTwo: cells[15].value,
+          urlTwo: cells[16].displayValue,
+          titleThree: cells[17].value,
+          urlThree: cells[18].displayValue,
           lob: lobArray,
           active: false
         };

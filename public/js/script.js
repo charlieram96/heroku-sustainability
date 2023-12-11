@@ -190,7 +190,7 @@ const rfpToggle = () => {
         var solutions = props[prop].solutions;
         for (var solution in solutions) {
           if (solutions[solution].commitment === true){
-            //addActive(solutions[solution].name, solutions[solution].id)
+            
             rowItems = {
               "category": subCategories.features[i].category,
               "subcategory": solutions[solution].name,

@@ -115,11 +115,14 @@ const showSolutions = (categoryIndex, typeVal) => {
         </div>
       </div>
     </div>`;
+
     var activeLook = document.getElementById('active-check-' + feature.id);
-    if ( table.column(1).data().toArray().indexOf(feature.name) !== -1 ) {
+    for (let i = 0; i < dataSet.length; i++) {
+    if ( dataSet[i].subcategory.indexOf(feature.name) !== -1 ) {
       activeLook.className += ' actived';
       activeLook.innerHTML = '&#10003;';
     }
+  }
   }); 
 
   // When a user checks or unchecks a box, the showSolutions function is called again with the updated filters
@@ -150,6 +153,14 @@ const showSolutions = (categoryIndex, typeVal) => {
     trimText($(`.one-${i}`), 60);
   });
 }
+
+var rfpToggleCheck;
+try {
+  rfpToggleCheck = sessionStorage.getItem('rfpToggleCheck');
+} catch (err) {
+  console.log("");
+}
+console.log(rfpToggleCheck);
 
 const addActive = (name, index) => {
   const features = subCategories.features[categoryIndex].properties[typeVal].solutions;

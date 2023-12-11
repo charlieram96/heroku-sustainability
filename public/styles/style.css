@@ -403,7 +403,7 @@ table.dataTable tr.dtrg-group.dtrg-level-0 th {
 .filter-buttons {
   background-color: transparent!important;
   font-family: 'gotham-medium'!important;
-  border-bottom: 1px solid #FFF!important;
+  /* border-bottom: 1px solid #FFF!important; */
   color: #FFF!important;
 }
 
