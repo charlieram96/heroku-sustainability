@@ -162,8 +162,6 @@ try {
 }
 console.log(rfpToggleCheck);
 
-// let selectedProgressions = [];
-
 const addActive = (name, index) => {
   const features = subCategories.features[categoryIndex].properties[typeVal].solutions;
   let activeCheck = document.getElementById('active-check-' + index);
@@ -175,7 +173,6 @@ const addActive = (name, index) => {
         activeCheck.innerHTML = '&#10003;';
         activeCheck.className += feature.active;
         if (feature.progression) {
-          // selectedProgressions.push(feature.progression); 
           removeEqualProgressionItems(feature);
         }
         refreshUI();
@@ -184,14 +181,10 @@ const addActive = (name, index) => {
         feature.active = false;
         activeCheck.innerHTML = 'Select';
         activeCheck.className = activeCheck.className.replace(' actived', '');
-        // selectedProgressions = selectedItems.filter(item => item !== feature.progression);
         refreshUI();
-
       }
     } 
   });
-
-  // console.log("Selected progressions", selectedProgressions);
 }
 
 const refreshUI = () => {
@@ -202,10 +195,10 @@ const refreshUI = () => {
 
     if (button) {
       if (feature.active) {
-        button.innerHTML = '&#10003;'; // Or other representation for active state
+        button.innerHTML = '&#10003;'; 
         button.className = 'btn btn-light btn-sm rounded-pill px-3 actived';
       } else {
-        button.innerHTML = 'Select'; // Or other representation for inactive state
+        button.innerHTML = 'Select'; 
         button.className = 'btn btn-light btn-sm rounded-pill px-3';
       }
     }
