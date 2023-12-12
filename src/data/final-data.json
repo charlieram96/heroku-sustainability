@@ -87,6 +87,12 @@
               "timeline": "0-3 Months",
               "zeroWaste": false,
               "reduceEmissions": false,
+              "titleOne": "Receptable Signage- Instructions",
+              "urlOne": "https://portal.assets.site/ssosaml/17492/product/8330/details",
+              "titleTwo": "Receptacle Signage- Images",
+              "urlTwo": "https://portal.assets.site/ssosaml/17492/product/8326/details",
+              "titleThree": "Receptacle Signage- Landfill",
+              "urlThree": "https://portal.assets.site/ssosaml/17492/product/8328/details",
               "lob": [
                 "Enterprise"
               ],
@@ -164,6 +170,12 @@
               "timeline": "Immediate",
               "zeroWaste": false,
               "reduceEmissions": false,
+              "titleOne": "Kraft Heinz",
+              "urlOne": "https://aramark365.sharepoint.com/sites/Supply-Chain/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FSupply%2DChain%2FShared%20Documents%2FFood%20Suppliers%2FKraftheinz%20condiment%20dispensers%2Epdf&parent=%2Fsites%2FSupply%2DChain%2FShared%20Documents%2FFood%20Suppliers",
+              "titleTwo": "French's",
+              "urlTwo": "https://aramark365.sharepoint.com/sites/Supply-Chain/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FSupply%2DChain%2FShared%20Documents%2FFood%20Suppliers%2FFrenchs%20Condiment%20Dispensers%20Aramark%2Epdf&parent=%2Fsites%2FSupply%2DChain%2FShared%20Documents%2FFood%20Suppliers",
+              "titleThree": "Ken's",
+              "urlThree": "https://aramark365.sharepoint.com/:w:/r/sites/Supply-Chain/_layouts/15/Doc.aspx?sourcedoc=%7B5469B4B8-17A3-4611-A903-ED298CA80DED%7D&file=Kens%20Order%20Form-2023.docx&action=default&mobileredirect=true&wdLOR=cF6BF44B4-F1F7-4599-A9C1-CA4EB222C06F",
               "lob": [
                 "Enterprise"
               ],

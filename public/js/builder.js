@@ -162,24 +162,64 @@ try {
 }
 console.log(rfpToggleCheck);
 
+// let selectedProgressions = [];
+
 const addActive = (name, index) => {
   const features = subCategories.features[categoryIndex].properties[typeVal].solutions;
   let activeCheck = document.getElementById('active-check-' + index);
+
   features.forEach((feature) => {
     if (feature.name === name) {
       if (feature.active === false || feature.active === '') {
         feature.active = " actived";
         activeCheck.innerHTML = '&#10003;';
         activeCheck.className += feature.active;
+        if (feature.progression) {
+          // selectedProgressions.push(feature.progression); 
+          removeEqualProgressionItems(feature);
+        }
+        refreshUI();
+
       } else if (feature.active === " actived") {
         feature.active = false;
-        activeCheck.innerHTML = `<style="color: #000; background-color: #F8F9FA; border-color: #F8F9FA;">Select</style>`;
+        activeCheck.innerHTML = 'Select';
         activeCheck.className = activeCheck.className.replace(' actived', '');
+        // selectedProgressions = selectedItems.filter(item => item !== feature.progression);
+        refreshUI();
+
       }
     } 
   });
+
+  // console.log("Selected progressions", selectedProgressions);
 }
 
+const refreshUI = () => {
+  const features = subCategories.features[categoryIndex].properties[typeVal].solutions;
+
+  features.forEach(feature => {
+    let button = document.getElementById('active-check-' + feature.id);
+
+    if (button) {
+      if (feature.active) {
+        button.innerHTML = '&#10003;'; // Or other representation for active state
+        button.className = 'btn btn-light btn-sm rounded-pill px-3 actived';
+      } else {
+        button.innerHTML = 'Select'; // Or other representation for inactive state
+        button.className = 'btn btn-light btn-sm rounded-pill px-3';
+      }
+    }
+  });
+}
+
+const removeEqualProgressionItems = (keptItem) => {
+  const features = subCategories.features[categoryIndex].properties[typeVal].solutions;
+  features.forEach(feature => {
+    if (feature.progression === keptItem.progression && feature.id !== keptItem.id) {
+      feature.active = false;
+    }
+  });
+}
 
 const checkDataSet = () => {
   if (dataSet.length > 0) {
