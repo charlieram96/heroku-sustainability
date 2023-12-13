@@ -84,10 +84,20 @@ const showSolutions = (categoryIndex, typeVal) => {
   let selectedCosts = Array.from(document.querySelectorAll('.cost-filter:checked')).map(el => el.value);
   let selectedTimelines = Array.from(document.querySelectorAll('.timeline-filter:checked')).map(el => el.value);
 
-  var filteredFeatures = features.filter(feature => 
-    selectedCosts.includes(feature.costicon) && selectedTimelines.includes(feature.timeline)
-  );
+  const allChecked = document.getElementById('enterpriseChecked').checked;
+  const reduceEmissionsChecked = document.getElementById('reduceEmissions').checked;
+  const zeroWasteChecked = document.getElementById('zeroWaste').checked;
   
+  var filteredFeatures = features.filter(feature => {
+    let costAndTimelineMatch = selectedCosts.includes(feature.costicon) && selectedTimelines.includes(feature.timeline);
+
+    let impactMatch = allChecked || 
+      (reduceEmissionsChecked && feature.reduceEmissions) || 
+      (zeroWasteChecked && feature.zeroWaste);
+
+    return costAndTimelineMatch && impactMatch;
+  });
+
   filteredFeatures.forEach((feature, i) => {
 
     if (feature.lob == 'Enterprise') {
@@ -130,7 +140,7 @@ const showSolutions = (categoryIndex, typeVal) => {
   }); 
 
   // When a user checks or unchecks a box, the showSolutions function is called again with the updated filters
-  document.querySelectorAll('.cost-filter, .timeline-filter').forEach(checkbox => {
+  document.querySelectorAll('.cost-filter, .timeline-filter, .impact-filter').forEach(checkbox => {
     checkbox.addEventListener('change', () => {
       showSolutions(categoryIndex, typeVal);
     });
