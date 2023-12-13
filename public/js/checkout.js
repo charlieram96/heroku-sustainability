@@ -1,10 +1,10 @@
 const costWeights = {
   'No Cost': 0,
-  '$': 1,
-  '$$': 2,
-  '$$$': 3,
-  '$$$$': 4,
-  '$$$$$': 5
+  '$0-5k': 1,
+  '$6-15k': 2,
+  '$16-25k': 3,
+  '$26-100k': 4,
+  '$100k+': 5
 };
 
 const timeWeights = {
@@ -37,11 +37,11 @@ if (rowCount > 0) {
 
   const getCostLabel = (value) => {
     if (value <= 0) return "No Cost";
-    if (value <= 1) return "$";
-    if (value <= 2) return "$$";
-    if (value <= 3) return "$$$";
-    if (value <= 4) return "$$$$";
-    if (value <= 5) return "$$$$$";
+    if (value <= 1) return "$0-5k";
+    if (value <= 2) return "$6-15k";
+    if (value <= 3) return "$16-25k";
+    if (value <= 4) return "$26-100k";
+    if (value <= 5) return "$100k+";
   };
 
   const getTimeLabel = (value) => {
@@ -58,3 +58,4 @@ if (rowCount > 0) {
   document.getElementById("costAvg").innerHTML = "<strong>Avg. Cost: </strong>" + costLabel;
   document.getElementById("timeAvg").innerHTML = "<strong>Avg. Time: </strong>" + timeLabel;
 }
+

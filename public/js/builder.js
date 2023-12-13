@@ -111,7 +111,7 @@ const showSolutions = (categoryIndex, typeVal) => {
           ${learnMore}
         </div>
         <div class="card-footer bg-transparent border-0 d-flex flex-row-reverse align-items-center justify-content-between">
-        <button onclick="addActive('${feature.name}', '${feature.id}'); return addRow('${subCategories.features[categoryIndex].category}', '${feature.name}', '${feature.progression}', '${feature.costicon}', '${feature.timeline}','${feature.id}', '${feature.commitment}')" class="btn btn-light btn-sm rounded-pill px-3" type="button" aria-pressed="true" id="active-check-${feature.id}">Select</button>
+        <button onclick="addActive('${feature.name}', '${feature.id}'); return addRow('${subCategories.features[categoryIndex].category}', '${feature.name}', '${feature.progression}', '${feature.costicon}', '${feature.timeline}','${feature.id}', '${feature.commitment}', '${feature.description}')" class="btn btn-light btn-sm rounded-pill px-3" type="button" aria-pressed="true" id="active-check-${feature.id}">Select</button>
           ${feature.lob}
         </div>
       </div>
