@@ -34,11 +34,18 @@ var checkoutTable = $('#checkoutTable').DataTable({
       return '<img class="icon-delete pointer" src="/assets/img/trash.svg">'}
     },
     {data: 'id'},
-    {data: 'commitment'}
+    {data: 'commitment'},
+    {data: null, 'render': function(data, type, row) {
+      if (row.progression) {
+        return 'progression';
+      }
+        return '';
+      }
+    }
   ],
   columnDefs: [
     {
-      targets: [0, 5, 6],
+      targets: [0, 5, 6, 7],
       visible: false,
       className: 'fw-bold'
     }
@@ -103,11 +110,18 @@ var table = $('#builderTable').DataTable({
       return '<img class="icon-delete pointer" src="/assets/img/trash.svg">'}
     },
     {data: 'id'},
-    {data: 'commitment'}
+    {data: 'commitment'},
+    {data: null, 'render': function(data, type, row) {
+      if (row.progression) {
+        return 'progression';
+      }
+        return '';
+      }
+    }
   ],
   columnDefs: [
     {
-      targets: [0, 2, 3, 5, 6],
+      targets: [0, 2, 3, 5, 6, 7],
       visible: false
     },
     {
@@ -151,7 +165,8 @@ const addRow = (category, solution, progression, cost, timeline, id, commitment)
     "cost": cost,
     "timeline": timeline,
     "id": id,
-    "commitment": commitment
+    "commitment": commitment,
+    "progression": progression
   }
 
   if (table.column(1).data().toArray().indexOf(rowItems.subcategory) === -1) {
@@ -198,8 +213,9 @@ const rfpToggle = () => {
               "timeline": solutions[solution].timeline,
               "id": solutions[solution].id,
               "commitment": solutions[solution].commitment,
+              "progression": solutions[solution].progression
             }
-
+            console.log(rowItems);
             dataSet.push(rowItems);
             sessionStorage.setItem('dataSet', JSON.stringify(dataSet));
           }
