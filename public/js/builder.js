@@ -139,13 +139,6 @@ const showSolutions = (categoryIndex, typeVal) => {
   }
   }); 
 
-  // When a user checks or unchecks a box, the showSolutions function is called again with the updated filters
-  document.querySelectorAll('.cost-filter, .timeline-filter, .impact-filter').forEach(checkbox => {
-    checkbox.addEventListener('change', () => {
-      showSolutions(categoryIndex, typeVal);
-    });
-  });
-
   /* Add elipsis for trimmed text, i.e.: "Read More" */
   features.forEach((feature, i) => {
     const trimText = (selector, limit) => {
@@ -167,6 +160,13 @@ const showSolutions = (categoryIndex, typeVal) => {
     trimText($(`.one-${i}`), 60);
   });
 }
+
+document.querySelectorAll('.cost-filter, .timeline-filter, .impact-filter').forEach(checkbox => {
+  checkbox.addEventListener('change', () => {
+    showSolutions(categoryIndex, typeVal);
+  });
+});
+
 
 let rfpToggleItem;
 
@@ -195,8 +195,6 @@ try {
 } catch (err) {
   console.log("error", err);
 }
-
-
 
 rfpToggleItem.addEventListener("change", handleRfpChange);
 
