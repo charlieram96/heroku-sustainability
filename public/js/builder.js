@@ -11,6 +11,7 @@ fetch('/src/data/final-data.json')
   showSolutions(categoryIndex, typeVal);
   showCategoryDescription(categoryIndex);
   checkDataSet();
+  refreshUI();
 })
 .catch((error) => {
   console.error('Error fetching final-data.json:', error);
@@ -116,12 +117,15 @@ const showSolutions = (categoryIndex, typeVal) => {
       </div>
     </div>`;
 
+    
     var activeLook = document.getElementById('active-check-' + feature.id);
     for (let i = 0; i < dataSet.length; i++) {
     if ( dataSet[i].subcategory.indexOf(feature.name) !== -1 ) {
       activeLook.className += ' actived';
       activeLook.innerHTML = '&#10003;';
+      refreshUI();
     }
+
   }
   }); 
 
@@ -154,13 +158,38 @@ const showSolutions = (categoryIndex, typeVal) => {
   });
 }
 
+let rfpToggleItem;
+
+const handleRfpChange = () => {
+  rfpToggleItem = document.getElementById('addDefaults');
+  console.log("new rfp value", rfpToggleItem.checked);
+  const features = subCategories.features[categoryIndex].properties[typeVal].solutions;
+  features.forEach(feature => {
+    if (feature.commitment === true) {
+      if (rfpToggleItem.checked) {
+        feature.active = " actived";
+      }
+      else {
+        feature.active = false;
+      }
+    }
+  });
+  refreshUI();
+}
+
 var rfpToggleCheck;
+
 try {
   rfpToggleCheck = sessionStorage.getItem('rfpToggleCheck');
+  handleRfpChange();
 } catch (err) {
-  console.log("");
+  console.log("error", err);
 }
-console.log(rfpToggleCheck);
+
+
+
+rfpToggleItem.addEventListener("change", handleRfpChange);
+
 
 const addActive = (name, index) => {
   const features = subCategories.features[categoryIndex].properties[typeVal].solutions;
@@ -194,12 +223,16 @@ const refreshUI = () => {
     let button = document.getElementById('active-check-' + feature.id);
 
     if (button) {
-      if (feature.active) {
+      if (feature.active || feature.active === " actived") {
         button.innerHTML = '&#10003;'; 
         button.className = 'btn btn-light btn-sm rounded-pill px-3 actived';
+        if (feature.commitment) {
+          button.classList.add('button-disabled');
+        }
       } else {
         button.innerHTML = 'Select'; 
         button.className = 'btn btn-light btn-sm rounded-pill px-3';
+        button.classList.remove('button-disabled');
       }
     }
   });
@@ -221,3 +254,4 @@ const checkDataSet = () => {
     }
   }
 }
+

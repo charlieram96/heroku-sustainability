@@ -197,7 +197,7 @@ const rfpToggle = () => {
               "cost": solutions[solution].costicon,
               "timeline": solutions[solution].timeline,
               "id": solutions[solution].id,
-              "commitment": solutions[solution].commitment
+              "commitment": solutions[solution].commitment,
             }
 
             dataSet.push(rowItems);

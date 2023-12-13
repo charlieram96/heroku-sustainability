@@ -418,3 +418,8 @@ table.dataTable tr.dtrg-group.dtrg-level-0 th {
   background-color: #007B8A!important;
   border-color: #007B8A!important;
 }
+
+.button-disabled {
+  opacity: .3;
+  pointer-events: none;
+}
