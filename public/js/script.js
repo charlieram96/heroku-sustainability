@@ -48,11 +48,13 @@ var checkoutTable = $('#checkoutTable').DataTable({
         return '';
       }
     },
-    {data: 'description'}
+    {data: 'description'},
+    {data: 'desc'}
+
   ],
   columnDefs: [
     {
-      targets: [0, 5, 6, 7, 8],
+      targets: [0, 5, 6, 7, 8, 9],
       visible: false,
       className: 'fw-bold'
     }
@@ -117,7 +119,7 @@ var checkoutTable = $('#checkoutTable').DataTable({
     extend: 'excelHtml5',
     text: 'Download Excel',
     exportOptions: {
-      columns: [0, 1, 2, 3]
+      columns: [0, 1, 9, 2, 3]
     },
   }],
   paging: false,
@@ -164,11 +166,12 @@ var table = $('#builderTable').DataTable({
         return '';
       }
     },
-    {data: 'description'}
+    {data: 'description'},
+    {data: 'desc'}
   ],
   columnDefs: [
     {
-      targets: [0, 2, 3, 5, 6, 7, 8],
+      targets: [0, 2, 3, 5, 6, 7, 8, 9],
       visible: false
     },
     {
@@ -214,7 +217,8 @@ const addRow = (category, solution, progression, cost, timeline, id, commitment,
     "id": id,
     "commitment": commitment,
     "progression": progression,
-    "description": solution + ": " + description
+    "description": solution + ": " + description,
+    "desc": description
   }
 
   if (table.column(1).data().toArray().indexOf(rowItems.subcategory) === -1) {
@@ -262,7 +266,8 @@ const rfpToggle = () => {
               "id": solutions[solution].id,
               "commitment": solutions[solution].commitment,
               "progression": solutions[solution].progression,
-              "description": solutions[solution].name + ": " + solutions[solution].description
+              "description": solutions[solution].name + ": " + solutions[solution].description,
+              "desc": solutions[solution].description
             }
             console.log(rowItems);
             dataSet.push(rowItems);
@@ -291,5 +296,3 @@ for (var i = 0; i < dataSet.length; i++) {
     table.row.add(dataSet[i]).draw();
   }
 }
-
-
