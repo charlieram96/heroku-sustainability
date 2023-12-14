@@ -11,6 +11,7 @@ fetch('/src/data/final-data.json')
   showSolutions(categoryIndex, typeVal);
   showCategoryDescription(categoryIndex);
   checkDataSet();
+  refreshUI();
 })
 .catch((error) => {
   console.error('Error fetching final-data.json:', error);
@@ -83,10 +84,20 @@ const showSolutions = (categoryIndex, typeVal) => {
   let selectedCosts = Array.from(document.querySelectorAll('.cost-filter:checked')).map(el => el.value);
   let selectedTimelines = Array.from(document.querySelectorAll('.timeline-filter:checked')).map(el => el.value);
 
-  var filteredFeatures = features.filter(feature => 
-    selectedCosts.includes(feature.costicon) && selectedTimelines.includes(feature.timeline)
-  );
+  const allChecked = document.getElementById('enterpriseChecked').checked;
+  const reduceEmissionsChecked = document.getElementById('reduceEmissions').checked;
+  const zeroWasteChecked = document.getElementById('zeroWaste').checked;
   
+  var filteredFeatures = features.filter(feature => {
+    let costAndTimelineMatch = selectedCosts.includes(feature.costicon) && selectedTimelines.includes(feature.timeline);
+
+    let impactMatch = allChecked || 
+      (reduceEmissionsChecked && feature.reduceEmissions) || 
+      (zeroWasteChecked && feature.zeroWaste);
+
+    return costAndTimelineMatch && impactMatch;
+  });
+
   filteredFeatures.forEach((feature, i) => {
 
     if (feature.lob == 'Enterprise') {
@@ -110,24 +121,23 @@ const showSolutions = (categoryIndex, typeVal) => {
           ${learnMore}
         </div>
         <div class="card-footer bg-transparent border-0 d-flex flex-row-reverse align-items-center justify-content-between">
-        <button onclick="addActive('${feature.name}', '${feature.id}'); return addRow('${subCategories.features[categoryIndex].category}', '${feature.name}', '${feature.progression}', '${feature.costicon}', '${feature.timeline}','${feature.id}', '${feature.commitment}')" class="btn btn-light btn-sm rounded-pill px-3" type="button" aria-pressed="true" id="active-check-${feature.id}">Select</button>
+        <button onclick="addActive('${feature.name}', '${feature.id}'); return addRow('${subCategories.features[categoryIndex].category}', '${feature.name}', '${feature.progression}', '${feature.costicon}', '${feature.timeline}','${feature.id}', '${feature.commitment}', '${feature.description}')" class="btn btn-light btn-sm rounded-pill px-3" type="button" aria-pressed="true" id="active-check-${feature.id}">Select</button>
           ${feature.lob}
         </div>
       </div>
     </div>`;
+
+    
     var activeLook = document.getElementById('active-check-' + feature.id);
-    if ( table.column(1).data().toArray().indexOf(feature.name) !== -1 ) {
+    for (let i = 0; i < dataSet.length; i++) {
+    if ( dataSet[i].subcategory.indexOf(feature.name) !== -1 ) {
       activeLook.className += ' actived';
       activeLook.innerHTML = '&#10003;';
+      refreshUI();
     }
-  }); 
 
-  // When a user checks or unchecks a box, the showSolutions function is called again with the updated filters
-  document.querySelectorAll('.cost-filter, .timeline-filter').forEach(checkbox => {
-    checkbox.addEventListener('change', () => {
-      showSolutions(categoryIndex, typeVal);
-    });
-  });
+  }
+  }); 
 
   /* Add elipsis for trimmed text, i.e.: "Read More" */
   features.forEach((feature, i) => {
@@ -151,24 +161,99 @@ const showSolutions = (categoryIndex, typeVal) => {
   });
 }
 
+document.querySelectorAll('.cost-filter, .timeline-filter, .impact-filter').forEach(checkbox => {
+  checkbox.addEventListener('change', () => {
+    showSolutions(categoryIndex, typeVal);
+  });
+});
+
+
+let rfpToggleItem;
+
+const handleRfpChange = () => {
+  rfpToggleItem = document.getElementById('addDefaults');
+  console.log("new rfp value", rfpToggleItem.checked);
+  const features = subCategories.features[categoryIndex].properties[typeVal].solutions;
+  features.forEach(feature => {
+    if (feature.commitment === true) {
+      if (rfpToggleItem.checked) {
+        feature.active = " actived";
+      }
+      else {
+        feature.active = false;
+      }
+    }
+  });
+  refreshUI();
+}
+
+var rfpToggleCheck;
+
+try {
+  rfpToggleCheck = sessionStorage.getItem('rfpToggleCheck');
+  handleRfpChange();
+} catch (err) {
+  console.log("error", err);
+}
+
+rfpToggleItem.addEventListener("change", handleRfpChange);
+
+
 const addActive = (name, index) => {
   const features = subCategories.features[categoryIndex].properties[typeVal].solutions;
   let activeCheck = document.getElementById('active-check-' + index);
+
   features.forEach((feature) => {
     if (feature.name === name) {
       if (feature.active === false || feature.active === '') {
         feature.active = " actived";
         activeCheck.innerHTML = '&#10003;';
         activeCheck.className += feature.active;
+        if (feature.progression) {
+          removeEqualProgressionItems(feature);
+        }
+        refreshUI();
+
       } else if (feature.active === " actived") {
         feature.active = false;
-        activeCheck.innerHTML = `<style="color: #000; background-color: #F8F9FA; border-color: #F8F9FA;">Select</style>`;
+        activeCheck.innerHTML = 'Select';
         activeCheck.className = activeCheck.className.replace(' actived', '');
+        refreshUI();
       }
     } 
   });
 }
 
+const refreshUI = () => {
+  const features = subCategories.features[categoryIndex].properties[typeVal].solutions;
+
+  features.forEach(feature => {
+    let button = document.getElementById('active-check-' + feature.id);
+
+    if (button) {
+      if (feature.active || feature.active === " actived") {
+        button.innerHTML = '&#10003;'; 
+        button.className = 'btn btn-light btn-sm rounded-pill px-3 actived';
+        if (feature.commitment) {
+          button.classList.add('button-disabled');
+        }
+      } else {
+        button.innerHTML = 'Select'; 
+        button.className = 'btn btn-light btn-sm rounded-pill px-3';
+        button.classList.remove('button-disabled');
+      }
+    }
+  });
+}
+
+const removeEqualProgressionItems = (keptItem) => {
+  const features = subCategories.features[categoryIndex].properties[typeVal].solutions;
+  features.forEach(feature => {
+    if (feature.progression === keptItem.progression && feature.id !== keptItem.id) {
+      feature.active = false;
+    }
+  });
+}
 
 const checkDataSet = () => {
   if (dataSet.length > 0) {
@@ -177,3 +262,4 @@ const checkDataSet = () => {
     }
   }
 }
+
