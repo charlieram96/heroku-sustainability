@@ -269,7 +269,7 @@ const rfpToggle = () => {
               "description": solutions[solution].name + ": " + solutions[solution].description,
               "desc": solutions[solution].description
             }
-            console.log(rowItems);
+            console.log("row items", rowItems);
             dataSet.push(rowItems);
             sessionStorage.setItem('dataSet', JSON.stringify(dataSet));
           }

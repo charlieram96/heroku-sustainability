@@ -54,7 +54,7 @@
               "id": 3,
               "name": "Terracycle: Single collection stream",
               "progression": "Prog - Terracyle",
-              "description": "Terracycle is a solution for difficult to recycle items that are not accepted in a traditional waste stream. There are several different \"waste streams\" you can choose from including candy and snack wrappers, gloves, and hotel amenties.",
+              "description": "Terracycle is a solution for difficult to recycle items that are not accepted in a traditional waste stream. There are several different waste streams you can choose from including candy and snack wrappers, gloves, and hotel amenities.",
               "commitment": false,
               "costicon": "$0-5k",
               "timeline": "0-3 Months",
@@ -69,7 +69,7 @@
               "id": 4,
               "name": "Terracycle: Multiple collection streams",
               "progression": "Prog - Terracyle",
-              "description": "Terracycle is a solution for difficult to recycle items that are not accepted in a traditional waste stream.There are several different \"waste streams\" you can choose from including candy and snack wrappers, gloves, and hotel amenties.",
+              "description": "Terracycle is a solution for difficult to recycle items that are not accepted in a traditional waste stream. There are several different waste streams you can choose from including candy and snack wrappers, gloves, and hotel amenities.",
               "costicon": "$16-25k",
               "timeline": "0-3 Months",
               "zeroWaste": false,
@@ -422,7 +422,7 @@
             {
               "id": 27,
               "name": "Recycled content: Napkins (standard)",
-              "progression": "Level - Standard or FSC",
+              "progression": "Napkins - Standard or FSC",
               "description": "Provide napkins made from post-consumer content, which uses less material overall since it is made of recycled inputs.",
               "commitment": false,
               "costicon": "$0-5k",
@@ -437,6 +437,7 @@
             {
               "id": 28,
               "name": "Recycled content: Napkins (FSC)",
+              "progression": "Napkins - Standard or FSC",
               "description": "Provide napkins made from post-consumer content, which uses less material overall since it is made of recycled inputs.",
               "commitment": false,
               "costicon": "$0-5k",
@@ -451,7 +452,7 @@
             {
               "id": 29,
               "name": "Recycled content: Toilet paper (standard)",
-              "progression": "Level - Standard or FSC",
+              "progression": "tp - Standard or FSC",
               "description": "Provide toilet paper made from post-consumer content, which uses less material overall since it is made of recycled inputs.",
               "commitment": false,
               "costicon": "$0-5k",
@@ -466,7 +467,7 @@
             {
               "id": 30,
               "name": "Recycled content: Toilet paper (FSC)",
-              "progression": "Level - Standard or FSC",
+              "progression": "tp - Standard or FSC",
               "description": "Provide toilet paper made from post-consumer content, which uses less material overall since it is made of recycled inputs.",
               "commitment": false,
               "costicon": "$0-5k",
@@ -481,7 +482,7 @@
             {
               "id": 31,
               "name": "Recycled content: Paper towels (standard)",
-              "progression": "Level - Standard or FSC",
+              "progression": "towels - Standard or FSC",
               "description": "Provide paper towels made from post-consumer content, which uses less material overall since it is made of recycled inputs.",
               "commitment": false,
               "costicon": "$0-5k",
@@ -496,7 +497,7 @@
             {
               "id": 32,
               "name": "Recycled content: Paper towels (FSC)",
-              "progression": "Level - Standard or FSC",
+              "progression": "towels - Standard or FSC",
               "description": "Provide paper towels made from post-consumer content, which uses less material overall since it is made of recycled inputs.",
               "commitment": false,
               "costicon": "$0-5k",
@@ -617,7 +618,7 @@
               "id": 40,
               "name": "Containers: Reusable",
               "progression": "Pick - Containers",
-              "description": "Reusable containers replace disposables in operations. Aramark is partnered with OZZI, G.E.T, and Whirley-DrinkWorks on reusable container solutions. Recommend considering a tracking solution with these types of programs to understand usage and support reducing container loss. Further details provided in the \"Learn More' resources.",
+              "description": "Reusable containers replace disposables in operations. Aramark is partnered with OZZI, G.E.T, and Whirley-DrinkWorks on reusable container solutions. Recommend considering a tracking solution with these types of programs to understand usage and support reducing container loss. Further details provided in the Learn More resources.",
               "commitment": false,
               "costicon": "$16-25k",
               "timeline": "7-9 Months",
@@ -735,7 +736,7 @@
             {
               "id": 47,
               "name": "On site garden",
-              "description": "Build a garden on-site to source fresh produce. Please follow guidance in the \"Learn More' section to ensure you are following appropriate Safety and Risk Control protocols.",
+              "description": "Build a garden on-site to source fresh produce. Please follow guidance in the Learn More section to ensure you are following appropriate Safety and Risk Control protocols.",
               "commitment": false,
               "costicon": "$6-15k",
               "timeline": "7-9 Months",
@@ -1076,7 +1077,7 @@
             {
               "id": 69,
               "name": "Food management process",
-              "description": "Aramark's Hospitality Enablement Program to support source reduction throughout the food production process from start to finish.",
+              "description": "Aramarks Hospitality Enablement Program to support source reduction throughout the food production process from start to finish.",
               "commitment": false,
               "costicon": "No Cost",
               "timeline": "Immediate",
@@ -1135,7 +1136,6 @@
             {
               "id": 73,
               "name": "Waste tracking: LeanPath Spark (FOH)",
-              "progression": "Prog - Waste tracking",
               "description": "Track post-consumer waste and educate consumers with the LeanPath Spark scale and consumer-facing display.",
               "commitment": false,
               "costicon": "$6-15k",
@@ -1156,7 +1156,7 @@
               "id": 74,
               "name": "Composting: Pre-consumer (BOH)",
               "progression": "Prog - Composting",
-              "description": "Compost food waste from back of house operations rather than sending it to the landfill through a contracted service. t",
+              "description": "Compost food waste from back of house operations rather than sending it to the landfill through a contracted service.",
               "commitment": false,
               "costicon": "$6-15k",
               "timeline": "4-6 Months",
@@ -1342,7 +1342,7 @@
             {
               "id": 86,
               "name": "Boss Defrost",
-              "description": "Use a Boss Defrost to mimic \"slacking\" (the running water method of defrosting) in order to reduce water use by 98.5%.",
+              "description": "Use a Boss Defrost to mimic slacking (the running water method of defrosting) in order to reduce water use by 98.5%.",
               "commitment": false,
               "costicon": "$16-25k",
               "timeline": "0-3 Months",
@@ -1736,7 +1736,7 @@
             {
               "id": 111,
               "name": "Food Emissions Reporting",
-              "description": "Annually track emissions from food: Aramark's Food Emissions Report provides clients with insight and analysis into the carbon emissions associated with the food served at their account. We developed this report to help us work together with our clients to reduce emissions from food.",
+              "description": "Annually track emissions from food: Aramarks Food Emissions Report provides clients with insight and analysis into the carbon emissions associated with the food served at their account. We developed this report to help us work together with our clients to reduce emissions from food.",
               "costicon": "No Cost",
               "timeline": "0-3 Months",
               "zeroWaste": true,
