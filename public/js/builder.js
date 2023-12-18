@@ -11,7 +11,9 @@ fetch('/src/data/final-data.json')
   showSolutions(categoryIndex, typeVal);
   showCategoryDescription(categoryIndex);
   checkDataSet();
+  handleRfpChange();
   refreshUI();
+  // rfpToggle();
 })
 .catch((error) => {
   console.error('Error fetching final-data.json:', error);
@@ -75,8 +77,14 @@ const getSubcategoryPosition = (el) => {
   showSolutions(categoryIndex, typeVal);
 }
 
+
+const progressionColors = new Map();
+let colorIndex = 0;
+const availableColors = ['blue', 'green', 'purple', 'red', 'orange'];
+
 /* Show the Solution Cards */
 const showSolutions = (categoryIndex, typeVal) => {
+  let rfpToggleItem = document.getElementById('addDefaults');
   const features = subCategories.features[categoryIndex].properties[typeVal].solutions;
   var optionCards = document.getElementById('optionCards');
   optionCards.innerHTML = '';
@@ -112,10 +120,21 @@ const showSolutions = (categoryIndex, typeVal) => {
     
     var learnMore = feature.name === 'Low carbon: Coolfood meals' ? `<h6 style="font-size: 13px;" class="card-title mt-2"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#solutionsCard">Learn More</a></h6>` : '';
 
+    let bannerHTML = '';
+    if (feature.progression) {
+        if (!progressionColors.has(feature.progression)) {
+            progressionColors.set(feature.progression, availableColors[colorIndex % availableColors.length]);
+            colorIndex++;
+        }
+        const bannerColor = progressionColors.get(feature.progression);
+        bannerHTML = `<div class="card-choose-banner" style="background-color: ${bannerColor}">Choose 1</div>`;
+    }
+
     optionCards.innerHTML +=
     `<div class="col mb-4">
       <div class="card h-100 card-bg p-2 d-flex flex-column">
         <div class="card-body">
+          ${bannerHTML}
           <h6 class="card-title">${feature.name}</h6>
           <p class="mt-3 text-trim one-${i} card-text">${feature.description}</p>
           ${learnMore}
@@ -133,9 +152,18 @@ const showSolutions = (categoryIndex, typeVal) => {
     if ( dataSet[i].subcategory.indexOf(feature.name) !== -1 ) {
       activeLook.className += ' actived';
       activeLook.innerHTML = '&#10003;';
-      refreshUI();
     }
+    if (feature.commitment === true && rfpToggleItem.checked === true) {
+        let button = document.getElementById('active-check-' + feature.id);
+        button.innerHTML = '&#10003;'; 
+        button.className = 'btn btn-light btn-sm rounded-pill px-3 actived';
+        button.classList.add('button-disabled');   
+    }
+    else {
+      let button = document.getElementById('active-check-' + feature.id);
+      button.classList.remove('button-disabled');   
 
+    }
   }
   }); 
 
@@ -168,7 +196,8 @@ document.querySelectorAll('.cost-filter, .timeline-filter, .impact-filter').forE
 });
 
 
-let rfpToggleItem;
+var rfpToggleItem = document.getElementById('addDefaults');;
+var rfpToggleCheck;
 
 const handleRfpChange = () => {
   rfpToggleItem = document.getElementById('addDefaults');
@@ -187,11 +216,10 @@ const handleRfpChange = () => {
   refreshUI();
 }
 
-var rfpToggleCheck;
-
 try {
   rfpToggleCheck = sessionStorage.getItem('rfpToggleCheck');
   handleRfpChange();
+  refreshUI();
 } catch (err) {
   console.log("error", err);
 }
@@ -206,10 +234,12 @@ const addActive = (name, index) => {
   features.forEach((feature) => {
     if (feature.name === name) {
       if (feature.active === false || feature.active === '') {
+        console.log("progression", feature.progression);
         feature.active = " actived";
         activeCheck.innerHTML = '&#10003;';
         activeCheck.className += feature.active;
         if (feature.progression) {
+          console.log("progression item clicked");
           removeEqualProgressionItems(feature);
         }
         refreshUI();
@@ -226,6 +256,7 @@ const addActive = (name, index) => {
 
 const refreshUI = () => {
   const features = subCategories.features[categoryIndex].properties[typeVal].solutions;
+  let rfpToggleItem = document.getElementById('addDefaults');
 
   features.forEach(feature => {
     let button = document.getElementById('active-check-' + feature.id);
@@ -234,7 +265,7 @@ const refreshUI = () => {
       if (feature.active || feature.active === " actived") {
         button.innerHTML = '&#10003;'; 
         button.className = 'btn btn-light btn-sm rounded-pill px-3 actived';
-        if (feature.commitment) {
+        if (feature.commitment === true && rfpToggleItem.checked === true) {
           button.classList.add('button-disabled');
         }
       } else {
@@ -253,6 +284,7 @@ const removeEqualProgressionItems = (keptItem) => {
       feature.active = false;
     }
   });
+  refreshUI();
 }
 
 const checkDataSet = () => {

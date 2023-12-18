@@ -230,6 +230,28 @@ p, li {
   font-family: "gotham-medium"!important;
 }
 
+.card {
+  position: relative;
+  padding-top: 15px !important;
+}
+
+.card-choose-banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 20px;
+  padding: 0 10px;
+  font-size: 10px;
+  color: #e7e7e7;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #000; */
+  border-radius: 0 .375rem 0 .375rem;
+  font-family: 'gotham-bold';
+}
+
 .card-bg {
   background-color: #E7E7E7 !important;
   border: none !important;

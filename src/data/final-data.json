@@ -422,7 +422,7 @@
             {
               "id": 27,
               "name": "Recycled content: Napkins (standard)",
-              "progression": "Level - Standard or FSC",
+              "progression": "Napkins - Standard or FSC",
               "description": "Provide napkins made from post-consumer content, which uses less material overall since it is made of recycled inputs.",
               "commitment": false,
               "costicon": "$0-5k",
@@ -437,6 +437,7 @@
             {
               "id": 28,
               "name": "Recycled content: Napkins (FSC)",
+              "progression": "Napkins - Standard or FSC",
               "description": "Provide napkins made from post-consumer content, which uses less material overall since it is made of recycled inputs.",
               "commitment": false,
               "costicon": "$0-5k",
@@ -451,7 +452,7 @@
             {
               "id": 29,
               "name": "Recycled content: Toilet paper (standard)",
-              "progression": "Level - Standard or FSC",
+              "progression": "tp - Standard or FSC",
               "description": "Provide toilet paper made from post-consumer content, which uses less material overall since it is made of recycled inputs.",
               "commitment": false,
               "costicon": "$0-5k",
@@ -466,7 +467,7 @@
             {
               "id": 30,
               "name": "Recycled content: Toilet paper (FSC)",
-              "progression": "Level - Standard or FSC",
+              "progression": "tp - Standard or FSC",
               "description": "Provide toilet paper made from post-consumer content, which uses less material overall since it is made of recycled inputs.",
               "commitment": false,
               "costicon": "$0-5k",
@@ -481,7 +482,7 @@
             {
               "id": 31,
               "name": "Recycled content: Paper towels (standard)",
-              "progression": "Level - Standard or FSC",
+              "progression": "towels - Standard or FSC",
               "description": "Provide paper towels made from post-consumer content, which uses less material overall since it is made of recycled inputs.",
               "commitment": false,
               "costicon": "$0-5k",
@@ -496,7 +497,7 @@
             {
               "id": 32,
               "name": "Recycled content: Paper towels (FSC)",
-              "progression": "Level - Standard or FSC",
+              "progression": "towels - Standard or FSC",
               "description": "Provide paper towels made from post-consumer content, which uses less material overall since it is made of recycled inputs.",
               "commitment": false,
               "costicon": "$0-5k",
@@ -1135,7 +1136,6 @@
             {
               "id": 73,
               "name": "Waste tracking: LeanPath Spark (FOH)",
-              "progression": "Prog - Waste tracking",
               "description": "Track post-consumer waste and educate consumers with the LeanPath Spark scale and consumer-facing display.",
               "commitment": false,
               "costicon": "$6-15k",
